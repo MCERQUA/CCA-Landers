@@ -274,6 +274,8 @@
                 
                 <div class="flex-half">
                     <form class="contact-form" name="contact" method="POST" netlify>
+                        <input type="hidden" name="form-name" value="contact">
+                        <input type="hidden" name="_to" value="echoaisystems@gmail.com">
                         <div class="form-field">
                             <label class="form-label" for="name">Full Name</label>
                             <input class="form-input" id="name" name="name" type="text" required>
@@ -375,6 +377,8 @@
             <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">Get in touch now</h3>
             
             <form name="modal-contact" method="POST" netlify style="margin-bottom: 1.5rem;">
+                <input type="hidden" name="form-name" value="modal-contact">
+                <input type="hidden" name="_to" value="echoaisystems@gmail.com">
                 <div style="margin-bottom: 1rem;">
                     <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Your Name</label>
                     <input type="text" name="name" style="width: 100%; padding: 0.5rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;" required>
