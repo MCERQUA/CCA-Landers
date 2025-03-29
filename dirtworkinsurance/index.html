@@ -276,7 +276,7 @@
                 </div>
                 
                 <div class="flex-half">
-                    <form name="quote" method="POST" data-netlify="true" data-netlify-recaptcha="true" netlify netlify-honeypot="bot-field" action="/success">
+                    <form name="quote" method="POST" data-netlify="true" netlify netlify-honeypot="bot-field" action="/success">
                         <input type="hidden" name="form-name" value="quote">
                         <p class="hidden" style="display: none;">
                             <label>Don't fill this out if you're human: <input name="bot-field" /></label>
@@ -306,9 +306,9 @@
                             <p style="font-size: 0.75rem; color: #6B7280;">By submitting this form, you agree to our <a href="#" style="text-decoration: underline; color: #2563EB;">privacy policy</a>. We'll never share your information with third parties.</p>
                         </div>
                         
-                        <div data-netlify-recaptcha="true" style="margin-bottom: 1rem;"></div>
+                        <div class="g-recaptcha" data-sitekey="your-site-key" style="margin-bottom: 1rem;"></div>
                         
-                        <button type="submit" style="width: 100%; background-color: #EAB308; color: white; font-weight: bold; padding: 0.75rem 1rem; border: none; border-radius: 0.25rem; cursor: pointer;">
+                        <button type="submit" style="width: 100%; background-color: #EAB308; color: white; font-weight: bold; padding: 0.75rem 1rem; border: none; border-radius: 0.25rem; cursor: pointer; margin-top: 1rem;">
                             Get My Free Quote
                         </button>
                     </form>
