@@ -6,285 +6,12 @@
     <title>Specialized Excavation & Dirtwork Insurance | DirtworkInsurance.com</title>
     <meta name="description" content="Protect your excavation business with specialized dirtwork insurance coverage. Custom policies for contractors, heavy equipment protection, and liability coverage.">
     
-    <!-- Ensure CSS is loaded properly with fallback -->
+    <!-- External CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    
-    <style>
-        /* Base styles in case Tailwind fails */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
-            line-height: 1.5;
-            color: #333;
-            margin: 0;
-        }
-        
-        .announcement-bar {
-            background-color: #EAB308;
-            color: white;
-            text-align: center;
-            padding: 0.5rem;
-        }
-        
-        .header-section {
-            background-color: #1E3A8A;
-            color: white;
-            padding: 2rem 1rem;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding-left: 1.25rem;
-            padding-right: 1.25rem;
-        }
-        
-        .hero-title {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background-color: #EAB308;
-            color: white;
-            font-weight: bold;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.25rem;
-            text-decoration: none;
-            margin-top: 1rem;
-        }
-        
-        .cta-button:hover {
-            background-color: #D97706;
-        }
-        
-        .section {
-            padding: 3rem 1rem;
-        }
-        
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        
-        .problem-solution {
-            background-color: white;
-        }
-        
-        .problem-box {
-            background-color: #F3F4F6;
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .solution-box {
-            background-color: #EFF6FF;
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-        }
-        
-        .features-section {
-            background-color: #F3F4F6;
-        }
-        
-        .feature-card {
-            background-color: white;
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            margin-bottom: 1rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
-        
-        .feature-icon {
-            background-color: #DBEAFE;
-            color: #1E3A8A;
-            width: 4rem;
-            height: 4rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-        }
-        
-        .testimonial-card {
-            background-color: #F9FAFB;
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            border: 1px solid #E5E7EB;
-            margin-bottom: 1rem;
-        }
-        
-        .faq-section {
-            background-color: #F3F4F6;
-        }
-        
-        .faq-item {
-            border-bottom: 1px solid #E5E7EB;
-            padding-bottom: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .contact-section {
-            background-color: #1E3A8A;
-            color: white;
-        }
-        
-        .contact-form {
-            background-color: white;
-            color: #333;
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-        }
-        
-        .form-field {
-            margin-bottom: 1rem;
-        }
-        
-        .form-label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-        
-        .form-input {
-            width: 100%;
-            padding: 0.5rem;
-            border: 1px solid #D1D5DB;
-            border-radius: 0.25rem;
-        }
-        
-        .footer {
-            background-color: #111827;
-            color: white;
-            padding: 2rem 1rem;
-        }
-        
-        .footer-heading {
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-        
-        .footer-links {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 1.5rem 0;
-        }
-        
-        .footer-link {
-            margin-bottom: 0.5rem;
-        }
-        
-        .floating-button {
-            position: fixed;
-            bottom: 1rem;
-            right: 1rem;
-            background-color: #10B981;
-            color: white;
-            width: 4rem;
-            height: 4rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            z-index: 50;
-        }
-        
-        @media (min-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .flex-row {
-                display: flex;
-            }
-            
-            .flex-half {
-                width: 50%;
-            }
-            
-            .flex-half:first-child {
-                padding-right: 1.5rem;
-            }
-            
-            .flex-half:last-child {
-                padding-left: 1.5rem;
-            }
-            
-            .grid-3 {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 1.5rem;
-            }
-            
-            .grid-2 {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1.5rem;
-            }
-        }
-    </style>
+    <link href="css/styles.css" rel="stylesheet">
     
     <!-- Schema markup for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "DirtworkInsurance.com",
-      "description": "Specialized insurance for excavation and dirtwork contractors",
-      "url": "https://dirtworkinsurance.com",
-      "sameAs": [
-        "https://facebook.com/dirtworkinsurance",
-        "https://linkedin.com/company/dirtworkinsurance"
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "500 Construction Way",
-        "addressLocality": "Boulder",
-        "addressRegion": "CO",
-        "postalCode": "80301",
-        "addressCountry": "US"
-      }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What types of businesses does dirtwork insurance cover?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Dirtwork insurance covers excavation contractors, grading companies, site preparation contractors, foundation specialists, trenching businesses, and any other contractors involved in earthmoving operations."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much does specialized excavation insurance cost?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Excavation insurance costs vary based on business size, equipment value, project types, and coverage limits. Our customized policies typically save contractors 15-20% compared to standard construction policies while providing better coverage."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does dirtwork insurance cover my heavy equipment?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, our comprehensive dirtwork insurance includes specialized equipment coverage for excavators, bulldozers, backhoes, loaders, and other heavy machinery, protecting against theft, damage, and breakdowns."
-          }
-        }
-      ]
-    }
-    </script>
+    <script src="data/schema.json" type="application/ld+json"></script>
 </head>
 <body>
     <!-- Announcement Bar -->
@@ -546,12 +273,7 @@
                 </div>
                 
                 <div class="flex-half">
-                    <form class="contact-form" style="padding: 1.5rem;" name="contact" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field">
-                        <input type="hidden" name="form-name" value="contact">
-                        <input type="hidden" name="recipient" value="echoaisystems@gmail.com">
-                        <div class="form-field" style="display: none;">
-                            <label>Don't fill this out if you're human: <input name="bot-field"></label>
-                        </div>
+                    <form class="contact-form" name="contact" method="POST" netlify>
                         <div class="form-field">
                             <label class="form-label" for="name">Full Name</label>
                             <input class="form-input" id="name" name="name" type="text" required>
@@ -571,25 +293,15 @@
                             <label class="form-label" for="company">Company Name</label>
                             <input class="form-input" id="company" name="company" type="text" required>
                         </div>
-
-                        <div data-netlify-recaptcha="true"></div>
                         
                         <div style="margin-bottom: 1.5rem;">
                             <p style="font-size: 0.75rem; color: #6B7280;">By submitting this form, you agree to our <a href="#" style="text-decoration: underline; color: #2563EB;">privacy policy</a>. We'll never share your information with third parties.</p>
                         </div>
                         
-                        <button type="submit" style="width: 100%; background-color: #EAB308; color: white; font-weight: bold; padding: 0.75rem 1rem; border: none; border-radius: 0.25rem; cursor: pointer;" onclick="alert('Thank you! Your quote request has been submitted. We will contact you shortly.');">
+                        <button type="submit" style="width: 100%; background-color: #EAB308; color: white; font-weight: bold; padding: 0.75rem 1rem; border: none; border-radius: 0.25rem; cursor: pointer;">
                             Get My Free Quote
                         </button>
                     </form>
-                    <script>
-                        document.querySelector('form[name="contact"]').addEventListener('submit', function(e) {
-                            e.preventDefault();
-                            setTimeout(() => {
-                                this.submit();
-                            }, 1000);
-                        });
-                    </script>
                 </div>
             </div>
         </div>
@@ -662,12 +374,7 @@
             
             <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">Get in touch now</h3>
             
-                    <form name="modal-contact" data-netlify="true" data-netlify-recaptcha="true" style="margin-bottom: 1.5rem;" netlify-honeypot="bot-field">
-                        <input type="hidden" name="form-name" value="modal-contact">
-                        <input type="hidden" name="recipient" value="echoaisystems@gmail.com">
-                        <div style="display: none;">
-                            <label>Don't fill this out if you're human: <input name="bot-field"></label>
-                        </div>
+            <form name="modal-contact" method="POST" netlify style="margin-bottom: 1.5rem;">
                 <div style="margin-bottom: 1rem;">
                     <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Your Name</label>
                     <input type="text" name="name" style="width: 100%; padding: 0.5rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;" required>
@@ -682,21 +389,11 @@
                     <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Message</label>
                     <textarea name="message" style="width: 100%; padding: 0.5rem; border: 1px solid #D1D5DB; border-radius: 0.25rem; height: 100px;" required></textarea>
                 </div>
-
-                <div data-netlify-recaptcha="true"></div>
                 
-                <button type="submit" style="width: 100%; background-color: #1E3A8A; color: white; font-weight: bold; padding: 0.75rem 1rem; border: none; border-radius: 0.25rem; cursor: pointer; margin-bottom: 1rem;" onclick="alert('Thank you! Your message has been submitted. We will contact you shortly.');">
+                <button type="submit" style="width: 100%; background-color: #1E3A8A; color: white; font-weight: bold; padding: 0.75rem 1rem; border: none; border-radius: 0.25rem; cursor: pointer; margin-bottom: 1rem;">
                     Send Message
                 </button>
             </form>
-            <script>
-                document.querySelector('form[name="modal-contact"]').addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    setTimeout(() => {
-                        this.submit();
-                    }, 1000);
-                });
-            </script>
             
             <div style="text-align: center;">
                 <p style="margin-bottom: 0.5rem;">Or call us directly:</p>
@@ -707,69 +404,7 @@
         </div>
     </div>
 
-    <!-- Netlify CAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    
-    <!-- Add JavaScript for mobile menu toggle and contact modal -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Mobile menu toggle
-            const menuButton = document.getElementById('menuButton');
-            const mobileMenu = document.getElementById('mobileMenu');
-            
-            if (menuButton && mobileMenu) {
-                menuButton.addEventListener('click', function() {
-                    if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
-                        mobileMenu.style.display = 'block';
-                    } else {
-                        mobileMenu.style.display = 'none';
-                    }
-                });
-                
-                // Close menu when clicking outside
-                document.addEventListener('click', function(event) {
-                    if (event.target !== menuButton && !menuButton.contains(event.target) && 
-                        event.target !== mobileMenu && !mobileMenu.contains(event.target)) {
-                        mobileMenu.style.display = 'none';
-                    }
-                });
-            }
-            
-            // Contact modal functionality
-            const contactButton = document.getElementById('contactButton');
-            const contactModal = document.getElementById('contactModal');
-            const closeModal = document.getElementById('closeModal');
-            
-            if (contactButton && contactModal && closeModal) {
-                // Add hover effect
-                contactButton.addEventListener('mouseenter', function() {
-                    this.style.transform = 'scale(1.1)';
-                    this.style.boxShadow = '0 6px 10px rgba(0, 0, 0, 0.2)';
-                });
-                
-                contactButton.addEventListener('mouseleave', function() {
-                    this.style.transform = 'scale(1)';
-                    this.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
-                });
-                
-                // Open modal on click
-                contactButton.addEventListener('click', function() {
-                    contactModal.style.display = 'flex';
-                });
-                
-                // Close modal
-                closeModal.addEventListener('click', function() {
-                    contactModal.style.display = 'none';
-                });
-                
-                // Close modal when clicking outside
-                contactModal.addEventListener('click', function(event) {
-                    if (event.target === contactModal) {
-                        contactModal.style.display = 'none';
-                    }
-                });
-            }
-        });
-    </script>
+    <!-- External JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 </html>
