@@ -12,6 +12,9 @@
     
     <!-- Schema markup for SEO -->
     <script src="data/schema.json" type="application/ld+json"></script>
+    
+    <!-- reCAPTCHA Script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <!-- Announcement Bar -->
@@ -273,7 +276,7 @@
                 </div>
                 
                 <div class="flex-half">
-                    <form class="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+                    <form class="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" action="/success" netlify>
                         <input type="hidden" name="form-name" value="contact">
                         <input type="hidden" name="_to" value="echoaisystems@gmail.com">
                         <div class="form-field">
@@ -378,7 +381,7 @@
             
             <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">Get in touch now</h3>
             
-            <form name="modal-contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" style="margin-bottom: 1.5rem;">
+            <form name="modal-contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" style="margin-bottom: 1.5rem;" action="/success" netlify>
                 <input type="hidden" name="form-name" value="modal-contact">
                 <input type="hidden" name="_to" value="echoaisystems@gmail.com">
                 <div style="margin-bottom: 1rem;">
