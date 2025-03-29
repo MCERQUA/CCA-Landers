@@ -276,30 +276,31 @@
                 </div>
                 
                 <div class="flex-half">
-                    <form class="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" action="/success" netlify>
-                        <input type="hidden" name="form-name" value="contact">
+                    <form name="quote" method="POST" data-netlify="true" data-netlify-recaptcha="true" action="/success">
+                        <input type="hidden" name="form-name" value="quote">
                         <input type="hidden" name="_to" value="echoaisystems@gmail.com">
-                        <div class="form-field">
-                            <label class="form-label" for="name">Full Name</label>
-                            <input class="form-input" id="name" name="name" type="text" required>
+                        
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Full Name</label>
+                            <input type="text" name="name" style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;" required>
                         </div>
                         
-                        <div class="form-field">
-                            <label class="form-label" for="email">Email Address</label>
-                            <input class="form-input" id="email" name="email" type="email" required>
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Email Address</label>
+                            <input type="email" name="email" style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;" required>
                         </div>
                         
-                        <div class="form-field">
-                            <label class="form-label" for="phone">Phone Number</label>
-                            <input class="form-input" id="phone" name="phone" type="tel" required>
-                        </div>
-                        
-                        <div class="form-field">
-                            <label class="form-label" for="company">Company Name</label>
-                            <input class="form-input" id="company" name="company" type="text" required>
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Phone Number</label>
+                            <input type="tel" name="phone" style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;" required>
                         </div>
                         
                         <div style="margin-bottom: 1.5rem;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Company Name</label>
+                            <input type="text" name="company" style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;" required>
+                        </div>
+                        
+                        <div style="margin-bottom: 1rem;">
                             <p style="font-size: 0.75rem; color: #6B7280;">By submitting this form, you agree to our <a href="#" style="text-decoration: underline; color: #2563EB;">privacy policy</a>. We'll never share your information with third parties.</p>
                         </div>
                         
