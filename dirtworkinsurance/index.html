@@ -546,7 +546,8 @@
                 </div>
                 
                 <div class="flex-half">
-                    <form class="contact-form" style="padding: 1.5rem;">
+                    <form class="contact-form" style="padding: 1.5rem;" netlify name="contact" data-netlify-recaptcha="true">
+                        <input type="hidden" name="form-name" value="contact">
                         <div class="form-field">
                             <label class="form-label" for="name">Full Name</label>
                             <input class="form-input" id="name" type="text">
@@ -647,7 +648,9 @@
             
             <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">Get in touch now</h3>
             
-            <form style="margin-bottom: 1.5rem;">
+                    <form netlify name="modal-contact" data-netlify-recaptcha="true" style="margin-bottom: 1.5rem;">
+                        <input type="hidden" name="form-name" value="modal-contact">
+                        <div data-netlify-recaptcha="true"></div>
                 <div style="margin-bottom: 1rem;">
                     <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Your Name</label>
                     <input type="text" style="width: 100%; padding: 0.5rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;">
@@ -677,6 +680,9 @@
         </div>
     </div>
 
+    <!-- Netlify CAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    
     <!-- Add JavaScript for mobile menu toggle and contact modal -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
