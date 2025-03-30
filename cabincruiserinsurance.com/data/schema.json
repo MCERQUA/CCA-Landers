@@ -1,0 +1,51 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Cabin Cruiser Insurance",
+    "description": "Specialized insurance coverage for cabin cruisers, providing comprehensive protection for vessels, personal belongings, and extended navigation. Industry-leading coverage backed by 24/7 support and emergency assistance.",
+    "url": "https://cabincruiserinsurance.com",
+    "sameAs": [
+      "https://facebook.com/cabincruiserinsurance",
+      "https://linkedin.com/company/cabin-cruiser-insurance"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Marina Way",
+      "addressLocality": "Newport Beach",
+      "addressRegion": "CA",
+      "postalCode": "92660",
+      "addressCountry": "US"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What makes cabin cruiser insurance different from regular boat insurance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cabin cruiser insurance provides specialized coverage for live-aboard amenities, extended navigation, and higher-value equipment typically found on cabin cruisers. It includes coverage for personal belongings, overnight accommodations, and custom installations that standard boat policies may not adequately protect."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas are covered under the navigation coverage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our policies typically cover coastal waters, inland waterways, and major lakes across the United States. Extended navigation coverage can be customized to include international waters and specific cruising regions based on your needs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How are personal belongings covered on my cabin cruiser?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our policies include comprehensive coverage for personal effects typically kept aboard, including electronics, clothing, and recreational equipment. Coverage limits can be customized based on the value of your belongings, with options for scheduled items of higher value."
+        }
+      }
+    ]
+  }
+]
