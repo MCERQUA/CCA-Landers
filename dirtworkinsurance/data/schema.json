@@ -11,12 +11,14 @@
     ],
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "500 Construction Way",
-      "addressLocality": "Boulder",
-      "addressRegion": "CO",
-      "postalCode": "80301",
+      "streetAddress": "12220 E Riggs Road, Suite #105",
+      "addressLocality": "Chandler",
+      "addressRegion": "AZ",
+      "postalCode": "85249",
       "addressCountry": "US"
-    }
+    },
+    "telephone": "844-967-5247",
+    "email": "josh@contractorschoiceagency.com"
   },
   {
     "@context": "https://schema.org",

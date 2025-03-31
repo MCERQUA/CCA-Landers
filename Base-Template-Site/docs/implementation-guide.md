@@ -280,3 +280,29 @@ Add these to interactive elements:
 [ ] Enable HTTPS and verify redirects
 [ ] Configure robots.txt
 [ ] Submit sitemap to Google Search Console
+
+## Social Media Configuration
+
+The template includes pre-configured Open Graph and Twitter Card meta tags in index.html for proper social media sharing. These should be left intact with the following structure:
+
+```html
+<!-- Open Graph / Social Media Meta Tags -->
+<meta property="og:title" content="Contractors Choice Agency">
+<meta property="og:description" content="Get the best insurance solutions for contractors">
+<meta property="og:image" content="images/company-logo.webp">
+<meta property="og:url" content="https://www.contractorschoiceagency.com">
+<meta property="og:type" content="website">
+    
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contractors Choice Agency">
+<meta name="twitter:description" content="Get the best insurance solutions for contractors">
+<meta name="twitter:image" content="images/company-logo.webp">
+```
+
+### Logo Replacement Instructions
+1. Replace images/company-logo.webp with your logo
+2. Maintain the same filename (company-logo.webp)
+3. Keep the image in WebP format for optimal performance
+4. Recommended dimensions: 1200x630px for social sharing
+5. The logo should be clearly visible when cropped to square aspect ratio
