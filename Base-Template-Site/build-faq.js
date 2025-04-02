@@ -89,15 +89,30 @@ function generateFaqHtml(faqData) {
   return html;
 }
 
-// Function to update schema.json with FAQ data
-function generateSchemaJson(faqData) {
-  // Read the existing schema.json
-  const schemaPath = path.join(__dirname, 'data', 'schema.json');
-  const schemaJson = JSON.parse(fs.readFileSync(schemaPath, 'utf8'));
-  
-  // Find or create the FAQ schema
-  const faqSchemaIndex = schemaJson.findIndex(item => item['@type'] === 'FAQPage');
-  
+// Function to generate schema JSON
+function generateSchemas(faqData) {
+  // Create LocalBusiness schema
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "[COMPANY NAME]",
+    "description": "[COMPANY DESCRIPTION - 1-2 SENTENCES ABOUT YOUR MAIN SERVICE]",
+    "url": "[COMPANY WEBSITE URL]",
+    "sameAs": [
+      "[FACEBOOK URL]",
+      "[LINKEDIN URL]"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "[STREET ADDRESS]",
+      "addressLocality": "[CITY]",
+      "addressRegion": "[STATE]",
+      "postalCode": "[ZIP CODE]",
+      "addressCountry": "US"
+    }
+  };
+
+  // Create FAQ schema
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -111,15 +126,10 @@ function generateSchemaJson(faqData) {
     }))
   };
 
-  if (faqSchemaIndex !== -1) {
-    // Update existing FAQ schema
-    schemaJson[faqSchemaIndex] = faqSchema;
-  } else {
-    // Add new FAQ schema
-    schemaJson.push(faqSchema);
-  }
-  
-  return JSON.stringify(schemaJson, null, 2);
+  return {
+    localBusinessSchema,
+    faqSchema
+  };
 }
 
 // Main execution
@@ -138,8 +148,8 @@ try {
   // Generate the FAQ HTML
   const faqHtml = generateFaqHtml(faqData);
 
-  // Generate the updated schema JSON
-  const schemaJson = generateSchemaJson(faqData);
+  // Generate the schemas
+  const { localBusinessSchema, faqSchema } = generateSchemas(faqData);
 
   // Read the index.html file
   const indexPath = path.join(__dirname, 'index.html');
@@ -156,14 +166,24 @@ try {
   
   indexHtml = indexHtml.replace(faqSectionRegex, newFaqSection);
 
+  // Create schema script tags
+  const schemaScripts = `
+    <script type="application/ld+json" id="localBusinessSchema">
+      ${JSON.stringify(localBusinessSchema, null, 2)}
+    </script>
+    <script type="application/ld+json" id="faqSchema">
+      ${JSON.stringify(faqSchema, null, 2)}
+    </script>`;
+
+  // Remove existing schema script reference
+  indexHtml = indexHtml.replace(/<script src="data\/schema\.json"[^>]*><\/script>/, '');
+
+  // Add schema scripts before </head>
+  indexHtml = indexHtml.replace('</head>', `${schemaScripts}\n</head>`);
+
   // Write the updated index.html
   console.log(`Writing updated index.html to ${indexPath}`);
   fs.writeFileSync(indexPath, indexHtml);
-
-  // Write the updated schema.json
-  const schemaPath = path.join(__dirname, 'data', 'schema.json');
-  console.log(`Writing updated schema.json to ${schemaPath}`);
-  fs.writeFileSync(schemaPath, schemaJson);
 
   console.log('FAQ build process completed successfully!');
 } catch (error) {

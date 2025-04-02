@@ -23,10 +23,80 @@
     <link href="css/styles.css" rel="stylesheet">
     
     <!-- Schema markup for SEO -->
-    <script src="data/schema.json" type="application/ld+json"></script>
+    
     
     <!-- reCAPTCHA Script -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script type="application/ld+json" id="localBusinessSchema">
+      {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "[COMPANY NAME]",
+  "description": "[COMPANY DESCRIPTION - 1-2 SENTENCES ABOUT YOUR MAIN SERVICE]",
+  "url": "[COMPANY WEBSITE URL]",
+  "sameAs": [
+    "[FACEBOOK URL]",
+    "[LINKEDIN URL]"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[STREET ADDRESS]",
+    "addressLocality": "[CITY]",
+    "addressRegion": "[STATE]",
+    "postalCode": "[ZIP CODE]",
+    "addressCountry": "US"
+  }
+}
+    </script>
+    <script type="application/ld+json" id="faqSchema">
+      {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What types of insurance do concrete contractors need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Concrete contractors typically need several types of insurance including:\r- General Liability Insurance\r- Workers' Compensation Insurance\r- Commercial Auto Insurance\r- Inland Marine Insurance (for equipment)\r- Professional Liability Insurance (for design-build contractors)\r- Umbrella/Excess Liability Insurance\r\n\nEach provides different coverage for the various risks associated with concrete work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does concrete contractor insurance cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The cost of concrete contractor insurance varies widely based on several factors including:\r- Your company's annual revenue\r- Number of employees\r- Types of projects you take on\r- Location\r- Claims history\r- Coverage limits\r\n\nOn average, small concrete contractors might pay $2,000-$5,000 annually for a basic general liability policy, while larger operations could pay significantly more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need workers' compensation insurance if I'm a sole proprietor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most states, sole proprietors without employees are not legally required to carry workers' compensation insurance for themselves. However, there are several reasons you might still need this coverage:\r\n\n- Many general contractors and project owners require it before allowing you on a jobsite\r- It provides medical coverage if you're injured while working\r- Some states do require all contractors to have coverage regardless of employee status\r\n\nAlways check your specific state requirements and client contract requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does general liability insurance cover for concrete contractors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "General liability insurance for concrete contractors typically covers:\r\n\n- Third-party bodily injury (customer or visitor injuries)\r- Third-party property damage (damage to a client's property)\r- Completed operations (issues arising after project completion)\r- Personal and advertising injury (slander, libel, copyright infringement)\r\n\nIt does NOT typically cover damage to your own equipment, employee injuries, or professional errors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is concrete contractor insurance more expensive than some other trades?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Concrete work often carries higher insurance rates because:\r\n\n1. The material is heavy and can cause significant property damage\r2. Concrete work involves specialized equipment that poses injury risks\r3. Structural concrete work has long-term liability exposure if failures occur\r4. The caustic nature of materials can cause chemical burns and injuries\r5. Errors in concrete work can be extremely costly to remedy\r\n\nInsurance companies base premiums on historical claims data, and concrete contractors face these specific risk factors."
+      }
+    }
+  ]
+}
+    </script>
 </head>
 <body>
     <!-- Announcement Bar -->
@@ -232,37 +302,47 @@
 
     <!-- FAQ Section -->
     <section id="faq" class="section faq-section">
-        <div class="container">
-            <h2 class="section-title">[FAQ SECTION HEADLINE]</h2>
-            
-            <div style="max-width: 48rem; margin: 0 auto;">
-                <div class="faq-item">
-                    <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">[FAQ QUESTION 1]</h3>
-                    <p style="margin: 0;">[FAQ ANSWER 1 - BE SPECIFIC AND COMPREHENSIVE]</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">[FAQ QUESTION 2]</h3>
-                    <p style="margin: 0;">[FAQ ANSWER 2 - BE SPECIFIC AND COMPREHENSIVE]</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">[FAQ QUESTION 3]</h3>
-                    <p style="margin: 0;">[FAQ ANSWER 3 - BE SPECIFIC AND COMPREHENSIVE]</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">[FAQ QUESTION 4]</h3>
-                    <p style="margin: 0;">[FAQ ANSWER 4 - BE SPECIFIC AND COMPREHENSIVE]</p>
-                </div>
-                
-                <div class="faq-item" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
-                    <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">[FAQ QUESTION 5]</h3>
-                    <p style="margin: 0;">[FAQ ANSWER 5 - BE SPECIFIC AND COMPREHENSIVE]</p>
-                </div>
-            </div>
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions About Concrete Contractor Insurance</h2>
+    
+    <div style="max-width: 48rem; margin: 0 auto;">
+        <div class="faq-item" style="">
+            <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">What types of insurance do concrete contractors need?</h3>
+            <p style="margin: 0.5rem 0;">Concrete contractors typically need several types of insurance including:- General Liability Insurance- Workers' Compensation Insurance- Commercial Auto Insurance- Inland Marine Insurance (for equipment)- Professional Liability Insurance (for design-build contractors)- Umbrella/Excess Liability Insurance</p>
+<p style="margin: 0.5rem 0;">Each provides different coverage for the various risks associated with concrete work.</p>
         </div>
-    </section>
+        <div class="faq-item" style="">
+            <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">How much does concrete contractor insurance cost?</h3>
+            <p style="margin: 0.5rem 0;">The cost of concrete contractor insurance varies widely based on several factors including:- Your company's annual revenue- Number of employees- Types of projects you take on- Location- Claims history- Coverage limits</p>
+<p style="margin: 0.5rem 0;">On average, small concrete contractors might pay $2,000-$5,000 annually for a basic general liability policy, while larger operations could pay significantly more.</p>
+        </div>
+        <div class="faq-item" style="">
+            <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">Do I need workers' compensation insurance if I'm a sole proprietor?</h3>
+            <p style="margin: 0.5rem 0;">In most states, sole proprietors without employees are not legally required to carry workers' compensation insurance for themselves. However, there are several reasons you might still need this coverage:</p>
+<ul style="list-style-type: disc; padding-left: 1.5rem; margin: 0.5rem 0;">
+            <li>Many general contractors and project owners require it before allowing you on a jobsite- It provides medical coverage if you're injured while working- Some states do require all contractors to have coverage regardless of employee status</li>
+          </ul>
+<p style="margin: 0.5rem 0;">Always check your specific state requirements and client contract requirements.</p>
+        </div>
+        <div class="faq-item" style="">
+            <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">What does general liability insurance cover for concrete contractors?</h3>
+            <p style="margin: 0.5rem 0;">General liability insurance for concrete contractors typically covers:</p>
+<ul style="list-style-type: disc; padding-left: 1.5rem; margin: 0.5rem 0;">
+            <li>Third-party bodily injury (customer or visitor injuries)- Third-party property damage (damage to a client's property)- Completed operations (issues arising after project completion)- Personal and advertising injury (slander, libel, copyright infringement)</li>
+          </ul>
+<p style="margin: 0.5rem 0;">It does NOT typically cover damage to your own equipment, employee injuries, or professional errors.</p>
+        </div>
+        <div class="faq-item" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
+            <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">Why is concrete contractor insurance more expensive than some other trades?</h3>
+            <p style="margin: 0.5rem 0;">Concrete work often carries higher insurance rates because:</p>
+<ol style="padding-left: 1.5rem; margin: 0.5rem 0;">
+            <li>The material is heavy and can cause significant property damage2. Concrete work involves specialized equipment that poses injury risks3. Structural concrete work has long-term liability exposure if failures occur4. The caustic nature of materials can cause chemical burns and injuries5. Errors in concrete work can be extremely costly to remedy</li>
+          </ol>
+<p style="margin: 0.5rem 0;">Insurance companies base premiums on historical claims data, and concrete contractors face these specific risk factors.</p>
+        </div>
+    </div>
+    </div>
+  </section>
 
     <!-- Contact/Lead Capture Section -->
     <section id="contact" class="section contact-section">
