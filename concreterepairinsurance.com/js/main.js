@@ -1,58 +1,89 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
+// Use passive listeners for better scroll performance
+const passiveSupported = () => {
+    let passive = false;
+    try {
+        const options = Object.defineProperty({}, 'passive', {
+            get: function() { passive = true; }
+        });
+        window.addEventListener('test', null, options);
+        window.removeEventListener('test', null, options);
+    } catch(err) {}
+    return passive;
+}
+
+const passiveListener = passiveSupported() ? { passive: true } : false;
+
+// Initialize menu functionality
+const initMenu = () => {
     const menuButton = document.getElementById('menuButton');
     const mobileMenu = document.getElementById('mobileMenu');
     
     if (menuButton && mobileMenu) {
-        menuButton.addEventListener('click', function() {
-            if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
-                mobileMenu.style.display = 'block';
+        const toggleMenu = (show) => {
+            mobileMenu.style.display = show ? 'block' : 'none';
+            if (show) {
+                document.body.style.overflow = 'hidden';
             } else {
-                mobileMenu.style.display = 'none';
+                document.body.style.overflow = '';
             }
-        });
+        };
+
+        menuButton.addEventListener('click', () => {
+            const isVisible = mobileMenu.style.display === 'block';
+            toggleMenu(!isVisible);
+        }, passiveListener);
         
         // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
+        document.addEventListener('click', (event) => {
             if (event.target !== menuButton && !menuButton.contains(event.target) && 
                 event.target !== mobileMenu && !mobileMenu.contains(event.target)) {
-                mobileMenu.style.display = 'none';
+                toggleMenu(false);
             }
-        });
+        }, passiveListener);
     }
-    
-    // Contact modal functionality
+};
+
+// Initialize modal functionality
+const initModal = () => {
     const contactButton = document.getElementById('contactButton');
     const contactModal = document.getElementById('contactModal');
     const closeModal = document.getElementById('closeModal');
     
     if (contactButton && contactModal && closeModal) {
-        // Add hover effect
-        contactButton.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.1)';
-            this.style.boxShadow = '0 6px 10px rgba(0, 0, 0, 0.2)';
-        });
+        const toggleModal = (show) => {
+            contactModal.style.display = show ? 'flex' : 'none';
+            if (show) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        };
+
+        // Use CSS transitions instead of direct style manipulation
+        contactButton.classList.add('hover:scale-110', 'hover:shadow-lg', 'transition-transform', 'duration-200');
         
-        contactButton.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1)';
-            this.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
-        });
-        
-        // Open modal on click
-        contactButton.addEventListener('click', function() {
-            contactModal.style.display = 'flex';
-        });
-        
-        // Close modal
-        closeModal.addEventListener('click', function() {
-            contactModal.style.display = 'none';
-        });
+        // Event listeners with passive option where applicable
+        contactButton.addEventListener('click', () => toggleModal(true), passiveListener);
+        closeModal.addEventListener('click', () => toggleModal(false), passiveListener);
         
         // Close modal when clicking outside
-        contactModal.addEventListener('click', function(event) {
+        contactModal.addEventListener('click', (event) => {
             if (event.target === contactModal) {
-                contactModal.style.display = 'none';
+                toggleModal(false);
             }
-        });
+        }, passiveListener);
+    }
+};
+
+// Initialize on DOM load
+document.addEventListener('DOMContentLoaded', () => {
+    initMenu();
+    // Lazy load modal initialization
+    const contactButton = document.getElementById('contactButton');
+    if (contactButton) {
+        contactButton.addEventListener('mouseenter', () => {
+            initModal();
+            contactButton.removeEventListener('mouseenter', initModal);
+        }, passiveListener);
     }
 });

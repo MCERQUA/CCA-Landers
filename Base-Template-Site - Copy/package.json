@@ -1,9 +1,0 @@
-{
-  "name": "concrete-contractor-insurance-site",
-  "version": "1.0.0",
-  "description": "Insurance landing page with dynamic FAQ system",
-  "scripts": {
-    "build": "node build-faq.js"
-  },
-  "dependencies": {}
-}

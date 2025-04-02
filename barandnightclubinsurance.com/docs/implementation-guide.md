@@ -14,7 +14,7 @@ Add these tags to the `<head>` section of your HTML:
 <!-- Open Graph Tags for Social Sharing -->
 <meta property="og:title" content="[COMPANY NAME] | [MAIN SERVICE]" />
 <meta property="og:description" content="[DESCRIPTION]" />
-<meta property="og:image" content="https://[YOUR-DOMAIN.COM]/images/[YOUR-OG-IMAGE].webp" />
+<meta property="og:image" content="https://[YOUR-DOMAIN.COM]/images/[YOUR-logo-IMAGE].webp" />
 <meta property="og:url" content="https://[YOUR-DOMAIN.COM]/[CURRENT-PAGE]" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="[COMPANY NAME]" />
