@@ -98,6 +98,14 @@ function generateSchemas(faqData) {
     "name": "[COMPANY NAME]",
     "description": "[COMPANY DESCRIPTION - 1-2 SENTENCES ABOUT YOUR MAIN SERVICE]",
     "url": "[COMPANY WEBSITE URL]",
+    "telephone": "844-967-5247",
+    "priceRange": "$$$",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.contractorschoiceagency.com/images/company-logo.webp",
+      "width": "800",
+      "height": "600"
+    },
     "sameAs": [
       "[FACEBOOK URL]",
       "[LINKEDIN URL]"
@@ -108,7 +116,22 @@ function generateSchemas(faqData) {
       "addressLocality": "[CITY]",
       "addressRegion": "[STATE]",
       "postalCode": "[ZIP CODE]",
-      "addressCountry": "US"
+      "addressCountry": {
+        "@type": "Country",
+        "name": "US"
+      }
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "17:00"
     }
   };
 
