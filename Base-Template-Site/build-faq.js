@@ -116,12 +116,22 @@ function generateSchemas(faqData) {
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
+    'name': 'Concrete Contractor Insurance FAQ',
+    'description': 'Comprehensive guide to insurance requirements, costs, and coverage types for concrete contractors',
+    'datePublished': '2025-04-02',
+    'dateModified': new Date().toISOString().split('T')[0],
+    'publisher': {
+      '@type': 'Organization',
+      'name': 'Contractors Choice Agency',
+      'url': 'https://www.contractorschoiceagency.com'
+    },
     'mainEntity': faqData.questions.map(item => ({
       '@type': 'Question',
       'name': item.question,
       'acceptedAnswer': {
         '@type': 'Answer',
-        'text': item.answer
+        'text': item.answer,
+        'datePublished': '2025-04-02'
       }
     }))
   };
