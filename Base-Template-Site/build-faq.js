@@ -175,8 +175,8 @@ try {
       ${JSON.stringify(faqSchema, null, 2)}
     </script>`;
 
-  // Remove existing schema script reference
-  indexHtml = indexHtml.replace(/<script src="data\/schema\.json"[^>]*><\/script>/, '');
+  // Remove all existing schema scripts
+  indexHtml = indexHtml.replace(/<script type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>\s*/g, '');
 
   // Add schema scripts before </head>
   indexHtml = indexHtml.replace('</head>', `${schemaScripts}\n</head>`);
