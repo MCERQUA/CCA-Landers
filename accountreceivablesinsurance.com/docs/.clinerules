@@ -44,6 +44,11 @@
 
 ## Technical Notes
 - Uses Tailwind CSS for utility classes
+- Floating contact button requires:
+  * Proper z-index values (99 for button, 100 for modal)
+  * JavaScript event listeners in js/main.js
+  * CSS positioning (fixed for button)
+  * Browser cache may need clearing after CSS/JS updates
 - Custom CSS for brand-specific styles
 - Vanilla JavaScript for all interactions
 - Netlify forms for lead capture
