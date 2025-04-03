@@ -17,6 +17,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeModal = document.getElementById('closeModal');
 
     if (contactButton && contactModal && closeModal) {
+        // Add hover effect
+        contactButton.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.1)';
+            this.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+        });
+        
+        contactButton.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+            this.style.boxShadow = 'none';
+        });
+
+        // Click handler
         contactButton.addEventListener('click', function() {
             contactModal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
