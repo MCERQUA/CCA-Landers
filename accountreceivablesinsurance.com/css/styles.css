@@ -30,6 +30,10 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
+.header-section .hero-title {
+  color: var(--primary-light);
+}
+
 .announcement-bar {
   background-color: var(--secondary);
   color: white;
@@ -224,10 +228,74 @@ input:focus, textarea:focus, select:focus {
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
-       url('../fonts/open-sans-v18-latin-600.woff2') format('woff2'),
-       url('../fonts/open-sans-v18-latin-600.woff') format('woff');
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
+         url('../fonts/open-sans-v18-latin-600.woff2') format('woff2'),
+         url('../fonts/open-sans-v18-latin-600.woff') format('woff');
+}
+
+/* Floating Contact Button */
+.floating-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--secondary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    transition: all 0.3s ease;
+}
+
+.floating-button:hover {
+    background-color: var(--primary);
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Contact Modal Styles */
+#contactModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+}
+
+#contactModal > div {
+    background-color: white;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+#closeModal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-light);
+}
+
+#closeModal:hover {
+    color: var(--text);
 }
