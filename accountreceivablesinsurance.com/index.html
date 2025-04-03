@@ -41,45 +41,121 @@
     </noscript>
     
     <!-- Schema markup for SEO -->
+    
     <script type="application/ld+json" id="localBusinessSchema">
+      {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "[COMPANY NAME]",
+  "description": "[COMPANY DESCRIPTION - 1-2 SENTENCES ABOUT YOUR MAIN SERVICE]",
+  "url": "[COMPANY WEBSITE URL]",
+  "telephone": "844-967-5247",
+  "priceRange": "$$",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.contractorschoiceagency.com/images/company-logo.webp",
+    "width": "800",
+    "height": "600"
+  },
+  "sameAs": [
+    "[FACEBOOK URL]",
+    "[LINKEDIN URL]"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[STREET ADDRESS]",
+    "addressLocality": "[CITY]",
+    "addressRegion": "[STATE]",
+    "postalCode": "[ZIP CODE]",
+    "addressCountry": {
+      "@type": "Country",
+      "name": "US"
+    }
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "09:00",
+    "closes": "17:00"
+  }
+}
+    </script>
+    <script type="application/ld+json" id="faqSchema">
+      {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": "Concrete Contractor Insurance FAQ",
+  "description": "Comprehensive guide to insurance requirements, costs, and coverage types for concrete contractors",
+  "datePublished": "2025-04-02",
+  "dateModified": "2025-04-03",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Contractors Choice Agency",
+    "url": "https://www.contractorschoiceagency.com"
+  },
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Account Receivables Insurance",
-      "description": "Specialized insurance protecting businesses from unpaid invoices and bad debt",
-      "url": "https://www.accountreceivablesinsurance.com",
-      "telephone": "844-967-5247",
-      "priceRange": "$$",
-      "image": {
-        "@type": "ImageObject",
-        "url": "https://www.accountreceivablesinsurance.com/images/account-receivables-insurance.webp",
-        "width": "800",
-        "height": "600"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "12220 E Riggs Road, Suite #105",
-        "addressLocality": "Chandler",
-        "addressRegion": "AZ",
-        "postalCode": "85249",
-        "addressCountry": {
-          "@type": "Country",
-          "name": "US"
-        }
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "09:00",
-        "closes": "17:00"
+      "@type": "Question",
+      "name": "What is account receivables insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Account receivables insurance protects businesses against losses when customers fail to pay their outstanding invoices. It covers:\r- Commercial credit risks\r- Customer insolvency\r- Protracted default (late payments)\r- Political risks for international trade\r- Pre-delivery risks",
+        "datePublished": "2025-04-02"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do businesses need receivables insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Key benefits include:\r- Protecting cash flow and working capital\r- Enabling business growth with credit sales\r- Reducing bad debt reserves\r- Improving borrowing capacity\r- Gaining credit management expertise",
+        "datePublished": "2025-04-02"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of businesses need this coverage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Businesses that benefit most include:\r- Manufacturers and wholesalers\r- Business-to-business service providers\r- Companies with concentrated customer bases\r- Businesses expanding into new markets\r- Companies with thin profit margins",
+        "datePublished": "2025-04-02"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the claims process work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The claims process typically involves:\r1. Notification within specified timeframe (usually 30-90 days)\r2. Submission of proof of debt and collection efforts\r3. Insurer verification and assessment\r4. Payment of claim (typically 70-90% of invoice value)\r5. Possible subrogation efforts by insurer",
+        "datePublished": "2025-04-02"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What factors affect premium costs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Premium considerations include:\r- Industry risk profile\r- Customer credit quality\r- Policy deductible/retention\r- Coverage limits\r- Claims history\r- Geographic exposure",
+        "datePublished": "2025-04-02"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does coverage take to implement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Implementation timeline:\r- Application: 1-2 weeks\r- Underwriting: 2-4 weeks\r- Policy issuance: 1 week\r- Coverage effective immediately after issuance\r- First claims eligible after waiting period (typically 30-90 days)",
+        "datePublished": "2025-04-02"
       }
     }
+  ]
+}
     </script>
 </head>
 <body>
@@ -299,50 +375,60 @@
       <h2 class="section-title">Frequently Asked Questions About Account Receivables Insurance</h2>
     
     <div style="max-width: 48rem; margin: 0 auto;">
-        <div class="faq-item">
-            <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">What types of businesses need account receivables insurance?</h3>
-            <p style="margin: 0.5rem 0;">This coverage is essential for any business that extends credit to customers, including:
-- Manufacturers
-- Wholesalers
-- Distributors
+        <div class="faq-item" style="">
+            <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">What is account receivables insurance?</h3>
+            <p style="margin: 0.5rem 0;">Account receivables insurance protects businesses against losses when customers fail to pay their outstanding invoices. It covers:
+- Commercial credit risks
+- Customer insolvency
+- Protracted default (late payments)
+- Political risks for international trade
+- Pre-delivery risks</p>
+        </div>
+        <div class="faq-item" style="">
+            <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">Why do businesses need receivables insurance?</h3>
+            <p style="margin: 0.5rem 0;">Key benefits include:
+- Protecting cash flow and working capital
+- Enabling business growth with credit sales
+- Reducing bad debt reserves
+- Improving borrowing capacity
+- Gaining credit management expertise</p>
+        </div>
+        <div class="faq-item" style="">
+            <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">What types of businesses need this coverage?</h3>
+            <p style="margin: 0.5rem 0;">Businesses that benefit most include:
+- Manufacturers and wholesalers
 - Business-to-business service providers
-- Exporters</p>
+- Companies with concentrated customer bases
+- Businesses expanding into new markets
+- Companies with thin profit margins</p>
         </div>
-        <div class="faq-item">
-            <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">How much coverage do I need?</h3>
-            <p style="margin: 0.5rem 0;">Coverage amounts are customized based on:
-- Your annual sales volume
-- Customer concentration
-- Average invoice size
-- Industry risk factors
-- Payment terms</p>
+        <div class="faq-item" style="">
+            <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">How does the claims process work?</h3>
+            <p style="margin: 0.5rem 0;">The claims process typically involves:
+1. Notification within specified timeframe (usually 30-90 days)
+2. Submission of proof of debt and collection efforts
+3. Insurer verification and assessment
+4. Payment of claim (typically 70-90% of invoice value)
+5. Possible subrogation efforts by insurer</p>
         </div>
-        <div class="faq-item">
-            <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">What's typically excluded from coverage?</h3>
-            <p style="margin: 0.5rem 0;">Common exclusions include:
-- Disputes over product quality
-- Late payments (without default)
-- Known financial difficulties at policy inception
-- Fraudulent transactions
-- Government accounts (special coverage available)</p>
-        </div>
-        <div class="faq-item">
-            <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">How are premiums calculated?</h3>
-            <p style="margin: 0.5rem 0;">Premiums are based on:
-- Your industry
+        <div class="faq-item" style="">
+            <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">What factors affect premium costs?</h3>
+            <p style="margin: 0.5rem 0;">Premium considerations include:
+- Industry risk profile
 - Customer credit quality
-- Coverage percentage (typically 80-95%)
-- Deductible amount
-- Policy limits
-- Claims history</p>
+- Policy deductible/retention
+- Coverage limits
+- Claims history
+- Geographic exposure</p>
         </div>
         <div class="faq-item" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
-            <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">How long does the application process take?</h3>
-            <p style="margin: 0.5rem 0;">Most applications can be completed in 1-2 weeks. We'll need:
-- 12 months of aging reports
-- Customer concentration details
-- Financial statements
-- Credit policies</p>
+            <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">How long does coverage take to implement?</h3>
+            <p style="margin: 0.5rem 0;">Implementation timeline:
+- Application: 1-2 weeks
+- Underwriting: 2-4 weeks
+- Policy issuance: 1 week
+- Coverage effective immediately after issuance
+- First claims eligible after waiting period (typically 30-90 days)</p>
         </div>
     </div>
     </div>
@@ -378,19 +464,25 @@
                             <label>Don't fill this out if you're human: <input name="bot-field" /></label>
                         </p>
                         
-                        <div style="margin-bottom: 1rem;">
-                            <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Full Name</label>
-                            <input type="text" name="name" style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;" required>
-                        </div>
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Phone Number</label>
+                    <input type="tel" name="phone" style="width: 100%; padding: 0.5rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;" required>
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Best Time to Call</label>
+                    <select name="call-time" style="width: 100%; padding: 0.5rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;">
+                        <option value="morning">Morning (9am-12pm)</option>
+                        <option value="afternoon">Afternoon (12pm-3pm)</option>
+                        <option value="late-afternoon">Late Afternoon (3pm-5pm)</option>
+                    </select>
+                </div>
+                
+                <div data-netlify-recaptcha="true" style="margin-bottom: 1rem;"></div>
                         
                         <div style="margin-bottom: 1rem;">
                             <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Email Address</label>
                             <input type="email" name="email" style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;" required>
-                        </div>
-                        
-                        <div style="margin-bottom: 1rem;">
-                            <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Phone Number</label>
-                            <input type="tel" name="phone" style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;" required>
                         </div>
                         
                         <div style="margin-bottom: 1.5rem;">
@@ -492,32 +584,3 @@
                 
                 <div style="margin-bottom: 1rem;">
                     <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Phone Number</label>
-                    <input type="tel" name="phone" style="width: 100%; padding: 0.5rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;" required>
-                </div>
-                
-                <div style="margin-bottom: 1rem;">
-                    <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Best Time to Call</label>
-                    <select name="call-time" style="width: 100%; padding: 0.5rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;">
-                        <option value="morning">Morning (9am-12pm)</option>
-                        <option value="afternoon">Afternoon (12pm-3pm)</option>
-                        <option value="late-afternoon">Late Afternoon (3pm-5pm)</option>
-                    </select>
-                </div>
-                
-                <button type="submit" style="width: 100%; background-color: #0055A4; color: white; font-weight: bold; padding: 0.75rem 1rem; border: none; border-radius: 0.25rem; cursor: pointer;">
-                    Request Call Back
-                </button>
-            </form>
-            
-            <div style="text-align: center;">
-                <p style="margin-bottom: 0.5rem;">Or call us now:</p>
-                <a href="tel:8449675247" style="display: inline-block; background-color: #10B981; color: white; font-weight: bold; padding: 0.75rem 1.5rem; border-radius: 0.25rem; text-decoration: none;">
-                    844-967-5247
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <script src="js/main.js"></script>
-</body>
-</html>

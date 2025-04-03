@@ -1,5 +1,7 @@
 [build]
-  command = "npm run build"
+  command = "npm install && npm run build"
+  publish = "."
 
 [build.environment]
   NODE_VERSION = "16"
+  NPM_FLAGS = "--legacy-peer-deps"
