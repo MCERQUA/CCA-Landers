@@ -170,12 +170,12 @@ body {
 
 .floating-button {
     position: fixed;
-    bottom: 1rem;
+    bottom: env(safe-area-inset-bottom, 1rem);
     right: 1rem;
     background-color: #10B981;
     color: white;
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -184,6 +184,7 @@ body {
     z-index: 50;
     transition: transform 0.2s, box-shadow 0.2s;
     -webkit-tap-highlight-color: transparent;
+    margin: 0;
 }
 
 .floating-button:hover,
@@ -194,6 +195,32 @@ body {
 
 .floating-button:active {
     transform: scale(0.95);
+}
+
+/* Add padding to account for the floating button */
+body {
+    padding-bottom: env(safe-area-inset-bottom, 4rem);
+}
+
+/* Modal styles */
+#contactModal {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#contactModal > div {
+    max-height: calc(100vh - 4rem);
+    margin: 2rem auto;
+    overflow-y: auto;
+    padding: 1.5rem;
+}
+
+@media (max-width: 767px) {
+    #contactModal > div {
+        margin: 1rem;
+        padding: 1rem;
+        max-height: calc(100vh - 2rem);
+    }
 }
 
 @media (min-width: 768px) {
