@@ -182,6 +182,18 @@ body {
     justify-content: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 50;
+    transition: transform 0.2s, box-shadow 0.2s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.floating-button:hover,
+.floating-button:focus {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.floating-button:active {
+    transform: scale(0.95);
 }
 
 @media (min-width: 768px) {

@@ -78,12 +78,5 @@ const initModal = () => {
 // Initialize on DOM load
 document.addEventListener('DOMContentLoaded', () => {
     initMenu();
-    // Lazy load modal initialization
-    const contactButton = document.getElementById('contactButton');
-    if (contactButton) {
-        contactButton.addEventListener('mouseenter', () => {
-            initModal();
-            contactButton.removeEventListener('mouseenter', initModal);
-        }, passiveListener);
-    }
+    initModal();
 });
