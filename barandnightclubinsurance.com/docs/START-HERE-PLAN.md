@@ -1,8 +1,8 @@
 # Comprehensive CCA Landing Page Creation Prompt with Implementation Checklist
 
 ## IMPORTANT: Document Updates
-- [x] **FIRST PRIORITY**: Update this document as you complete each section, marking items as done and noting any changes or issues encountered
-- [x] Maintain this document in the project folder as a record of what has been completed and any modifications made
+- [ ] **FIRST PRIORITY**: Update this document as you complete each section, marking items as done and noting any changes or issues encountered
+- [ ] Maintain this document in the project folder as a record of what has been completed and any modifications made
 
 ## Project Overview
 Please create a new landing page for Bar & Nightclub Insurance using the CCA Base Template. The site should be fully SEO-optimized, mobile-responsive, and conversion-focused to generate insurance quote leads. Follow the comprehensive checklist below to ensure all elements are properly implemented.
@@ -10,11 +10,15 @@ Please create a new landing page for Bar & Nightclub Insurance using the CCA Bas
 ## Phase 1: Project Setup and Research
 
 ### 1.1 Brand and Identity Setup
-- [ ] Extract primary, secondary, and accent colors from client logo
-- [ ] Define typography based on logo style and industry standards
-- [ ] Create a brand style guide document with hex codes, fonts, and usage guidelines
+- [ ] Primary color: Deep Purple (#3C1053) for headers/navigation
+- [ ] Secondary color: Electric Blue (#00B4D8) for accents/buttons
+- [ ] Accent color: Neon Pink (#FF36AB) for high-impact CTAs
+- [ ] Typography: 
+  - [ ] Montserrat Bold for headers/navigation
+  - [ ] Open Sans for body text
+  - [ ] Bebas Neue for special highlights
 - [ ] Update CSS variables with brand colors
-- [ ] Replace all company logo images with client logo (must use WebP format)
+- [ ] Replace all company logo images with bar-nightclub specific logo (must use WebP format)
 
 ### 1.2 Company Information
 - [ ] Update company name throughout the site
@@ -62,11 +66,11 @@ Please create a new landing page for Bar & Nightclub Insurance using the CCA Bas
   - [ ] Address (complete with street, city, state, zip)
   - [ ] Opening hours (verify these match actual business hours)
   - [ ] Image URL (must be absolute URL with https://)
-- [x] Update FAQ schema with industry-specific questions:
-  - [x] At least 5 questions with complete answers
-  - [x] Ensure questions match visible FAQ section on page EXACTLY
-  - [x] Update datePublished and dateModified with current date
-  - [x] Double-check that no placeholder text remains in the FAQ schema
+- [ ] Update FAQ schema with industry-specific questions:
+  - [ ] At least 5 questions with complete answers
+  - [ ] Ensure questions match visible FAQ section on page EXACTLY
+  - [ ] Update datePublished and dateModified with current date
+  - [ ] Double-check that no placeholder text remains in the FAQ schema
 - [ ] Verify no duplicate schema exists (check for multiple script tags with same schema type)
 
 ### 2.3 Technical Optimizations
@@ -118,20 +122,20 @@ Please create a new landing page for Bar & Nightclub Insurance using the CCA Bas
 - [ ] Add descriptive alt text for all logos
 
 ### 3.5 FAQ Section and Automation
-- [x] Create or update the `data/faq.md` file following the correct format:
-  - [x] Level 1 heading (`#`) for the section title containing the primary keyword
-  - [x] Level 2 headings (`##`) for each question
-  - [x] Plain text below each question for the answer
-  - [x] Blank lines between paragraphs for multi-paragraph answers
-  - [x] Format lists with either `-` for bullet points or numbers followed by periods (`1.`, `2.`) for numbered lists
-- [x] Include at least 5 questions based on Google search research
-- [x] Provide comprehensive answers to each question (200+ words total per question)
+- [ ] Create or update the `data/faq.md` file following the correct format:
+  - [ ] Level 1 heading (`#`) for the section title containing the primary keyword
+  - [ ] Level 2 headings (`##`) for each question
+  - [ ] Plain text below each question for the answer
+  - [ ] Blank lines between paragraphs for multi-paragraph answers
+  - [ ] Format lists with either `-` for bullet points or numbers followed by periods (`1.`, `2.`) for numbered lists
+- [ ] Include at least 5 questions based on Google search research
+- [ ] Provide comprehensive answers to each question (200+ words total per question)
   - Updated all FAQ content to focus on nightclub insurance needs including liquor liability, assault coverage, and special event considerations
-- [x] Verified FAQ automation system is working correctly:
-  - [x] data/faq.md exists and is properly formatted
-  - [x] build-faq.js script is unmodified
-  - [x] package.json contains correct build script
-  - [x] netlify.toml is properly configured
+- [ ] Verified FAQ automation system is working correctly:
+  - [ ] data/faq.md exists and is properly formatted
+  - [ ] build-faq.js script is unmodified
+  - [ ] package.json contains correct build script
+  - [ ] netlify.toml is properly configured
 - [ ] CRITICAL: The FAQ content in `data/faq.md` will be automatically used to:
   - Update the visible FAQ section in the HTML
   - Update the FAQ schema in the head section of index.html
@@ -227,41 +231,11 @@ Please create a new landing page for Bar & Nightclub Insurance using the CCA Bas
 - [ ] After changes are committed to GitHub, the build process will automatically run
 - [ ] The site will be rebuilt with updated FAQ content in both places
 
-### 6.4 Testing the FAQ Automation
-- [ ] Verify the `data/faq.md` file exists and is formatted correctly
-- [ ] Verify the `build-faq.js` script exists and has not been modified
-- [ ] Verify the `package.json` and `netlify.toml` files have the correct build commands
-
-## Phase 7: GitHub Repository Management
-
-### 7.1 Repository Structure
-- [ ] Verify all files are properly added to the GitHub repository
-- [ ] The repository structure should be:
-  - Project Root (repository root)
-    - Base-Template-Site (source template)
-    - [PROJECT-NAME] (the new website folder)
-- [ ] All necessary files must be included:
-  - index.html
-  - success.html
-  - data/faq.md
-  - build-faq.js
-  - package.json
-  - netlify.toml
-  - css/styles.css
-  - js/main.js
-  - images folder with all required images
-
-### 7.2 Critical Files Verification
+### 8 Critical Verification
 - [ ] Verify build-faq.js script is unmodified from the template
 - [ ] Verify package.json contains the correct build script
 - [ ] Verify netlify.toml is configured properly for the build process
 - [ ] Verify proper image structure is maintained
-
-### 7.3 Deployment Process
-- [ ] The website will be hosted on GitHub
-- [ ] You will NOT be responsible for the actual deployment
-- [ ] The site will be manually deployed on Netlify from the repository
-- [ ] Ensure all files are committed and pushed to the repository
 
 ## Critical Issues to Watch For
 
@@ -328,10 +302,7 @@ Please create a new landing page for Bar & Nightclub Insurance using the CCA Bas
   - FAQ section: 400-500 words
   - Contact section: 100-150 words
 
-### Source Files
-- The template website is located at: `E:\1-ECHO-WORKING-FOLDER\LOCAL-FILES\CCA-Landers\Base-Template-Site`
-- Documentation is in the docs folder
-- The company information is:
+### Company information
   - Address: 12220 E Riggs Road, Suite #105, Chandler, AZ 85249
   - Phone: 844-967-5247
   - Email: josh@contractorschoiceagency.com

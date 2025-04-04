@@ -1,22 +1,25 @@
 /* Base styles in case Tailwind fails */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
-    line-height: 1.5;
-    color: #333;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #f8f9fa;
+    background-color: #121212;
     margin: 0;
 }
 
 .announcement-bar {
-    background-color: #EAB308;
+    background-color: #3C1053;
     color: white;
     text-align: center;
     padding: 0.5rem;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .header-section {
-    background-color: #1E3A8A;
+    background-color: #3C1053;
     color: white;
     padding: 2rem 1rem;
+    background: linear-gradient(135deg, #3C1053 0%, #00B4D8 100%);
 }
 
 .container {
@@ -60,37 +63,40 @@ body {
 }
 
 .problem-solution {
-    background-color: white;
+    background-color: #1a1a1a;
 }
 
 .problem-box {
-    background-color: #F3F4F6;
+    background-color: rgba(60, 16, 83, 0.3);
     padding: 1.5rem;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
+    border: 1px solid #3C1053;
 }
 
 .solution-box {
-    background-color: #EFF6FF;
+    background-color: rgba(0, 180, 216, 0.2);
     padding: 1.5rem;
     border-radius: 0.5rem;
+    border: 1px solid #00B4D8;
 }
 
 .features-section {
-    background-color: #F3F4F6;
+    background-color: #1a1a1a;
 }
 
 .feature-card {
-    background-color: white;
+    background-color: rgba(18, 18, 18, 0.8);
     padding: 1.5rem;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 180, 216, 0.1);
+    border: 1px solid #3C1053;
 }
 
 .feature-icon {
-    background-color: #DBEAFE;
-    color: #1E3A8A;
+    background-color: #3C1053;
+    color: #00B4D8;
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
@@ -101,33 +107,34 @@ body {
 }
 
 .testimonial-card {
-    background-color: #F9FAFB;
+    background-color: rgba(18, 18, 18, 0.8);
     padding: 1.5rem;
     border-radius: 0.5rem;
-    border: 1px solid #E5E7EB;
+    border: 1px solid #3C1053;
     margin-bottom: 1rem;
 }
 
 .faq-section {
-    background-color: #F3F4F6;
+    background-color: #1a1a1a;
 }
 
 .faq-item {
-    border-bottom: 1px solid #E5E7EB;
+    border-bottom: 1px solid #3C1053;
     padding-bottom: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
 .contact-section {
-    background-color: #1E3A8A;
+    background: linear-gradient(135deg, #3C1053 0%, #121212 100%);
     color: white;
 }
 
 .contact-form {
-    background-color: white;
-    color: #333;
+    background-color: rgba(18, 18, 18, 0.8);
+    color: #f8f9fa;
     padding: 1.5rem;
     border-radius: 0.5rem;
+    border: 1px solid #00B4D8;
 }
 
 .form-field {
@@ -143,14 +150,23 @@ body {
 .form-input {
     width: 100%;
     padding: 0.5rem;
-    border: 1px solid #D1D5DB;
+    background-color: rgba(18, 18, 18, 0.5);
+    border: 1px solid #3C1053;
     border-radius: 0.25rem;
+    color: #f8f9fa;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #00B4D8;
+    box-shadow: 0 0 0 2px rgba(0, 180, 216, 0.2);
 }
 
 .footer {
-    background-color: #111827;
+    background: linear-gradient(135deg, #3C1053 0%, #121212 100%);
     color: white;
     padding: 2rem 1rem;
+    border-top: 1px solid #00B4D8;
 }
 
 .footer-heading {
@@ -170,18 +186,121 @@ body {
 
 .floating-button {
     position: fixed;
-    bottom: 1rem;
+    bottom: env(safe-area-inset-bottom, 1rem);
     right: 1rem;
-    background-color: #10B981;
+    background-color: #FF36AB;
     color: white;
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 50;
+    transition: transform 0.2s, box-shadow 0.2s;
+    -webkit-tap-highlight-color: transparent;
+    margin: 0;
+}
+
+.floating-button:hover,
+.floating-button:focus {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.floating-button:active {
+    transform: scale(0.95);
+}
+
+/* Add padding to account for the floating button */
+body {
+    padding-bottom: env(safe-area-inset-bottom, 4rem);
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Section animations */
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Card animations */
+.feature-card, .testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover, .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Modal styles */
+#contactModal {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#contactModal.visible {
+    opacity: 1;
+}
+
+#contactModal > div {
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+#contactModal.visible > div {
+    transform: scale(1);
+}
+
+@media (max-width: 767px) {
+    #contactModal > div {
+        margin: 1rem;
+        padding: 1rem;
+        max-height: calc(100vh - 2rem);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media (min-width: 768px) {
+    #contactModal > div {
+        width: 500px;
+        max-width: 90%;
+        max-height: none;
+        height: auto;
+        overflow: visible;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 }
 
 @media (min-width: 768px) {
