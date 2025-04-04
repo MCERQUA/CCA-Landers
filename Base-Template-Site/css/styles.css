@@ -258,9 +258,8 @@ body {
 #contactModal > div {
     transform: scale(0.95);
     transition: transform 0.3s ease;
-    max-height: calc(100vh - 4rem);
     margin: 2rem auto;
-    padding: 1.5rem;
+    padding: 2rem;
 }
 
 #contactModal.visible > div {
@@ -279,9 +278,12 @@ body {
 
 @media (min-width: 768px) {
     #contactModal > div {
+        width: 500px;
+        max-width: 90%;
         max-height: none;
         height: auto;
         overflow: visible;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 }
 
