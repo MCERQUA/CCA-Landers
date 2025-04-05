@@ -170,18 +170,121 @@ body {
 
 .floating-button {
     position: fixed;
-    bottom: 1rem;
+    bottom: env(safe-area-inset-bottom, 1rem);
     right: 1rem;
     background-color: #10B981;
     color: white;
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 50;
+    transition: transform 0.2s, box-shadow 0.2s;
+    -webkit-tap-highlight-color: transparent;
+    margin: 0;
+}
+
+.floating-button:hover,
+.floating-button:focus {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.floating-button:active {
+    transform: scale(0.95);
+}
+
+/* Add padding to account for the floating button */
+body {
+    padding-bottom: env(safe-area-inset-bottom, 4rem);
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Section animations */
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Card animations */
+.feature-card, .testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover, .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Modal styles */
+#contactModal {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#contactModal.visible {
+    opacity: 1;
+}
+
+#contactModal > div {
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+#contactModal.visible > div {
+    transform: scale(1);
+}
+
+@media (max-width: 767px) {
+    #contactModal > div {
+        margin: 1rem;
+        padding: 1rem;
+        max-height: calc(100vh - 2rem);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media (min-width: 768px) {
+    #contactModal > div {
+        width: 500px;
+        max-width: 90%;
+        max-height: none;
+        height: auto;
+        overflow: visible;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 }
 
 @media (min-width: 768px) {

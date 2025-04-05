@@ -1,5 +1,9 @@
 # Base Template Site Guidelines
 
+## IMPORTANT
+- **REQUIRED**: Review this document before making any changes to the template
+- **REQUIRED**: Verify all critical elements after implementation (see Critical Implementation Checklist)
+
 ## Overview
 This template is designed for creating professional service landing pages with consistent structure, strong SEO, and high conversion rates. All sites use Netlify for form handling and include reCAPTCHA integration.
 
@@ -31,7 +35,7 @@ This template is designed for creating professional service landing pages with c
    - Value propositions
 
 2. Visual Elements
-   - Replace company-logo.webp (hero image)
+   - Replace company-logo.webp with new image in /images folder (with the actual company name) (hero image)
    - Replace logo-[1-5].webp (partner/certification logos)
    - Update color scheme in styles.css
    - Adjust typography if needed
@@ -61,6 +65,31 @@ This template is designed for creating professional service landing pages with c
 - Clear call-to-action buttons
 - Consistent spacing and typography
 - Professional, clean aesthetic
+
+## Critical Implementation Checklist
+
+### Technical Implementation
+- [ ] Verify reCAPTCHA appears on BOTH forms (main and modal)
+- [ ] Verify floating contact button is visible and functional
+- [ ] Verify both schema blocks (LocalBusiness and FAQ) are complete
+- [ ] Verify FAQ content matches schema exactly
+- [ ] Verify Open Graph and Twitter Card tags are properly set
+- [ ] Verify NO placeholder content remains (search for "[" and "]")
+
+### Content Verification
+- [ ] Verify total word count is 1,500+ words
+- [ ] Verify consistent voice and tone throughout
+- [ ] Verify all placeholder images have been replaced
+- [ ] Verify hero section title text is clearly visible
+- [ ] Verify company name in header is clearly visible
+
+### FAQ Automation
+- [ ] ONLY edit data/faq.md for FAQ content
+- [ ] NEVER manually edit FAQ section in index.html
+- [ ] NEVER manually edit FAQ schema in head section
+- [ ] Verify build-faq.js script is unmodified
+- [ ] Verify package.json contains correct build script
+- [ ] Verify netlify.toml is configured properly
 
 ## Best Practices
 1. SEO
@@ -113,6 +142,31 @@ This template is designed for creating professional service landing pages with c
    - Clear, direct answers
    - Industry-specific concerns
    - Structured with schema markup for rich snippets
+
+## Implementation Phases
+
+### Phase 1: Project Setup
+- Brand and identity setup (colors, typography)
+- Company information updates
+- SEO research and documentation
+
+### Phase 2: Technical Implementation  
+- Meta information updates
+- Schema markup implementation
+- Technical optimizations (image compression, lazy loading)
+
+### Phase 3: Content Implementation
+- Header/hero section updates
+- Problem/solution section
+- Benefits/features section
+- Social proof section
+- FAQ section and automation
+- Contact/lead capture section
+
+### Phase 4: Final Verification
+- Complete Critical Implementation Checklist
+- Validate all forms and interactive elements
+- Test across devices and browsers
 
 ## Security Enhancements
 - reCAPTCHA integration on all forms
