@@ -3,35 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[COMPANY NAME] - Thank You</title>
+    <title>Fight Club Insurance - Thank You</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Barlow+Condensed:wght@500;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
     
     <!-- External CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Barlow', sans-serif;
+            background-color: #FFFFFF;
+            color: #333333;
+            line-height: 1.6;
+        }
+        
+        h1, h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #000000;
+        }
+        
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .content-box {
+            max-width: 600px;
+            padding: 2rem;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            background-color: #D20000;
+            color: #FFFFFF;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        .next-steps {
+            background-color: #E0B88D;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin: 2rem 0;
+            border: 2px solid #000000;
+        }
+        
+        .next-steps ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .next-steps li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            text-align: left;
+        }
+        
+        .next-steps li::before {
+            content: '✓';
+            color: #D20000;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+    </style>
 </head>
 <body>
-    <div class="container" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 2rem;">
-        <div style="max-width: 600px;">
-            <h1 style="font-size: 2rem; font-weight: bold; margin-bottom: 1rem;">[SUCCESS PAGE HEADLINE]</h1>
+    <div class="container">
+        <div class="content-box">
+            <h1 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Thank You For Your Submission</h1>
             
-            <p style="font-size: 1.125rem; margin-bottom: 2rem;">[SUCCESS MESSAGE - EXPLAIN WHAT HAPPENS NEXT AND WHEN THEY'LL BE CONTACTED]</p>
+            <p style="font-size: 1.125rem; margin-bottom: 1.5rem;">
+                We've received your request and a Fight Club Insurance specialist will contact you within 24 hours 
+                to discuss your combat sports insurance needs.
+            </p>
             
-            <div style="background-color: #F3F4F6; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 2rem;">
-                <h2 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 1rem;">[NEXT STEPS HEADLINE]</h2>
-                <ul style="list-style-type: none; padding: 0;">
-                    <li style="margin-bottom: 0.75rem;">✓ [NEXT STEP 1]</li>
-                    <li style="margin-bottom: 0.75rem;">✓ [NEXT STEP 2]</li>
-                    <li>✓ [NEXT STEP 3]</li>
+            <div class="next-steps">
+                <h2 style="font-size: 1.5rem; margin-bottom: 1rem; text-align: center;">What Happens Next</h2>
+                <ul>
+                    <li>We'll review your information and prepare a customized quote</li>
+                    <li>A specialist will call you at the number provided</li>
+                    <li>We'll explain your coverage options and answer any questions</li>
                 </ul>
             </div>
             
-            <p style="margin-bottom: 1rem;">[IMMEDIATE ASSISTANCE MESSAGE]</p>
-            <a href="tel:[PHONE NUMBER]" style="display: inline-block; background-color: #10B981; color: white; font-weight: bold; padding: 0.75rem 1.5rem; border-radius: 0.25rem; text-decoration: none; margin-bottom: 2rem;">
-                [CALL NOW BUTTON TEXT]
+            <p style="margin-bottom: 1.5rem; font-weight: 500;">
+                Need immediate assistance? Call us now to speak with a representative.
+            </p>
+            <a href="tel:844-967-5247" class="btn-primary">
+                Call Now: 844-967-5247
             </a>
             
-            <div>
-                <a href="index.html" style="color: #2563EB; text-decoration: underline;">← Return to homepage</a>
+            <div style="margin: 3rem 0 2rem;">
+                <a href="index.html" style="color: #D20000; text-decoration: underline; font-weight: bold;">← Return to homepage</a>
+            </div>
+
+            <div class="testimonials" style="margin-top: 3rem; width: 100%;">
+                <h2 style="font-family: 'Bebas Neue'; font-size: 1.8rem; margin-bottom: 1.5rem; text-transform: uppercase;">What Our Fighters Say</h2>
+                <div style="display: flex; gap: 1rem; overflow-x: auto; padding: 1rem 0; justify-content: center;">
+                    <div style="flex: 0 0 auto; width: 150px; text-align: center;">
+                        <img src="images/reviews/man.webp" alt="Customer review" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #D20000; margin: 0 auto 0.5rem;">
+                        <p style="font-size: 0.9rem; font-weight: 500;">"Saved me thousands!"</p>
+                    </div>
+                    <div style="flex: 0 0 auto; width: 150px; text-align: center;">
+                        <img src="images/reviews/woman.webp" alt="Customer review" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #D20000; margin: 0 auto 0.5rem;">
+                        <p style="font-size: 0.9rem; font-weight: 500;">"Best coverage!"</p>
+                    </div>
+                    <div style="flex: 0 0 auto; width: 150px; text-align: center;">
+                        <img src="images/reviews/man2.webp" alt="Customer review" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #D20000; margin: 0 auto 0.5rem;">
+                        <p style="font-size: 0.9rem; font-weight: 500;">"Fight-approved!"</p>
+                    </div>
+                    <div style="flex: 0 0 auto; width: 150px; text-align: center;">
+                        <img src="images/reviews/woman-2.webp" alt="Customer review" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #D20000; margin: 0 auto 0.5rem;">
+                        <p style="font-size: 0.9rem; font-weight: 500;">"No hidden fees"</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

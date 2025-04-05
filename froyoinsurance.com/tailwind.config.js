@@ -12,6 +12,13 @@ module.exports = {
         secondary: '#EAB308',
         success: '#10B981',
         danger: '#DC2626',
+        icecream: {
+          vanilla: '#FFF8E1',
+          chocolate: '#D7CCC8',
+          strawberry: '#FFCDD2',
+          mint: '#C8E6C9',
+          blueberry: '#BBDEFB',
+        }
       },
     },
   },

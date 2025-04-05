@@ -89,20 +89,36 @@ function generateFaqHtml(faqData) {
   return html;
 }
 
+// Configurable publisher info
+const publisherConfig = {
+  name: "Contractors Choice Agency",
+  url: "https://www.contractorschoiceagency.com",
+  logo: "https://www.contractorschoiceagency.com/images/company-logo.webp",
+  phone: "844-967-5247",
+  address: {
+    street: "[STREET ADDRESS]",
+    city: "[CITY]",
+    state: "[STATE]",
+    zip: "[ZIP CODE]"
+  }
+};
+
 // Function to generate schema JSON
 function generateSchemas(faqData) {
+  const today = new Date().toISOString().split('T')[0];
+  
   // Create LocalBusiness schema
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "[COMPANY NAME]",
-    "description": "[COMPANY DESCRIPTION - 1-2 SENTENCES ABOUT YOUR MAIN SERVICE]",
-    "url": "[COMPANY WEBSITE URL]",
-    "telephone": "844-967-5247",
+    "name": publisherConfig.name,
+    "description": faqData.title ? `${faqData.title} - ${publisherConfig.name}` : publisherConfig.name,
+    "url": publisherConfig.url,
+    "telephone": publisherConfig.phone,
     "priceRange": "$$$",
     "image": {
       "@type": "ImageObject",
-      "url": "https://www.contractorschoiceagency.com/images/company-logo.webp",
+      "url": publisherConfig.logo,
       "width": "800",
       "height": "600"
     },
@@ -112,10 +128,10 @@ function generateSchemas(faqData) {
     ],
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "[STREET ADDRESS]",
-      "addressLocality": "[CITY]",
-      "addressRegion": "[STATE]",
-      "postalCode": "[ZIP CODE]",
+      "streetAddress": publisherConfig.address.street,
+      "addressLocality": publisherConfig.address.city,
+      "addressRegion": publisherConfig.address.state,
+      "postalCode": publisherConfig.address.zip,
       "addressCountry": {
         "@type": "Country",
         "name": "US"
@@ -139,14 +155,29 @@ function generateSchemas(faqData) {
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    'name': 'Concrete Contractor Insurance FAQ',
-    'description': 'Comprehensive guide to insurance requirements, costs, and coverage types for concrete contractors',
-    'datePublished': '2025-04-02',
-    'dateModified': new Date().toISOString().split('T')[0],
+    'name': faqData.title || 'FAQ',
+    'description': faqData.title ? `${faqData.title} - Frequently Asked Questions` : 'Frequently Asked Questions',
+    'datePublished': today,
+    'dateModified': today,
     'publisher': {
       '@type': 'Organization',
-      'name': 'Contractors Choice Agency',
-      'url': 'https://www.contractorschoiceagency.com'
+      'name': publisherConfig.name,
+      'url': publisherConfig.url,
+      'logo': {
+        '@type': 'ImageObject',
+        'url': publisherConfig.logo,
+        'width': 800,
+        'height': 600
+      },
+      'address': {
+        '@type': 'PostalAddress',
+        'streetAddress': publisherConfig.address.street,
+        'addressLocality': publisherConfig.address.city,
+        'addressRegion': publisherConfig.address.state,
+        'postalCode': publisherConfig.address.zip,
+        'addressCountry': 'US'
+      },
+      'telephone': publisherConfig.phone
     },
     'mainEntity': faqData.questions.map(item => ({
       '@type': 'Question',
@@ -154,7 +185,7 @@ function generateSchemas(faqData) {
       'acceptedAnswer': {
         '@type': 'Answer',
         'text': item.answer,
-        'datePublished': '2025-04-02'
+        'datePublished': today
       }
     }))
   };

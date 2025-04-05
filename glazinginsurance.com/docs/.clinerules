@@ -90,6 +90,10 @@ This template is designed for creating professional service landing pages with c
 - [ ] Verify build-faq.js script is unmodified
 - [ ] Verify package.json contains correct build script
 - [ ] Verify netlify.toml is configured properly
+- [ ] Ensure schema uses dynamic title from FAQ markdown
+- [ ] Verify publisher info is configurable
+- [ ] Check date handling is automatic
+- [ ] Confirm no industry-specific defaults remain
 
 ## Best Practices
 1. SEO

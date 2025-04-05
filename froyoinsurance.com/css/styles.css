@@ -4,6 +4,7 @@ body {
     line-height: 1.5;
     color: #333;
     margin: 0;
+    background-color: var(--icecream-vanilla, #FFF8E1);
 }
 
 .announcement-bar {
@@ -50,6 +51,7 @@ body {
 
 .section {
     padding: 3rem 1rem;
+    background-color: var(--icecream-blueberry, #BBDEFB);
 }
 
 .section-title {
@@ -60,18 +62,18 @@ body {
 }
 
 .problem-solution {
-    background-color: white;
+    background-color: var(--icecream-vanilla, #FFF8E1);
 }
 
 .problem-box {
-    background-color: #F3F4F6;
+    background-color: var(--icecream-mint, #C8E6C9);
     padding: 1.5rem;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
 }
 
 .solution-box {
-    background-color: #EFF6FF;
+    background-color: var(--icecream-strawberry, #FFCDD2);
     padding: 1.5rem;
     border-radius: 0.5rem;
 }
@@ -81,7 +83,7 @@ body {
 }
 
 .feature-card {
-    background-color: white;
+    background-color: var(--icecream-mint, #C8E6C9);
     padding: 1.5rem;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
@@ -101,7 +103,7 @@ body {
 }
 
 .testimonial-card {
-    background-color: #F9FAFB;
+    background-color: var(--icecream-vanilla, #FFF8E1);
     padding: 1.5rem;
     border-radius: 0.5rem;
     border: 1px solid #E5E7EB;
@@ -109,7 +111,7 @@ body {
 }
 
 .faq-section {
-    background-color: #F3F4F6;
+    background-color: var(--icecream-blueberry, #BBDEFB);
 }
 
 .faq-item {
@@ -124,7 +126,7 @@ body {
 }
 
 .contact-form {
-    background-color: white;
+    background-color: var(--icecream-chocolate, #D7CCC8);
     color: #333;
     padding: 1.5rem;
     border-radius: 0.5rem;
@@ -200,6 +202,67 @@ body {
 /* Add padding to account for the floating button */
 body {
     padding-bottom: env(safe-area-inset-bottom, 4rem);
+}
+
+/* Sprinkle styles */
+.sprinkle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    will-change: transform;
+    z-index: 10;
+    opacity: 0.1;
+    animation: float 6s ease-in-out infinite;
+}
+
+.header-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background: 
+        radial-gradient(8px 8px at 90% 20%, #FCD34D, transparent),
+        radial-gradient(10px 10px at 10% 70%, #F472B6, transparent),
+        radial-gradient(8px 8px at 40% 30%, #5EEAD4, transparent),
+        radial-gradient(10px 10px at 60% 90%, #FCD34D, transparent),
+        radial-gradient(8px 8px at 30% 50%, #F472B6, transparent),
+        radial-gradient(10px 10px at 70% 10%, #5EEAD4, transparent),
+        radial-gradient(8px 8px at 20% 80%, #FFF07C, transparent),
+        radial-gradient(10px 10px at 50% 40%, #8A2BE2, transparent);
+    opacity: 0.8;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(-20px) translateX(0);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) translateX(20px);
+        opacity: 0;
+    }
+}
+
+.sprinkle {
+    animation: float 4s linear infinite;
+    animation-delay: calc(var(--i) * 0.2s);
+}
+
+/* Section containers need relative positioning */
+.header-section, 
+.problem-solution, 
+.features-section {
+    position: relative;
+    overflow: hidden;
 }
 
 /* Animation keyframes */

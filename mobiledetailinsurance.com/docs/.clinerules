@@ -143,6 +143,20 @@ This template is designed for creating professional service landing pages with c
    - Industry-specific concerns
    - Structured with schema markup for rich snippets
 
+## Style Implementation Protocol
+
+1. For any style changes:
+   - First check tailwind.config.js for existing colors/classes
+   - Prefer using Tailwind classes directly in HTML
+   - Only use custom CSS when absolutely necessary
+   - Document changes in brand-style-guide.md
+
+2. Verification Steps:
+   - [ ] Test changes in development mode
+   - [ ] Verify production build
+   - [ ] Check multiple browsers
+   - [ ] Clear cache before testing
+
 ## Implementation Phases
 
 ### Phase 1: Project Setup

@@ -111,9 +111,86 @@ const initScrollAnimations = () => {
     });
 };
 
+class SprinkleManager {
+    constructor() {
+        this.sprinkles = [];
+        this.colors = ['#FF9AA2', '#FFB7B2', '#FFDAC1', '#E2F0CB', '#B5EAD7', '#C7CEEA'];
+        this.maxSprinkles = 50;
+        this.activeSections = ['.header-section', '.problem-solution', 'features-section'];
+    }
+
+    createSprinkle(section) {
+        if (this.sprinkles.length >= this.maxSprinkles) return;
+        
+        const sprinkle = document.createElement('div');
+        sprinkle.className = 'sprinkle';
+        
+        // Random properties
+        const size = Math.random() * 5 + 3;
+        const color = this.colors[Math.floor(Math.random() * this.colors.length)];
+        
+        // Initial position
+        const startX = Math.random() * section.offsetWidth;
+        
+        Object.assign(sprinkle.style, {
+            width: `${size}px`,
+            height: `${size}px`,
+            backgroundColor: color,
+            left: `${startX}px`,
+            top: `-10px`
+        });
+        
+        section.appendChild(sprinkle);
+        
+        this.sprinkles.push({
+            element: sprinkle,
+            x: startX,
+            y: -10,
+            speed: Math.random() * 2 + 1,
+            drift: Math.random() * 2 - 1,
+            rotation: Math.random() * 360
+        });
+    }
+
+    update() {
+        this.sprinkles.forEach((sprinkle, index) => {
+            sprinkle.y += sprinkle.speed;
+            sprinkle.x += sprinkle.drift;
+            sprinkle.rotation += sprinkle.drift * 2;
+            
+            sprinkle.element.style.transform = `translate(${sprinkle.x}px, ${sprinkle.y}px) rotate(${sprinkle.rotation}deg)`;
+            
+            // Remove if off screen
+            if (sprinkle.y > sprinkle.element.parentElement.offsetHeight + 20) {
+                sprinkle.element.remove();
+                this.sprinkles.splice(index, 1);
+            }
+        });
+    }
+
+    init() {
+        this.activeSections.forEach(sectionId => {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                // Create initial sprinkles
+                setInterval(() => this.createSprinkle(section), 300);
+            }
+        });
+        
+        // Animation loop
+        const animate = () => {
+            this.update();
+            requestAnimationFrame(animate);
+        };
+        animate();
+    }
+}
+
 // Initialize on DOM load
 document.addEventListener('DOMContentLoaded', () => {
     initMenu();
     initModal();
     initScrollAnimations();
+    const sprinkleManager = new SprinkleManager();
+    sprinkleManager.init();
 });

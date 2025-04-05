@@ -73,6 +73,12 @@ const initModal = () => {
         
         // Event listeners with passive option where applicable
         contactButton.addEventListener('click', () => toggleModal(true), passiveListener);
+        
+        // Connect floating phone button to modal
+        const floatingPhoneButton = document.getElementById('floatingPhoneButton');
+        if (floatingPhoneButton) {
+            floatingPhoneButton.addEventListener('click', () => toggleModal(true), passiveListener);
+        }
         closeModal.addEventListener('click', () => toggleModal(false), passiveListener);
         
         // Close modal when clicking outside

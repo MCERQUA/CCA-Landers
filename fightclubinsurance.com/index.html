@@ -2,37 +2,257 @@
 <html lang="en">
 <head>
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Contractors Choice Agency">
-    <meta property="og:description" content="Get the best insurance solutions for contractors">
-    <meta property="og:image" content="images/optimized/company-logo-large.webp">
-    <meta property="og:url" content="https://www.contractorschoiceagency.com">
+    <meta property="og:title" content="Fight Club Insurance">
+    <meta property="og:description" content="Specialized Protection for Combat Sports">
+    <meta property="og:image" content="images/fightclub-insurance.webp">
+    <meta property="og:url" content="https://www.fightclubinsurance.com">
     <meta property="og:type" content="website">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contractors Choice Agency">
-    <meta name="twitter:description" content="Get the best insurance solutions for contractors">
-    <meta name="twitter:image" content="images/optimized/company-logo-large.webp">
+    <meta name="twitter:title" content="Fight Club Insurance">
+    <meta name="twitter:description" content="Specialized Protection for Combat Sports">
+    <meta name="twitter:image" content="images/fightclub-insurance.webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[COMPANY NAME] | [MAIN SERVICE/VALUE PROPOSITION]</title>
-    <meta name="description" content="[2-3 SENTENCES ABOUT YOUR MAIN SERVICE AND VALUE PROPOSITION. INCLUDE KEY BENEFITS AND TARGET AUDIENCE.]">
+    <title>Fight Club Insurance | Specialized Protection for Combat Sports</title>
+    <meta name="description" content="Fight Club Insurance provides tailored insurance solutions for fighters, gyms, and combat sports professionals. Get comprehensive coverage for martial arts, boxing, MMA, and more at competitive rates.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Barlow+Condensed:wght@500;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
     
     <!-- Critical CSS -->
     <style>
-      /* Critical path CSS */
-      body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans',sans-serif;line-height:1.5;color:#333;margin:0}
-      .announcement-bar{background-color:#EAB308;color:#fff;text-align:center;padding:.5rem}
-      .header-section{background-color:#1E3A8A;color:#fff;padding:2rem 1rem}
-      .container{width:100%;max-width:1200px;margin:0 auto;padding-left:1.25rem;padding-right:1.25rem}
-      .hero-title{font-size:2rem;font-weight:700;margin-bottom:1rem}
-      .cta-button{display:inline-block;background-color:#EAB308;color:#fff;font-weight:700;padding:.75rem 1.5rem;border-radius:.25rem;text-decoration:none;margin-top:1rem}
+      /* Base Styles */
+      body {
+        font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+        line-height: 1.6;
+        color: #333333;
+        margin: 0;
+        background-color: #FFFFFF;
+      }
+      
+      /* Announcement Bar */
+      .announcement-bar {
+        background-color: #000000;
+        color: #FFFFFF;
+        text-align: center;
+        padding: 0.5rem;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.875rem;
+      }
+      
+      /* Container */
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+      }
+      
+      /* Headings */
+      h1, h2, h3, h4 {
+        font-family: 'Bebas Neue', 'Barlow Condensed', sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #000000;
+        letter-spacing: 1.5px;
+        line-height: 1.15;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+      }
+      
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      h2 {
+        font-size: 2rem;
+      }
+      
+      /* Buttons */
+      .btn-primary {
+        display: inline-block;
+        background-color: #D20000;
+        color: #FFFFFF;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 700;
+        padding: 0.75rem 1.5rem;
+        border-radius: 4px;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 0.2s ease;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      }
+      
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      }
+      
+      /* Hero Section */
+      .hero-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        color: #FFFFFF;
+        padding: 4rem 1rem;
+        text-align: center;
+        background: #1A2E3C;
+      }
+
+      .hero-logo {
+        max-width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: contain;
+      }
+
+      @media (min-width: 768px) {
+        .hero-section {
+          flex-direction: row;
+          text-align: center;
+          padding: 4rem;
+        }
+        .hero-content {
+          flex: 1;
+        }
+        .hero-logo {
+          flex: 1;
+          max-height: 400px;
+        }
+      }
+      
+      .hero-title {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #FFD700; /* Gold/yellow color */
+        text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline effect */
+      }
+      
+      .hero-subtitle {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 500;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+      }
+      
+      /* Feature Cards */
+      .feature-card {
+        background: linear-gradient(135deg, #FFFFFF 0%, #E0B88D 100%);
+        border: 3px solid #000000;
+        border-radius: 8px;
+        padding: 2rem;
+        box-shadow: 0 4px 20px rgba(210, 0, 0, 0.2), 
+                    0 0 0 1px rgba(255,255,255,0.3) inset;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .feature-card::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(210,0,0,0.1) 0%, rgba(210,0,0,0) 70%);
+        transition: all 0.5s ease;
+        opacity: 0;
+      }
+      
+      .feature-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 25px rgba(210, 0, 0, 0.3),
+                    0 0 0 2px rgba(255,255,255,0.5) inset;
+      }
+      
+      .feature-card:hover::before {
+        opacity: 1;
+      }
+      
+      .feature-card h3 {
+        color: #D20000;
+        text-shadow: 1px 1px 0 #000, 
+                    -1px -1px 0 #000, 
+                    1px -1px 0 #000, 
+                    -1px 1px 0 #000;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      
+      .feature-card ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      
+      .feature-card li {
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      .feature-card li::before {
+        content: '•';
+        color: #D20000;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+      }
+      
+      .feature-icon svg {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-bottom: 1rem;
+        filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.3));
+      }
+      
+      /* Testimonials */
+      .testimonial-card {
+        background-color: #E0B88D;
+        border-radius: 4px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+      
+      /* Form Elements */
+      input, select, textarea {
+        background-color: #E0B88D;
+        border: 1px solid #333333;
+        border-radius: 4px;
+        padding: 0.75rem;
+        width: 100%;
+        font-family: 'Barlow', sans-serif;
+      }
+      
+      /* Footer */
+      .footer {
+        background-color: #1A2E3C;
+        color: #FFFFFF;
+        padding: 3rem 0;
+      }
+      
+      .footer a {
+        color: #FFFFFF;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+      
+      .footer a:hover {
+        color: #D20000;
+      }
     </style>
     
     <!-- Preload critical assets -->
-    <link rel="preload" href="images/optimized/company-logo-large.webp" as="image" fetchpriority="high">
-    <link rel="preload" href="images/optimized/company-logo-medium.webp" as="image" media="(max-width: 1200px)">
-    <link rel="preload" href="images/optimized/company-logo-small.webp" as="image" media="(max-width: 600px)">
+    <link rel="preload" href="images/fightclub-insurance.webp" as="image" fetchpriority="high">
     
     <!-- Deferred CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" media="print" onload="this.media='all'">
@@ -41,243 +261,29 @@
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet">
     </noscript>
-    
-    <!-- Schema markup for SEO -->
-    
-    
-    <!-- reCAPTCHA Script -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-    
-    
-    
-    <script type="application/ld+json" id="localBusinessSchema">
-      {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "[COMPANY NAME]",
-  "description": "[COMPANY DESCRIPTION - 1-2 SENTENCES ABOUT YOUR MAIN SERVICE]",
-  "url": "[COMPANY WEBSITE URL]",
-  "telephone": "844-967-5247",
-  "priceRange": "$$",
-  "image": {
-    "@type": "ImageObject",
-    "url": "https://www.contractorschoiceagency.com/images/optimized/company-logo-large.webp",
-    "width": "800",
-    "height": "600"
-  },
-  "sameAs": [
-    "[FACEBOOK URL]",
-    "[LINKEDIN URL]"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "[STREET ADDRESS]",
-    "addressLocality": "[CITY]",
-    "addressRegion": "[STATE]",
-    "postalCode": "[ZIP CODE]",
-    "addressCountry": {
-      "@type": "Country",
-      "name": "US"
-    }
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday"
-    ],
-    "opens": "09:00",
-    "closes": "17:00"
-  }
-}
-    </script>
-    <script type="application/ld+json" id="faqSchema">
-      {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "name": "Concrete Contractor Insurance FAQ",
-  "description": "Comprehensive guide to insurance requirements, costs, and coverage types for concrete contractors",
-  "datePublished": "2025-04-02",
-  "dateModified": "2025-04-02",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Contractors Choice Agency",
-    "url": "https://www.contractorschoiceagency.com"
-  },
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What types of insurance do concrete contractors need?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Concrete contractors typically need several types of insurance including:\r- General Liability Insurance\r- Workers' Compensation Insurance\r- Commercial Auto Insurance\r- Inland Marine Insurance (for equipment)\r- Professional Liability Insurance (for design-build contractors)\r- Umbrella/Excess Liability Insurance\r\n\nEach provides different coverage for the various risks associated with concrete work.",
-        "datePublished": "2025-04-02"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does concrete contractor insurance cost?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The cost of concrete contractor insurance varies widely based on several factors including:\r- Your company's annual revenue\r- Number of employees\r- Types of projects you take on\r- Location\r- Claims history\r- Coverage limits\r\n\nOn average, small concrete contractors might pay $2,000-$5,000 annually for a basic general liability policy, while larger operations could pay significantly more.",
-        "datePublished": "2025-04-02"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I need workers' compensation insurance if I'm a sole proprietor?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "In most states, sole proprietors without employees are not legally required to carry workers' compensation insurance for themselves. However, there are several reasons you might still need this coverage:\r\n\n- Many general contractors and project owners require it before allowing you on a jobsite\r- It provides medical coverage if you're injured while working\r- Some states do require all contractors to have coverage regardless of employee status\r\n\nAlways check your specific state requirements and client contract requirements.",
-        "datePublished": "2025-04-02"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What does general liability insurance cover for concrete contractors?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "General liability insurance for concrete contractors typically covers:\r\n\n- Third-party bodily injury (customer or visitor injuries)\r- Third-party property damage (damage to a client's property)\r- Completed operations (issues arising after project completion)\r- Personal and advertising injury (slander, libel, copyright infringement)\r\n\nIt does NOT typically cover damage to your own equipment, employee injuries, or professional errors.",
-        "datePublished": "2025-04-02"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why is concrete contractor insurance more expensive than some other trades?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Concrete work often carries higher insurance rates because:\r\n\n1. The material is heavy and can cause significant property damage\r2. Concrete work involves specialized equipment that poses injury risks\r3. Structural concrete work has long-term liability exposure if failures occur\r4. The caustic nature of materials can cause chemical burns and injuries\r5. Errors in concrete work can be extremely costly to remedy\r\n\nInsurance companies base premiums on historical claims data, and concrete contractors face these specific risk factors.",
-        "datePublished": "2025-04-02"
-      }
-    }
-  ]
-}
-    </script>
 </head>
 <body>
     <!-- Announcement Bar -->
     <div class="announcement-bar">
-        <div class="container">
-            <p>Limited Time: Get a free risk assessment with your quote. <a href="#contact" class="text-white underline">Learn More</a></p>
-        </div>
+        24/7 Claims Support for Combat Athletes | Licensed in All 50 States | Call: 844-967-5247
     </div>
 
     <!-- Header Section -->
-    <header class="header-section">
-        <div class="container">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-            <div style="font-size: 1.5rem; font-weight: bold;">[COMPANY NAME]</div>
-                <nav style="display: none;">
-                    <!-- Hidden on mobile -->
-                    <ul style="display: flex; gap: 1.5rem;">
-                        <li><a href="#benefits" style="color: white;">Coverage</a></li>
-                        <li><a href="#testimonials" style="color: white;">Testimonials</a></li>
-                        <li><a href="#faq" style="color: white;">FAQ</a></li>
-                        <li><a href="#contact" class="cta-button" style="padding: 0.5rem 1rem;">Get a Quote</a></li>
-                    </ul>
-                </nav>
-                <button id="menuButton" style="background-color: #2563EB; color: white; padding: 0.5rem 1rem; border-radius: 0.25rem; border: none;">Menu</button>
-            </div>
-            
-            <div id="mobileMenu" style="display: none; margin-bottom: 1.5rem;">
-                <div style="background-color: #2563EB; border-radius: 0.25rem; overflow: hidden;">
-                    <a href="#benefits" style="display: block; padding: 0.75rem 1rem; color: white; border-bottom: 1px solid rgba(255,255,255,0.1);">Coverage</a>
-                    <a href="#testimonials" style="display: block; padding: 0.75rem 1rem; color: white; border-bottom: 1px solid rgba(255,255,255,0.1);">Testimonials</a>
-                    <a href="#faq" style="display: block; padding: 0.75rem 1rem; color: white; border-bottom: 1px solid rgba(255,255,255,0.1);">FAQ</a>
-                    <a href="#contact" style="display: block; padding: 0.75rem 1rem; color: white; background-color: #EAB308; text-align: center; font-weight: bold;">Get a Quote</a>
-                </div>
-            </div>
-            
-            <div class="flex-row">
-                <div class="flex-half" style="margin-bottom: 2rem;">
-                    <h1 class="hero-title">[MAIN HEADLINE - DESCRIBE YOUR PRIMARY SERVICE/SOLUTION]</h1>
-                    <p style="font-size: 1.125rem; margin-bottom: 1.5rem;">[SUBHEADLINE - EXPLAIN YOUR UNIQUE VALUE PROPOSITION AND KEY BENEFITS]</p>
-                    <a href="#contact" class="cta-button">Get Your Custom Quote</a>
-                </div>
-                <div class="flex-half">
-                    <img 
-                        src="images/placeholder-logo.webp"
-                        alt="Contractors Choice Agency Logo"
-                        width="800"
-                        height="600"
-                        style="width: 100%; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);"
-                        loading="eager"
-                        decoding="async">
-                </div>
+    <header class="hero-section">
+            <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; width: 100%;">
+            <img src="images/fightclub-insurance.webp" alt="Fight Club Insurance Logo" class="hero-logo">
+            <div class="hero-content" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+                <h1 class="hero-title">FIGHT CLUB INSURANCE</h1>
+                <p class="hero-subtitle">Specialized Protection for Combat Sports</p>
+                <a href="#contact" class="btn-primary">Get Your Free Quote</a>
             </div>
         </div>
     </header>
 
-    <!-- Problem/Solution Section -->
-    <section class="section problem-solution">
+    <!-- Features Section -->
+    <section id="features" class="section">
         <div class="container">
-            <h2 class="section-title">[PROBLEM STATEMENT - WHY EXISTING SOLUTIONS AREN'T ENOUGH]</h2>
-            
-            <div class="flex-row">
-                <div class="flex-half">
-                    <div class="problem-box">
-                        <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 1rem; color: #DC2626;">[PAIN POINTS HEADLINE]</h3>
-                        <ul style="list-style-type: none; padding: 0; margin: 0;">
-                            <li style="display: flex; margin-bottom: 0.75rem;">
-                                <span style="color: #DC2626; margin-right: 0.5rem;">✕</span>
-                                <p style="margin: 0;">[PAIN POINT 1 - SPECIFIC PROBLEM YOUR CUSTOMERS FACE]</p>
-                            </li>
-                            <li style="display: flex; margin-bottom: 0.75rem;">
-                                <span style="color: #DC2626; margin-right: 0.5rem;">✕</span>
-                                <p style="margin: 0;">[PAIN POINT 2 - ANOTHER SPECIFIC PROBLEM]</p>
-                            </li>
-                            <li style="display: flex; margin-bottom: 0.75rem;">
-                                <span style="color: #DC2626; margin-right: 0.5rem;">✕</span>
-                                <p style="margin: 0;">[PAIN POINT 3 - ANOTHER SPECIFIC PROBLEM]</p>
-                            </li>
-                            <li style="display: flex;">
-                                <span style="color: #DC2626; margin-right: 0.5rem;">✕</span>
-                                <p style="margin: 0;">[PAIN POINT 4 - ANOTHER SPECIFIC PROBLEM]</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="flex-half">
-                    <div class="solution-box">
-                        <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 1rem; color: #059669;">[SOLUTION HEADLINE]</h3>
-                        <ul style="list-style-type: none; padding: 0; margin: 0;">
-                            <li style="display: flex; margin-bottom: 0.75rem;">
-                                <span style="color: #059669; margin-right: 0.5rem;">✓</span>
-                                <p style="margin: 0;">[SOLUTION 1 - HOW YOU SOLVE PAIN POINT 1]</p>
-                            </li>
-                            <li style="display: flex; margin-bottom: 0.75rem;">
-                                <span style="color: #059669; margin-right: 0.5rem;">✓</span>
-                                <p style="margin: 0;">[SOLUTION 2 - HOW YOU SOLVE PAIN POINT 2]</p>
-                            </li>
-                            <li style="display: flex; margin-bottom: 0.75rem;">
-                                <span style="color: #059669; margin-right: 0.5rem;">✓</span>
-                                <p style="margin: 0;">[SOLUTION 3 - HOW YOU SOLVE PAIN POINT 3]</p>
-                            </li>
-                            <li style="display: flex;">
-                                <span style="color: #059669; margin-right: 0.5rem;">✓</span>
-                                <p style="margin: 0;">[SOLUTION 4 - HOW YOU SOLVE PAIN POINT 4]</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="#contact" class="cta-button" style="background-color: #1E3A8A;">[CALL TO ACTION - WHAT THE USER SHOULD DO NEXT]</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits/Features Section -->
-    <section id="benefits" class="section features-section">
-        <div class="container">
-            <h2 class="section-title">[FEATURES SECTION HEADLINE]</h2>
-            <p style="text-align: center; font-size: 1.125rem; margin-bottom: 2rem; max-width: 48rem; margin-left: auto; margin-right: auto;">[FEATURES SECTION SUBHEADLINE - OVERVIEW OF YOUR OFFERINGS]</p>
+            <h2 class="section-title">Comprehensive Coverage for Combat Sports</h2>
             
             <div class="grid-3">
                 <div class="feature-card">
@@ -286,12 +292,12 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                         </svg>
                     </div>
-                    <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.75rem;">[FEATURE 1 TITLE]</h3>
-                    <ul style="padding-left: 1.25rem;">
-                        <li>[FEATURE 1 BENEFIT 1]</li>
-                        <li>[FEATURE 1 BENEFIT 2]</li>
-                        <li>[FEATURE 1 BENEFIT 3]</li>
-                        <li>[FEATURE 1 BENEFIT 4]</li>
+                    <h3>Fighter Protection</h3>
+                    <ul>
+                        <li>Coverage for training and competition injuries</li>
+                        <li>Medical expense reimbursement</li>
+                        <li>Disability protection</li>
+                        <li>Accidental death & dismemberment</li>
                     </ul>
                 </div>
                 
@@ -301,12 +307,12 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                         </svg>
                     </div>
-                    <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.75rem;">[FEATURE 2 TITLE]</h3>
-                    <ul style="padding-left: 1.25rem;">
-                        <li>[FEATURE 2 BENEFIT 1]</li>
-                        <li>[FEATURE 2 BENEFIT 2]</li>
-                        <li>[FEATURE 2 BENEFIT 3]</li>
-                        <li>[FEATURE 2 BENEFIT 4]</li>
+                    <h3>Gym & Dojo Coverage</h3>
+                    <ul>
+                        <li>General liability for member injuries</li>
+                        <li>Property damage protection</li>
+                        <li>Equipment and facility coverage</li>
+                        <li>Professional liability for instructors</li>
                     </ul>
                 </div>
                 
@@ -316,12 +322,12 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                         </svg>
                     </div>
-                    <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.75rem;">[FEATURE 3 TITLE]</h3>
-                    <ul style="padding-left: 1.25rem;">
-                        <li>[FEATURE 3 BENEFIT 1]</li>
-                        <li>[FEATURE 3 BENEFIT 2]</li>
-                        <li>[FEATURE 3 BENEFIT 3]</li>
-                        <li>[FEATURE 3 BENEFIT 4]</li>
+                    <h3>Event Coverage</h3>
+                    <ul>
+                        <li>Tournament and competition liability</li>
+                        <li>Spectator injury protection</li>
+                        <li>Venue damage coverage</li>
+                        <li>Event cancellation insurance</li>
                     </ul>
                 </div>
             </div>
@@ -331,165 +337,143 @@
     <!-- Social Proof Section -->
     <section id="testimonials" class="section">
         <div class="container">
-            <h2 class="section-title">[SOCIAL PROOF HEADLINE]</h2>
+            <h2 class="section-title">Trusted by Combat Sports Professionals</h2>
             
             <div class="grid-2">
                 <div class="testimonial-card">
                     <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                        <div style="width: 4rem; height: 4rem; background-color: #DBEAFE; border-radius: 50%; margin-right: 1rem;"></div>
+                        <img src="images/reviews/man-4.webp" alt="John Martinez" style="width: 4rem; height: 4rem; border-radius: 50%; margin-right: 1rem; object-fit: cover;">
                         <div>
-                            <h4 style="font-weight: bold; margin: 0;">[CUSTOMER NAME 1]</h4>
-                            <p style="margin: 0; color: #6B7280;">[CUSTOMER COMPANY 1]</p>
+                            <h4>John Martinez</h4>
+                            <p>Owner, Phoenix MMA Academy</p>
                         </div>
                     </div>
-                    <p style="font-style: italic; margin: 0;">[TESTIMONIAL 1 - INCLUDE SPECIFIC RESULTS AND BENEFITS]</p>
+                    <p>"After struggling with standard insurance that wouldn't cover sparring injuries, Fight Club Insurance saved us. When a student was injured during training, they processed our claim in 48 hours with no pushback. Their specialized knowledge of combat sports is unmatched."</p>
                 </div>
                 
                 <div class="testimonial-card">
                     <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                        <div style="width: 4rem; height: 4rem; background-color: #DBEAFE; border-radius: 50%; margin-right: 1rem;"></div>
+                        <img src="images/reviews/woman.webp" alt="Sarah Rodriguez" style="width: 4rem; height: 4rem; border-radius: 50%; margin-right: 1rem; object-fit: cover;">
                         <div>
-                            <h4 style="font-weight: bold; margin: 0;">[CUSTOMER NAME 2]</h4>
-                            <p style="margin: 0; color: #6B7280;">[CUSTOMER COMPANY 2]</p>
+                            <h4>Sarah Rodriguez</h4>
+                            <p>Professional MMA Fighter</p>
                         </div>
                     </div>
-                    <p style="font-style: italic; margin: 0;">[TESTIMONIAL 2 - INCLUDE SPECIFIC RESULTS AND BENEFITS]</p>
+                    <p>"As a pro fighter, I need coverage that understands the risks of competition. Fight Club Insurance covered my knee surgery after a tournament injury when other insurers denied my claim. They're the only company I trust to protect my career."</p>
                 </div>
             </div>
             
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#testimonials" class="btn-primary">Read More Success Stories</a>
+            </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="section faq-section">
-    <div class="container">
-      <h2 class="section-title">Frequently Asked Questions About Concrete Contractor Insurance</h2>
-    
-    <div style="max-width: 48rem; margin: 0 auto;">
-        <div class="faq-item" style="">
-            <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">What types of insurance do concrete contractors need?</h3>
-            <p style="margin: 0.5rem 0;">Concrete contractors typically need several types of insurance including:
-- General Liability Insurance
-- Workers' Compensation Insurance
-- Commercial Auto Insurance
-- Inland Marine Insurance (for equipment)
-- Professional Liability Insurance (for design-build contractors)
-- Umbrella/Excess Liability Insurance
-</p>
-<p style="margin: 0.5rem 0;">Each provides different coverage for the various risks associated with concrete work.</p>
+    <section id="faq" class="section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+        
+            <div style="max-width: 48rem; margin: 0 auto;">
+                <div class="feature-card" style="margin-bottom: 1.5rem;">
+                    <h3>What types of insurance do fighters and gyms need?</h3>
+                    <p>Combat sports professionals typically need:</p>
+                    <ul>
+                        <li>General Liability Insurance</li>
+                        <li>Professional Liability for instructors</li>
+                        <li>Participant Accident coverage</li>
+                        <li>Equipment and property insurance</li>
+                        <li>Event liability coverage for competitions</li>
+                        <li>Workers' Compensation for employees</li>
+                    </ul>
+                    <p>Each provides different coverage for the unique risks in combat sports.</p>
+                </div>
+                
+                <div class="feature-card" style="margin-bottom: 1.5rem;">
+                    <h3>How much does combat sports insurance cost?</h3>
+                    <p>Costs vary based on:</p>
+                    <ul>
+                        <li>Type and size of your facility</li>
+                        <li>Number of participants</li>
+                        <li>Training methods used</li>
+                        <li>Location and state requirements</li>
+                        <li>Coverage limits selected</li>
+                    </ul>
+                    <p>Most gyms pay $1,500-$5,000 annually for comprehensive coverage, while individual fighters can get coverage starting at $300/year.</p>
+                </div>
+                
+                <div class="feature-card" style="margin-bottom: 1.5rem;">
+                    <h3>Does insurance cover sparring and competition injuries?</h3>
+                    <p>Our specialized policies explicitly cover:</p>
+                    <ul>
+                        <li>Training injuries during sparring and drills</li>
+                        <li>Competition injuries in sanctioned events</li>
+                        <li>Medical expenses for participants</li>
+                        <li>Liability protection for the gym</li>
+                    </ul>
+                    <p>Standard insurance often excludes combat sports, which is why specialized coverage is essential.</p>
+                </div>
+            </div>
         </div>
-        <div class="faq-item" style="">
-            <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">How much does concrete contractor insurance cost?</h3>
-            <p style="margin: 0.5rem 0;">The cost of concrete contractor insurance varies widely based on several factors including:
-- Your company's annual revenue
-- Number of employees
-- Types of projects you take on
-- Location
-- Claims history
-- Coverage limits
-</p>
-<p style="margin: 0.5rem 0;">On average, small concrete contractors might pay $2,000-$5,000 annually for a basic general liability policy, while larger operations could pay significantly more.</p>
-        </div>
-        <div class="faq-item" style="">
-            <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">Do I need workers' compensation insurance if I'm a sole proprietor?</h3>
-            <p style="margin: 0.5rem 0;">In most states, sole proprietors without employees are not legally required to carry workers' compensation insurance for themselves. However, there are several reasons you might still need this coverage:
-</p>
-<ul style="list-style-type: disc; padding-left: 1.5rem; margin: 0.5rem 0;">
-            <li>Many general contractors and project owners require it before allowing you on a jobsite
-- It provides medical coverage if you're injured while working
-- Some states do require all contractors to have coverage regardless of employee status
-</li>
-          </ul>
-<p style="margin: 0.5rem 0;">Always check your specific state requirements and client contract requirements.</p>
-        </div>
-        <div class="faq-item" style="">
-            <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">What does general liability insurance cover for concrete contractors?</h3>
-            <p style="margin: 0.5rem 0;">General liability insurance for concrete contractors typically covers:
-</p>
-<ul style="list-style-type: disc; padding-left: 1.5rem; margin: 0.5rem 0;">
-            <li>Third-party bodily injury (customer or visitor injuries)
-- Third-party property damage (damage to a client's property)
-- Completed operations (issues arising after project completion)
-- Personal and advertising injury (slander, libel, copyright infringement)
-</li>
-          </ul>
-<p style="margin: 0.5rem 0;">It does NOT typically cover damage to your own equipment, employee injuries, or professional errors.</p>
-        </div>
-        <div class="faq-item" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
-            <h3 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem;">Why is concrete contractor insurance more expensive than some other trades?</h3>
-            <p style="margin: 0.5rem 0;">Concrete work often carries higher insurance rates because:
-</p>
-<ol style="padding-left: 1.5rem; margin: 0.5rem 0;">
-            <li>The material is heavy and can cause significant property damage
-2. Concrete work involves specialized equipment that poses injury risks
-3. Structural concrete work has long-term liability exposure if failures occur
-4. The caustic nature of materials can cause chemical burns and injuries
-5. Errors in concrete work can be extremely costly to remedy
-</li>
-          </ol>
-<p style="margin: 0.5rem 0;">Insurance companies base premiums on historical claims data, and concrete contractors face these specific risk factors.</p>
-        </div>
-    </div>
-    </div>
-  </section>
+    </section>
 
     <!-- Contact/Lead Capture Section -->
-    <section id="contact" class="section contact-section">
-        <div class="container" style="padding-left: 1.25rem; padding-right: 1.25rem;">
+    <section id="contact" class="section" style="background-color: #E0B88D;">
+        <div class="container">
             <div class="flex-row">
                 <div class="flex-half" style="margin-bottom: 2rem; padding-right: 1.5rem;">
-                    <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 1rem;">[CONTACT FORM HEADLINE]</h2>
-                    <p style="font-size: 1.125rem; margin-bottom: 1.5rem;">[CONTACT FORM SUBHEADLINE - EXPLAIN WHAT HAPPENS NEXT]</p>
+                    <h2 class="section-title">Get Your Custom Combat Sports Insurance Quote</h2>
+                    <p>Complete this form and one of our combat sports insurance specialists will contact you within 24 hours with a customized quote.</p>
                     <ul style="list-style-type: none; padding: 0; margin: 0 0 1.5rem 0;">
                         <li style="display: flex; margin-bottom: 0.5rem;">
-                            <span style="color: #EAB308; margin-right: 0.5rem;">✓</span>
-                            <p style="margin: 0;">[BENEFIT 1 OF SUBMITTING FORM]</p>
+                            <span style="color: #D20000; margin-right: 0.5rem;">✓</span>
+                            <p>Free risk assessment with every quote</p>
                         </li>
                         <li style="display: flex; margin-bottom: 0.5rem;">
-                            <span style="color: #EAB308; margin-right: 0.5rem;">✓</span>
-                            <p style="margin: 0;">[BENEFIT 2 OF SUBMITTING FORM]</p>
+                            <span style="color: #D20000; margin-right: 0.5rem;">✓</span>
+                            <p>No obligation - compare coverage options</p>
                         </li>
                         <li style="display: flex;">
-                            <span style="color: #EAB308; margin-right: 0.5rem;">✓</span>
-                            <p style="margin: 0;">[BENEFIT 3 OF SUBMITTING FORM]</p>
+                            <span style="color: #D20000; margin-right: 0.5rem;">✓</span>
+                            <p>Specialized policies for your discipline</p>
                         </li>
                     </ul>
                 </div>
                 
                 <div class="flex-half">
-                    <form name="quote" method="POST" data-netlify="true" netlify netlify-honeypot="bot-field" action="/success">
+                    <form name="quote" method="POST" data-netlify="true" netlify netlify-honeypot="bot-field" action="/success" style="background-color: #FFFFFF; padding: 2rem; border-radius: 8px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); border: 2px solid #000000;">
                         <input type="hidden" name="form-name" value="quote">
                         <p class="hidden" style="display: none;">
                             <label>Don't fill this out if you're human: <input name="bot-field" /></label>
                         </p>
                         
-                        <div style="margin-bottom: 1rem;">
-                            <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Full Name</label>
-                            <input type="text" name="name" style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;" required>
-                        </div>
-                        
-                        <div style="margin-bottom: 1rem;">
-                            <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Email Address</label>
-                            <input type="email" name="email" style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;" required>
-                        </div>
-                        
-                        <div style="margin-bottom: 1rem;">
-                            <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Phone Number</label>
-                            <input type="tel" name="phone" style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;" required>
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.75rem; font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; color: #000000; letter-spacing: 1px;">Full Name</label>
+                            <input type="text" name="name" style="background-color: #E0B88D; border: 1px solid #333333; border-radius: 4px; padding: 0.875rem; width: 100%; font-family: 'Barlow', sans-serif; transition: all 0.2s ease;" required>
                         </div>
                         
                         <div style="margin-bottom: 1.5rem;">
-                            <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Company Name</label>
-                            <input type="text" name="company" style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;" required>
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.75rem; font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; color: #000000; letter-spacing: 1px;">Email Address</label>
+                            <input type="email" name="email" style="background-color: #E0B88D; border: 1px solid #333333; border-radius: 4px; padding: 0.875rem; width: 100%; font-family: 'Barlow', sans-serif; transition: all 0.2s ease;" required>
                         </div>
                         
-                        <div style="margin-bottom: 1rem;">
-                            <p style="font-size: 0.75rem; color: #6B7280;">By submitting this form, you agree to our <a href="#" style="text-decoration: underline; color: #2563EB;">privacy policy</a>.</p>
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.75rem; font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; color: #000000; letter-spacing: 1px;">Phone Number</label>
+                            <input type="tel" name="phone" style="background-color: #E0B88D; border: 1px solid #333333; border-radius: 4px; padding: 0.875rem; width: 100%; font-family: 'Barlow', sans-serif; transition: all 0.2s ease;" required>
                         </div>
                         
-                        <div data-netlify-recaptcha="true" style="margin-bottom: 1rem;"></div>
+                        <div style="margin-bottom: 2rem;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.75rem; font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; color: #000000; letter-spacing: 1px;">Company Name</label>
+                            <input type="text" name="company" style="background-color: #E0B88D; border: 1px solid #333333; border-radius: 4px; padding: 0.875rem; width: 100%; font-family: 'Barlow', sans-serif; transition: all 0.2s ease;" required>
+                        </div>
                         
-                        <button type="submit" style="width: 100%; background-color: #10B981; color: white; font-weight: bold; padding: 0.75rem 1rem; border: none; border-radius: 0.25rem; cursor: pointer;">
+                        <div style="margin-bottom: 1.5rem;">
+                            <p style="font-size: 0.75rem; color: #333333; font-family: 'Barlow', sans-serif;">By submitting this form, you agree to our <a href="#" style="text-decoration: underline; color: #D20000; font-weight: bold;">privacy policy</a>.</p>
+                        </div>
+                        
+                        <div data-netlify-recaptcha="true" style="margin-bottom: 1.5rem;"></div>
+                        
+                        <button type="submit" style="width: 100%; background-color: #D20000; color: white; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; padding: 1rem; border: none; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
                             Get My Free Quote
                         </button>
                     </form>
@@ -503,119 +487,103 @@
         <div class="container">
             <div class="flex-row">
                 <div class="flex-half" style="margin-bottom: 2rem;">
-                    <div style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">[COMPANY NAME]</div>
-                    <p style="max-width: 20rem;">[COMPANY TAGLINE OR BRIEF DESCRIPTION]</p>
+                    <div style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; font-family: Impact, sans-serif; text-transform: uppercase;">Fight Club Insurance</div>
+                    <p>Specialized protection for fighters, gyms, and combat sports professionals since 2015.</p>
                 </div>
                 
                 <div class="flex-half" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
                     <div>
-                        <h3 class="footer-heading">Coverage</h3>
-                        <ul class="footer-links">
-                            <li class="footer-link"><a href="#" style="color: white; text-decoration: none;">Liability</a></li>
-                            <li class="footer-link"><a href="#" style="color: white; text-decoration: none;">Equipment</a></li>
-                            <li class="footer-link"><a href="#" style="color: white; text-decoration: none;">Workers' Comp</a></li>
-                            <li class="footer-link"><a href="#" style="color: white; text-decoration: none;">Environmental</a></li>
+                        <h3 style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; color: #FFD700;">Coverage</h3>
+                        <ul style="list-style-type: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 0.5rem;"><a href="#">Liability</a></li>
+                            <li style="margin-bottom: 0.5rem;"><a href="#">Equipment</a></li>
+                            <li style="margin-bottom: 0.5rem;"><a href="#">Workers' Comp</a></li>
+                            <li style="margin-bottom: 0.5rem;"><a href="#">Environmental</a></li>
                         </ul>
                     </div>
                     
                     <div>
-                        <h3 class="footer-heading">Company</h3>
-                        <ul class="footer-links">
-                            <li class="footer-link"><a href="#" style="color: white; text-decoration: none;">About Us</a></li>
-                            <li class="footer-link"><a href="#" style="color: white; text-decoration: none;">Team</a></li>
-                            <li class="footer-link"><a href="#" style="color: white; text-decoration: none;">Careers</a></li>
-                            <li class="footer-link"><a href="#" style="color: white; text-decoration: none;">Blog</a></li>
+                        <h3 style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; color: #FFD700;">Company</h3>
+                        <ul style="list-style-type: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 0.5rem;"><a href="#">About Us</a></li>
+                            <li style="margin-bottom: 0.5rem;"><a href="#">Team</a></li>
+                            <li style="margin-bottom: 0.5rem;"><a href="#">Careers</a></li>
+                            <li style="margin-bottom: 0.5rem;"><a href="#">Blog</a></li>
                         </ul>
                     </div>
                     
                     <div>
-                        <h3 class="footer-heading">Contact</h3>
-                        <ul class="footer-links">
-                            <li class="footer-link">[STREET ADDRESS]</li>
-                            <li class="footer-link">[CITY, STATE ZIP]</li>
-                            <li class="footer-link">844-967-5247</li>
-                            <li class="footer-link">josh@contractorschoiceagency.com</li>
+                        <h3 style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; color: #FFD700;">Contact</h3>
+                        <ul style="list-style-type: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 0.5rem;">12220 E Riggs Road, Suite #105</li>
+                            <li style="margin-bottom: 0.5rem;">Chandler, AZ 85249</li>
+                            <li style="margin-bottom: 0.5rem;">844-967-5247</li>
+                            <li style="margin-bottom: 0.5rem;">info@fightclubinsurance.com</li>
                         </ul>
                     </div>
                 </div>
             </div>
             
-            <div style="border-top: 1px solid #374151; margin-top: 2rem; padding-top: 2rem; display: flex; flex-direction: column; align-items: center;">
-                <p style="margin-bottom: 1rem;">© 2025 [COMPANY NAME]. All rights reserved.</p>
+            <div style="border-top: 1px solid #3D5866; margin-top: 2rem; padding-top: 2rem; display: flex; flex-direction: column; align-items: center;">
+                <p style="margin-bottom: 1rem;">© 2025 Fight Club Insurance. All rights reserved.</p>
                 <div>
-                    <a href="#" style="color: white; text-decoration: none; margin-right: 1rem;">Privacy Policy</a>
-                    <a href="#" style="color: white; text-decoration: none; margin-right: 1rem;">Terms of Service</a>
-                    <a href="#" style="color: white; text-decoration: none;">Sitemap</a>
+                    <a href="#" style="margin-right: 1rem;">Privacy Policy</a>
+                    <a href="#" style="margin-right: 1rem;">Terms of Service</a>
+                    <a href="#">Sitemap</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Floating Contact Button & Modal -->
-    <div id="contactButton" class="floating-button hover:scale-110 hover:shadow-lg transition-transform duration-200" style="cursor: pointer;">
-        <svg xmlns="http://www.w3.org/2000/svg" style="width: 1.5rem; height: 1.5rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-        </svg>
-    </div>
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <!-- Floating Contact Button -->
+    <button id="floatingPhoneButton" class="floating-button" aria-label="Contact Us">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+    </button>
 
     <!-- Contact Modal -->
-    <div id="contactModal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.7); z-index: 100; align-items: center; justify-content: center;">
-        <div style="background-color: white; width: 90%; max-width: 500px; border-radius: 0.5rem; padding: 1.5rem; position: relative; max-height: 90vh; overflow-y: auto;">
-            <button id="closeModal" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; cursor: pointer;">×</button>
-            
-            <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">Get Your Free Insurance Quote</h3>
-            
-            <!-- Click to Call Button -->
-            <a href="tel:844-967-5247" style="display: block; background-color: #10B981; color: white; text-align: center; padding: 1rem; border-radius: 0.5rem; font-weight: bold; text-decoration: none; margin-bottom: 1.5rem;">
-                <svg xmlns="http://www.w3.org/2000/svg" style="width: 1.5rem; height: 1.5rem; display: inline-block; vertical-align: middle; margin-right: 0.5rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                Call Now: 844-967-5247
-            </a>
-
-            <div style="text-align: center; margin-bottom: 1.5rem;">
-                <p style="margin: 0;">- OR -</p>
+    <div id="contactModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.75); z-index: 1000; align-items: center; justify-content: center;">
+        <div style="background-color: white; padding: 2rem; border-radius: 0.5rem; max-width: 500px; width: 90%;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                <h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase;">Contact Us</h3>
+                <button id="closeModal" style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">&times;</button>
             </div>
             
-            <form name="modal-contact" method="POST" data-netlify="true" netlify netlify-honeypot="bot-field" style="margin-bottom: 1.5rem;" action="/success">
-                <input type="hidden" name="form-name" value="modal-contact">
-                <p class="hidden" style="display: none;">
-                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            <div style="margin-bottom: 1.5rem;">
+                <p>Call us directly at:</p>
+                <a href="tel:844-967-5247" style="font-size: 1.25rem; font-weight: bold; display: block; margin: 0.5rem 0;">844-967-5247</a>
+            </div>
+            
+            <form name="contact" method="POST" data-netlify="true" action="/success" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="contact">
+                <p class="hidden">
+                    <label>Don't fill this out <input name="bot-field"></label>
                 </p>
+                
                 <div style="margin-bottom: 1rem;">
-                    <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Your Name</label>
-                    <input type="text" name="name" style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;" required>
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Name</label>
+                    <input type="text" name="name" style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 0.25rem;" required>
                 </div>
                 
                 <div style="margin-bottom: 1rem;">
-                    <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Email Address</label>
-                    <input type="email" name="email" style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;" required>
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Email</label>
+                    <input type="email" name="email" style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 0.25rem;" required>
                 </div>
-
-                <div style="margin-bottom: 1rem;">
-                    <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Phone Number</label>
-                    <input type="tel" name="phone" style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;" required>
-                </div>
-
+                
                 <div style="margin-bottom: 1.5rem;">
-                    <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Company Name</label>
-                    <input type="text" name="company" style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;" required>
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Message</label>
+                    <textarea name="message" style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 0.25rem; min-height: 100px;" required></textarea>
                 </div>
-
-                <div style="margin-bottom: 1rem;">
-                    <p style="font-size: 0.75rem; color: #6B7280;">By submitting this form, you agree to our <a href="#" style="text-decoration: underline; color: #2563EB;">privacy policy</a>.</p>
-                </div>
-
-                <div data-netlify-recaptcha="true" style="margin-bottom: 1rem;"></div>
-
-                <button type="submit" style="width: 100%; background-color: #10B981; color: white; font-weight: bold; padding: 0.75rem 1rem; border: none; border-radius: 0.25rem; cursor: pointer;">
-                    Get My Free Quote
-                </button>
+                
+                <div data-netlify-recaptcha="true"></div>
+                
+                <button type="submit" style="background-color: #D20000; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 0.25rem; cursor: pointer; font-weight: bold; text-transform: uppercase;">Send Message</button>
             </form>
         </div>
     </div>
-
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
 </body>
 </html>

@@ -7,12 +7,28 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        primary: '#1E3A8A',
-        secondary: '#EAB308',
-        success: '#10B981',
-        danger: '#DC2626',
-      },
+  colors: {
+    primary: {
+      DEFAULT: '#0A3D62',
+      dark: '#082A47',
+      light: '#0C4B7A'
+    },
+    secondary: {
+      DEFAULT: '#3498DB',
+      dark: '#2980B9',
+      light: '#5DADE2'
+    },
+    accent: '#AED6F1',
+    background: '#F2F2F2',
+    white: '#FFFFFF',
+    success: '#10B981',
+    danger: '#DC2626',
+  },
+  fontFamily: {
+    sans: ['Open Sans', 'sans-serif'],
+    heading: ['Montserrat', 'sans-serif'],
+    body: ['Open Sans', 'sans-serif'],
+  },
     },
   },
   plugins: [],
