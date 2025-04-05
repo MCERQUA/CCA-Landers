@@ -8,11 +8,22 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#1E3A8A',
-        secondary: '#EAB308',
+        primary: {
+          navy: '#0B3C5D',
+          teal: '#328CC1'
+        },
+        secondary: {
+          gray: '#D9D9D9',
+          orange: '#F47B20',
+          charcoal: '#212529'
+        },
         success: '#10B981',
         danger: '#DC2626',
       },
+      fontFamily: {
+        heading: ['Montserrat', 'sans-serif'],
+        body: ['"Open Sans"', 'sans-serif']
+      }
     },
   },
   plugins: [],

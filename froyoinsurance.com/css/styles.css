@@ -15,7 +15,7 @@ body {
 }
 
 .header-section {
-    background-color: #1E3A8A;
+    background-color: #E84A5F;
     color: white;
     padding: 2rem 1rem;
 }
@@ -36,7 +36,7 @@ body {
 
 .cta-button {
     display: inline-block;
-    background-color: #EAB308;
+    background-color: #E84A5F;
     color: white;
     font-weight: bold;
     padding: 0.75rem 1.5rem;
@@ -46,7 +46,7 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #D97706;
+    background-color: #D63D52;
 }
 
 .section {
