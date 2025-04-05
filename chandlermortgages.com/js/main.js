@@ -51,11 +51,20 @@ const initModal = () => {
     
     if (contactButton && contactModal && closeModal) {
         const toggleModal = (show) => {
-            contactModal.style.display = show ? 'flex' : 'none';
             if (show) {
+                contactModal.style.display = 'flex';
+                // Use setTimeout to trigger animation after display change
+                setTimeout(() => {
+                    contactModal.classList.add('visible');
+                }, 10);
                 document.body.style.overflow = 'hidden';
             } else {
-                document.body.style.overflow = '';
+                contactModal.classList.remove('visible');
+                // Wait for animation to complete before hiding
+                setTimeout(() => {
+                    contactModal.style.display = 'none';
+                    document.body.style.overflow = '';
+                }, 300);
             }
         };
 
@@ -75,15 +84,36 @@ const initModal = () => {
     }
 };
 
+// Initialize scroll animations
+const initScrollAnimations = () => {
+    const observerOptions = {
+        threshold: 0.2
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                // Stop observing after animation
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe all sections
+    document.querySelectorAll('.section').forEach(section => {
+        observer.observe(section);
+    });
+
+    // Add staggered animation to cards
+    document.querySelectorAll('.feature-card, .testimonial-card').forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+    });
+};
+
 // Initialize on DOM load
 document.addEventListener('DOMContentLoaded', () => {
     initMenu();
-    // Lazy load modal initialization
-    const contactButton = document.getElementById('contactButton');
-    if (contactButton) {
-        contactButton.addEventListener('mouseenter', () => {
-            initModal();
-            contactButton.removeEventListener('mouseenter', initModal);
-        }, passiveListener);
-    }
+    initModal();
+    initScrollAnimations();
 });
