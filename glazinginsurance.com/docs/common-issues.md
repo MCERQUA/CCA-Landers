@@ -1,51 +1,23 @@
 # Common Issues and Solutions
 
-## Style Changes Not Visible
+## Scroll Animations Not Triggering
 
-### Issue
-CSS/Tailwind style changes don't appear on the live site.
+**Problem**: Sections would flash briefly then disappear on page load.
 
-### Root Causes
-1. Tailwind purging CSS in production builds
-2. Custom CSS being overridden by Tailwind
-3. Browser caching old styles
+**Root Cause**: 
+- CSS sets sections to opacity:0 by default
+- JavaScript IntersectionObserver wasn't consistently triggering due to:
+  - High threshold (0.2)
+  - No fallback mechanism
+  - Possible timing issues with DOM loading
 
-### Solution
-1. Always verify changes by:
-   - Running `npm run dev` to see changes locally
-   - Checking the production build with `npm run build && npm run preview`
-2. For Tailwind changes:
-   - Add new colors to tailwind.config.js
-   - Use @apply or direct Tailwind classes in HTML
-3. For custom CSS:
-   - Use !important sparingly for overrides
-   - Verify CSS specificity
+**Solution**:
+1. Lowered IntersectionObserver threshold to 0.1
+2. Added fallback timeout that adds 'visible' class after 1 second
+3. Ensured proper DOM loading sequence
 
-### Prevention
-- Document all style changes in brand-style-guide.md
-- Include build verification steps in workflow
+**Affected Files**:
+- js/main.js (scroll animation initialization)
+- css/styles.css (section visibility styles)
 
-## Contact Modal Not Working
-
-### Issue
-The floating contact button modal was not opening when clicked.
-
-### Root Causes
-1. Missing JavaScript file inclusion
-2. Duplicate form content causing structural issues
-3. Incorrect HTML structure
-
-### Solution
-1. Added the JavaScript file at the end of the body:
-```html
-<script src="js/main.js"></script>
-```
-
-2. Removed duplicate form content in the modal section
-3. Fixed HTML structure and nesting
-
-### Prevention
-- Always include necessary JavaScript files
-- Avoid duplicate form content
-- Maintain proper HTML structure and nesting
-- Test interactive elements after making changes
+**Date Fixed**: 2025-04-05

@@ -87,7 +87,7 @@ const initModal = () => {
 // Initialize scroll animations
 const initScrollAnimations = () => {
     const observerOptions = {
-        threshold: 0.2
+        threshold: 0.1
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -99,6 +99,15 @@ const initScrollAnimations = () => {
             }
         });
     }, observerOptions);
+
+    // Fallback in case IntersectionObserver fails
+    setTimeout(() => {
+        document.querySelectorAll('.section').forEach(section => {
+            if (!section.classList.contains('visible')) {
+                section.classList.add('visible');
+            }
+        });
+    }, 1000);
 
     // Observe all sections
     document.querySelectorAll('.section').forEach(section => {

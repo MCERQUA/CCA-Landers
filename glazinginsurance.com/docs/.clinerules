@@ -90,10 +90,6 @@ This template is designed for creating professional service landing pages with c
 - [ ] Verify build-faq.js script is unmodified
 - [ ] Verify package.json contains correct build script
 - [ ] Verify netlify.toml is configured properly
-- [ ] Ensure schema uses dynamic title from FAQ markdown
-- [ ] Verify publisher info is configurable
-- [ ] Check date handling is automatic
-- [ ] Confirm no industry-specific defaults remain
 
 ## Best Practices
 1. SEO
@@ -146,6 +142,14 @@ This template is designed for creating professional service landing pages with c
    - Clear, direct answers
    - Industry-specific concerns
    - Structured with schema markup for rich snippets
+
+## Style Implementation Protocol
+
+1. For any style changes:
+   - First check tailwind.config.js for existing colors/classes
+   - Prefer using Tailwind classes directly in HTML
+   - Only use custom CSS when absolutely necessary
+   - Document changes in brand-style-guide.md
 
 ## Implementation Phases
 
