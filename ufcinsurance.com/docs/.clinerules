@@ -90,6 +90,9 @@ This template is designed for creating professional service landing pages with c
 - [ ] Verify build-faq.js script is unmodified
 - [ ] Verify package.json contains correct build script
 - [ ] Verify netlify.toml is configured properly
+- [ ] Verify scroll animations work for #faq section
+  - Either add .section class to #faq
+  - Or modify initScrollAnimations() to observe #faq specifically
 
 ## Best Practices
 1. SEO

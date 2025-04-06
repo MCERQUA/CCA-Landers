@@ -1,5 +1,16 @@
 # Common Issues and Solutions
 
+## FAQ Section Not Appearing
+**Problem:** After running build-faq.js, the FAQ section disappears from the website.
+
+**Root Cause:** The intersection observer in main.js wasn't observing the #faq section specifically, only .section elements.
+
+**Solution:** Modified initScrollAnimations() to observe both .section and #faq elements.
+
+**Prevention:** When adding new sections that need scroll animations, ensure they're either:
+1. Marked with .section class
+2. Explicitly added to the observer query selector
+
 ## Style Changes Not Visible
 
 ### Issue

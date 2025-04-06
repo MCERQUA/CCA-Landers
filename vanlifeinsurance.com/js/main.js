@@ -100,8 +100,8 @@ const initScrollAnimations = () => {
         });
     }, observerOptions);
 
-    // Observe all sections
-    document.querySelectorAll('.section').forEach(section => {
+    // Observe all sections and FAQ
+    document.querySelectorAll('.section, #faq').forEach(section => {
         observer.observe(section);
     });
 

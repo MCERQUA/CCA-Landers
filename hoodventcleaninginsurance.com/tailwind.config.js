@@ -9,20 +9,28 @@ module.exports = {
     extend: {
       colors: {
         primary: {
+          DEFAULT: '#0B3C5D',
           navy: '#0B3C5D',
-          teal: '#328CC1'
+          teal: '#328CC1',
+          light: '#328CC1'
         },
         secondary: {
+          DEFAULT: '#D9D9D9', 
           gray: '#D9D9D9',
           orange: '#F47B20',
           charcoal: '#212529'
         },
-        success: '#10B981',
+        announcement: '#F47B20',
+        success: '#059669',
         danger: '#DC2626',
       },
       fontFamily: {
         heading: ['Montserrat', 'sans-serif'],
-        body: ['"Open Sans"', 'sans-serif']
+        body: ['"Open Sans"', 'sans-serif'],
+        accent: ['Montserrat', 'sans-serif']
+      },
+      borderRadius: {
+        'button': '4px'
       }
     },
   },
