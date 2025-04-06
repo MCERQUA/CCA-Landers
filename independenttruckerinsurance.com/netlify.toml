@@ -3,3 +3,29 @@
 
 [build.environment]
   NODE_VERSION = "16"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Netlify Forms configuration
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "same-origin"
+
+[context.production.environment]
+  FORM_SUBMIT_URL = "https://api.netlify.com/submit"
+
+# Form processing configuration
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+[forms]
+  enable = true
+  honeypot_field = "bot-field"
+  recaptcha = false
