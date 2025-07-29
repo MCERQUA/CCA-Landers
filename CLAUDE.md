@@ -2,6 +2,158 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## 🚨 CRITICAL FILE EDITING RULE - READ FIRST
+
+**❌ NEVER EVER WRITE "REST OF THE FILE THE SAME" OR SIMILAR PHRASES**
+
+This is COMPLETELY UNACCEPTABLE and destroys file integrity. You MUST:
+- Always write complete, full file content when editing
+- Never use shortcuts like "rest remains the same"
+- Never truncate files with placeholder text
+- If a file is too long, use specific line-by-line edits instead
+- ALWAYS preserve every line of existing content unless explicitly modifying it
+
+**🚨 VIOLATION OF THIS RULE IS NEVER ACCEPTABLE UNDER ANY CIRCUMSTANCES**
+
+## 🚀 DEPLOYMENT WORKFLOW - IMPORTANT
+
+**Netlify Auto-Deployment Process:**
+- **DO NOT** use Netlify MCP to deploy manually
+- **WORKFLOW**: 
+  1. Push changes to GitHub: `git push origin main`
+  2. Netlify automatically deploys when new commits are detected
+  3. Use Netlify MCP to CHECK deployment status after pushing
+- **REMEMBER**: GitHub push → Netlify auto-deploys → Check status with MCP
+
+## 🤖 MULTI-SITE AGENT SYSTEM
+
+This repository uses a specialized agent identity system where each site has its own unique agent identifier:
+
+### Agent Identity Format: CC-CCA-LANDER-{SITE-CODE}
+
+**Site Directory → Agent Identity Mapping:**
+- accountreceivablesinsurance.com → **CC-CCA-LANDER-ACC-REC-INS**
+- barandnightclubinsurance.com → **CC-CCA-LANDER-BNB-INS**  
+- cabincruiserinsurance.com → **CC-CCA-LANDER-CRUISE-INS**
+- chandlermortgages.com → **CC-CCA-LANDER-MORT-CHA**
+- concreterepairinsurance.com → **CC-CCA-LANDER-CONC-INS**
+- dirtworkinsurance → **CC-CCA-LANDER-DIRT-INS**
+- fightclubinsurance.com → **CC-CCA-LANDER-FIGHT-INS**
+- froyoinsurance.com → **CC-CCA-LANDER-FROYO-INS**
+- glazinginsurance.com → **CC-CCA-LANDER-GLAZE-INS**
+- hiredautoinsurance.com → **CC-CCA-LANDER-HIRED-AUTO**
+- hoodventcleaninginsurance.com → **CC-CCA-LANDER-VENT-INS**
+- independenttruckerinsurance.com → **CC-CCA-LANDER-TRUCK-INS**
+- indoorskitrainer.com → **CC-CCA-LANDER-SKI-INS**
+- mobiledetailinsurance.com → **CC-CCA-LANDER-DETAIL-INS**
+- oilfieldweldinginsurance.com → **CC-CCA-LANDER-WELD-INS**
+- puroseguro.com → **CC-CCA-LANDER-PURO-SEG**
+- ufcinsurance.com → **CC-CCA-LANDER-UFC-INS**
+- vanlifeinsurance.com → **CC-CCA-LANDER-VAN-INS**
+- waterproofinginsurance.com → **CC-CCA-LANDER-WATER-INS**
+
+### Agent System Usage
+When working on any specific site, use the corresponding agent identity in:
+- Slack notifications and updates
+- Command execution logs  
+- Research documentation
+- Error tracking
+- Progress reporting
+
+**Example Usage:**
+```
+🚀 [CC-CCA-LANDER-BNB-INS] TASK_START: Update bar insurance FAQ content
+📊 [CC-CCA-LANDER-FROYO-INS] PROGRESS: Building CSS optimization - 75% complete
+✅ [CC-CCA-LANDER-TRUCK-INS] TASK_COMPLETE: Independent trucker landing page deployed
+```
+
+## 🚨 CRITICAL DEPLOYMENT BLOCKER - READ FIRST
+
+**MDX ACORN PARSING ERROR PREVENTION**
+
+⚠️ **CONFIRMED ROOT CAUSES**: When MDX acorn parsing errors persist despite structural fixes, the issue is content-level corruption requiring complete rebuild, not incremental debugging.
+
+### **Confirmed Root Causes of MDX Acorn Parsing Errors**
+
+**❌ Primary Issue: Corrupted Content Patterns**
+- **Problem**: Original blog content contained specific syntax patterns that the MDX parser couldn't handle
+- **Evidence**: Rebuilding with identical structure but fresh content resolved the error completely  
+- **Root Cause**: Content copied from external sources likely contained hidden characters, malformed markdown, or incompatible syntax
+
+**❌ Secondary Issue: Accumulated Content Corruption**
+- **Problem**: Multiple editing iterations had introduced parsing conflicts
+- **Evidence**: Despite fixing frontmatter, JSX components, line endings - the error persisted until complete content rebuild
+- **Root Cause**: Layered fixes may have created additional parsing conflicts
+
+### **What Was NOT the Problem** (despite extensive debugging):
+1. **YAML frontmatter complexity** - Working and failing blogs had identical frontmatter structure
+2. **JSX component imports** - Same components work fine in other blogs  
+3. **Line endings (CRLF vs LF)** - Conversion didn't resolve the issue
+4. **Multi-line JSX syntax** - Flattening had no effect
+5. **Apostrophes/quotes** - Never actually caused parsing errors
+6. **❌ CRITICAL: Content length is NEVER the problem** - We have multiple working blogs with 4000+ words:
+   - decoding-policy-statements.mdx: 4,212 words ✅ WORKING
+   - insurance-premium-calculation-factors.mdx: 3,531 words ✅ WORKING
+   - michigan-contractor-insurance-guide.mdx: 3,277 words ✅ WORKING
+
+### **🎯 Confirmed Solution Pattern:**
+- **Template-based rebuild** using proven working blog structure
+- **Fresh content creation** rather than fixing corrupted content
+- **Exact component patterns** from successful builds (`<Callout>`, `<Stats>`, `<Table>`, etc.)
+
+### **✅ WORKING MDX PATTERNS** (Confirmed in production):
+```jsx
+// Safe components (confirmed working):
+import { Callout } from '@/components/ui/Callout'
+import { Stats } from '@/components/ui/Stats'
+import { Table, TableHead, TableBody, TableRow, TableCell, TableHeaderCell } from '@/components/ui/Table'
+import { CTABox } from '@/components/ui/CTABox'
+```
+
+### **❌ NEVER USE - CONFIRMED TO CAUSE ACORN ERRORS**:
+```jsx
+// These cause systematic build failures:
+import { BlogFAQ } from '@/components/blog/BlogFAQ'           // ❌
+import { BlogCTA } from '@/components/blog/BlogCTA'           // ❌  
+import { BlogQuoteBox } from '@/components/blog/BlogQuoteBox' // ❌
+import { BlogInfographic } from '@/components/blog/BlogInfographic' // ❌
+```
+
+### **FAQ FORMATTING** (Use simple markdown):
+```markdown
+## Frequently Asked Questions
+
+**Q: Your question here?**
+A: Your answer here.
+
+**Q: Another question?**  
+A: Another answer here.
+```
+
+### **CRITICAL DEPLOYMENT TESTING**:
+**🚨 NEVER claim "deployment ready" based on local build success alone**
+
+**Required validation before deployment:**
+1. **`npm run test:netlify`** - Simulate Netlify environment
+2. **`npm run test:mdx`** - Validate all MDX files  
+3. **`node scripts/pre-deploy-check.js`** - Comprehensive validation
+4. **All tests must pass** - Local build success ≠ Netlify success
+
+## Blog Creation Guidelines
+
+- **🚨 MANDATORY REQUIREMENT**: ALL BLOG POSTS MUST BE 5000+ WORDS LONG. SHORT BLOG POSTS ARE UNACCEPTABLE.
+
+### **❌ NEVER REDUCE BLOG POST LENGTH AS A SOLUTION**
+
+**CRITICAL UNDERSTANDING**: We have multiple working blogs with 4000+ words:
+- decoding-policy-statements.mdx: 4,212 words ✅ BUILDS SUCCESSFULLY
+- insurance-premium-calculation-factors.mdx: 3,531 words ✅ BUILDS SUCCESSFULLY  
+- michigan-contractor-insurance-guide.mdx: 3,277 words ✅ BUILDS SUCCESSFULLY
+
+**⚠️ THEREFORE**: Content length is NEVER the cause of build errors. If a blog fails to build, the solution is NEVER to make it shorter. The solution is to identify specific content patterns causing the issue.
+
+**✅ REQUIRED APPROACH**: Always create comprehensive, detailed blog posts over 5000 words. If build errors occur, investigate content patterns, not length.
+
 ## Repository Overview
 
 This repository contains multiple insurance landing page websites for Clean Cut Agents (CCA). Each website directory represents a specialized insurance vertical with its own complete website implementation. The project uses a template-based architecture with standardized build processes across all sites.
