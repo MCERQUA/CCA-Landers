@@ -17,6 +17,44 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="../../css/styles.css" rel="stylesheet">
     
+    <!-- Mobile responsive styles -->
+    <style>
+        /* Mobile responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
+            .blog-article {
+                padding: 1.5rem !important;
+            }
+            
+            .blog-article h1 {
+                font-size: 2rem !important;
+                line-height: 1.1 !important;
+            }
+            
+            .blog-article h2 {
+                font-size: 1.25rem !important;
+            }
+            
+            .blog-article h3 {
+                font-size: 1.125rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .blog-article {
+                padding: 1rem !important;
+            }
+            
+            .blog-article h1 {
+                font-size: 1.75rem !important;
+            }
+        }
+    </style>
+    
     <!-- Schema markup for article -->
     <script type="application/ld+json">
     {
@@ -87,7 +125,7 @@
                 </header>
 
                 <!-- Article Content -->
-                <article style="background: white; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 2rem;">
+                <article class="blog-article" style="background: white; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 2rem;">
                     <div style="line-height: 1.8; color: #333;">
                         <p style="margin-bottom: 1.5rem;">If you serve alcohol in your establishment, liquor liability insurance isn't just recommended—it's absolutely essential. This specialized coverage protects your business from potentially devastating lawsuits related to alcohol service, and in many cases, it's required by law or your lease agreement.</p>
 
