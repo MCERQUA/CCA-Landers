@@ -117,9 +117,57 @@ const initScrollAnimations = () => {
     });
 };
 
+// Enhanced spam protection for forms
+const initSpamProtection = () => {
+    document.querySelectorAll('form[data-netlify]').forEach(form => {
+        const startTime = Date.now();
+        
+        // Add hidden timestamp field
+        const timeField = document.createElement('input');
+        timeField.type = 'hidden';
+        timeField.name = 'form_start_time';
+        timeField.value = startTime;
+        form.appendChild(timeField);
+        
+        form.addEventListener('submit', (e) => {
+            const submitTime = Date.now();
+            const timeDiff = submitTime - startTime;
+            
+            // Block if submitted too quickly (under 2 seconds)
+            if (timeDiff < 2000) {
+                e.preventDefault();
+                alert('Please take a moment to review your information before submitting.');
+                return false;
+            }
+            
+            // Check for suspicious content
+            const formData = new FormData(form);
+            for (let [key, value] of formData.entries()) {
+                // Skip checking email field for URL patterns
+                if (key !== 'email' && typeof value === 'string') {
+                    // Check for URLs, spam keywords, or repeated characters
+                    if (/https?:\/\/|SEO|marketing|promote|rank.*website|(.)\1{4,}/i.test(value)) {
+                        e.preventDefault();
+                        alert('Please remove any links or promotional content from your message.');
+                        return false;
+                    }
+                }
+            }
+            
+            // Add timing data to submission
+            const submitTimeField = document.createElement('input');
+            submitTimeField.type = 'hidden';
+            submitTimeField.name = 'submit_timing';
+            submitTimeField.value = timeDiff;
+            form.appendChild(submitTimeField);
+        });
+    });
+};
+
 // Initialize on DOM load
 document.addEventListener('DOMContentLoaded', () => {
     initMenu();
     initModal();
     initScrollAnimations();
+    initSpamProtection();
 });

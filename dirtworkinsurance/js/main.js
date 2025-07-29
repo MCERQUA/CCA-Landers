@@ -1,4 +1,42 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Enhanced spam protection function
+    function detectSpam(form) {
+        const honeypotFields = ['website', 'company_name', 'referral_source', 'email_address'];
+        
+        for (let field of honeypotFields) {
+            const input = form.querySelector(`input[name="${field}"]`);
+            if (input && input.value.trim() !== '') {
+                return true; // Spam detected
+            }
+        }
+        
+        // Additional spam detection: form submission too fast
+        const submitTime = Date.now();
+        const formLoadTime = window.formLoadTime || submitTime;
+        const timeDiff = submitTime - formLoadTime;
+        
+        if (timeDiff < 3000) { // Less than 3 seconds
+            return true; // Likely spam
+        }
+        
+        return false;
+    }
+    
+    // Set form load time
+    window.formLoadTime = Date.now();
+    
+    // Add spam protection to all forms
+    const forms = document.querySelectorAll('form[data-netlify="true"]');
+    forms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            if (detectSpam(form)) {
+                e.preventDefault();
+                console.log('Spam detected, form submission blocked');
+                return false;
+            }
+        });
+    });
+
     // Mobile menu toggle
     const menuButton = document.getElementById('menuButton');
     const mobileMenu = document.getElementById('mobileMenu');
