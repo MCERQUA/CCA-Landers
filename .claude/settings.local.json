@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "defaultMode": "bypassPermissions",
+    "allow": [
+      "mcp__slack__slack_post_message"
+    ],
+    "deny": []
+  },
+  "diff_viewing": true,
+  "show_changes_in_ide": true,
+  "enable_background_tasks": true,
+  "background_task_limit": 8
+}
