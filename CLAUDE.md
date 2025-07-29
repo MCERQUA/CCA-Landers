@@ -25,6 +25,9 @@ This is COMPLETELY UNACCEPTABLE and destroys file integrity. You MUST:
   3. Use Netlify MCP to CHECK deployment status after pushing
 - **REMEMBER**: GitHub push → Netlify auto-deploys → Check status with MCP
 
+## Command Reminder
+- Always use `git push origin main` to push changes to the GitHub repository
+
 ## 🤖 MULTI-SITE AGENT SYSTEM
 
 This repository uses a specialized agent identity system where each site has its own unique agent identifier:
