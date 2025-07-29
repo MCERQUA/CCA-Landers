@@ -68,8 +68,7 @@ const initModal = () => {
             }
         };
 
-        // Use CSS transitions instead of direct style manipulation
-        contactButton.classList.add('hover:scale-110', 'hover:shadow-lg', 'transition-transform', 'duration-200');
+        // Modal functionality (hover effects handled by CSS)
         
         // Event listeners with passive option where applicable
         contactButton.addEventListener('click', () => toggleModal(true), passiveListener);
