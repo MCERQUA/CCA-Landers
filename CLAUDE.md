@@ -320,6 +320,13 @@ When working on a specific site:
 5. Test all forms and interactive elements
 6. Verify schema markup validity
 
+### 🚨 Critical Issue Reference: FAQ Visibility Problems
+If FAQ sections show empty white space or invisible overlays:
+- **Reference**: `/docs/faq-visibility-fix-guide.md` for complete diagnosis and solution
+- **Quick Fix**: Use `/FAQ-FIX` command for automated resolution
+- **Symptoms**: FAQ content flashes briefly then disappears behind invisible overlay
+- **Root Cause**: CSS animation system sets sections to `opacity: 0` by default
+
 ## Common Tasks
 
 ### Building a Site
