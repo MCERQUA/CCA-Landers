@@ -257,6 +257,24 @@ body {
     animation-delay: calc(var(--i) * 0.2s);
 }
 
+/* Blog Preview Section Styles */
+#blog-preview article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+#blog-preview article a:hover {
+    text-decoration: none;
+}
+
+/* Mobile responsive for blog cards */
+@media (max-width: 768px) {
+    #blog-preview .grid-3 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
 /* Section containers need relative positioning */
 .header-section, 
 .problem-solution, 
