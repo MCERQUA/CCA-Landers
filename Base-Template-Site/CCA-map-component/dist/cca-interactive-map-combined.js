@@ -530,7 +530,11 @@ window.CCAMapStateData = {
     handleStateClick(stateCode, stateName) {
       // Custom callback if provided
       if (this.options.onStateClick) {
-        this.options.onStateClick(stateCode, stateName, stateRoutes[stateCode]);
+        const result = this.options.onStateClick(stateCode, stateName, stateRoutes[stateCode]);
+        // If callback returns false, prevent default navigation
+        if (result === false) {
+          return;
+        }
       }
 
       // Navigate to state page

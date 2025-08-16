@@ -1377,10 +1377,10 @@
                     availableColor: '#3b82f6',
                     hoverColor: '#1e40af',
                     unavailableColor: '#e2e8f0',
-                    openInNewTab: true,
+                    openInNewTab: false, // Changed to false to use our custom handler
                     showTooltip: true,
                     onStateClick: function(stateCode, stateName, url) {
-                        // Track click event (optional - for analytics)
+                        // Track click event for analytics
                         if (typeof gtag !== 'undefined') {
                             gtag('event', 'click', {
                                 'event_category': 'State Map',
@@ -1388,7 +1388,13 @@
                                 'value': stateCode
                             });
                         }
-                        // Map component handles the navigation
+                        
+                        // Redirect to our internal state viewer page
+                        // This keeps users on our site with our navigation visible
+                        window.location.href = `/state-map.html?state=${stateCode}&name=${encodeURIComponent(stateName)}`;
+                        
+                        // Prevent default navigation
+                        return false;
                     }
                 });
             }

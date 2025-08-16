@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[COMPANY NAME] | Business Insurance Coverage by State</title>
+    <meta name="description" content="Explore state-specific business insurance requirements and coverage options. Get tailored insurance solutions for your state's unique regulations and business needs.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://[DOMAIN NAME]/state-map.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="[COMPANY NAME] | Business Insurance by State">
+    <meta property="og:description" content="Find state-specific business insurance requirements and coverage options tailored to your location.">
+    <meta property="og:image" content="https://[DOMAIN NAME]/images/og-image.jpg">
+    <meta property="og:url" content="https://[DOMAIN NAME]/state-map.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="[COMPANY NAME]">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="[COMPANY NAME] | Business Insurance by State">
+    <meta name="twitter:description" content="Find state-specific business insurance requirements and coverage options.">
+    <meta name="twitter:image" content="https://[DOMAIN NAME]/images/twitter-card.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/styles.min.css">
+    
+    <style>
+        /* Page-specific styles for state map viewer */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Fixed header navigation */
+        .navigation-wrapper {
+            position: relative;
+            flex-shrink: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Main container for iframe */
+        .iframe-container {
+            flex: 1;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            background: #f7f7f7;
+        }
+        
+        /* Loading indicator */
+        .loading-indicator {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 10;
+        }
+        
+        .loading-spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3B82F6;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* State iframe */
+        #state-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: none;
+        }
+        
+        #state-iframe.loaded {
+            display: block;
+        }
+        
+        /* Error message */
+        .error-message {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+        
+        .error-message h2 {
+            color: #ef4444;
+            margin-bottom: 1rem;
+        }
+        
+        .error-message p {
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+        }
+        
+        .error-message a {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #3B82F6;
+            color: white;
+            text-decoration: none;
+            border-radius: 0.375rem;
+            transition: background 0.3s;
+        }
+        
+        .error-message a:hover {
+            background: #2563eb;
+        }
+        
+        /* State info bar */
+        .state-info-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to right, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 0.75rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 5;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .state-info-bar.active {
+            transform: translateY(0);
+        }
+        
+        .state-info-bar h1 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .state-info-bar .actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .state-info-bar button {
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 0.375rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 0.875rem;
+        }
+        
+        .state-info-bar button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Mobile responsive adjustments */
+        @media (max-width: 768px) {
+            .state-info-bar {
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 0.5rem;
+                text-align: center;
+            }
+            
+            .state-info-bar h1 {
+                font-size: 1rem;
+            }
+            
+            .state-info-bar .actions {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .state-info-bar button {
+                font-size: 0.75rem;
+                padding: 0.375rem 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="navigation-wrapper">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="/" class="logo">
+                    <img src="images/logo.svg" alt="[COMPANY NAME]" class="logo-img">
+                </a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-links">
+                    <a href="/#services" class="nav-link">Services</a>
+                    <a href="/#benefits" class="nav-link">Coverage</a>
+                    <a href="/#testimonials" class="nav-link">Testimonials</a>
+                    <a href="/#state-map" class="nav-link">Business by State</a>
+                    <a href="/blog/" class="nav-link">Blog</a>
+                    <a href="/#faq" class="nav-link">FAQ</a>
+                    <a href="/#contact" class="nav-link nav-cta">Get Quote</a>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-nav" id="mobileNav">
+            <a href="/#services" class="mobile-nav-link">Services</a>
+            <a href="/#benefits" class="mobile-nav-link">Coverage</a>
+            <a href="/#testimonials" class="mobile-nav-link">Testimonials</a>
+            <a href="/#state-map" class="mobile-nav-link">Business by State</a>
+            <a href="/blog/" class="mobile-nav-link">Blog</a>
+            <a href="/#faq" class="mobile-nav-link">FAQ</a>
+            <a href="/#contact" class="mobile-nav-link mobile-nav-cta">Get Quote</a>
+        </div>
+    </header>
+    
+    <!-- Main iframe container -->
+    <div class="iframe-container">
+        <!-- State info bar -->
+        <div class="state-info-bar" id="stateInfoBar">
+            <h1 id="stateTitle">Loading State Information...</h1>
+            <div class="actions">
+                <button onclick="goBackToMap()">← Back to Map</button>
+                <button onclick="openInNewTab()">Open in New Tab ↗</button>
+            </div>
+        </div>
+        
+        <!-- Loading indicator -->
+        <div class="loading-indicator" id="loadingIndicator">
+            <div class="loading-spinner"></div>
+            <p>Loading state information...</p>
+        </div>
+        
+        <!-- Error message -->
+        <div class="error-message" id="errorMessage">
+            <h2>Unable to Load State Information</h2>
+            <p>We're having trouble loading the state information. Please try again or visit the state page directly.</p>
+            <a href="/#state-map">Return to Map</a>
+        </div>
+        
+        <!-- State content iframe -->
+        <iframe 
+            id="state-iframe" 
+            title="State Insurance Information"
+            sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
+            loading="lazy">
+        </iframe>
+    </div>
+    
+    <!-- JavaScript for state map viewer functionality -->
+    <script>
+        // Get state from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const state = urlParams.get('state');
+        const stateName = urlParams.get('name') || state;
+        
+        // State code to URL mapping - matches CCA site structure
+        const stateRoutes = {
+            'AL': 'https://contractorschoiceagency.com/states/alabama-contractor-insurance',
+            'AK': 'https://contractorschoiceagency.com/states/alaska-contractor-insurance',
+            'AZ': 'https://contractorschoiceagency.com/states/arizona-contractor-insurance',
+            'AR': 'https://contractorschoiceagency.com/states/arkansas-contractor-insurance',
+            'CA': 'https://contractorschoiceagency.com/states/california-contractor-insurance',
+            'CO': 'https://contractorschoiceagency.com/states/colorado-contractor-insurance',
+            'CT': 'https://contractorschoiceagency.com/states/connecticut-contractor-insurance',
+            'DE': 'https://contractorschoiceagency.com/states/delaware-contractor-insurance',
+            'FL': 'https://contractorschoiceagency.com/states/florida-contractor-insurance',
+            'GA': 'https://contractorschoiceagency.com/states/georgia-contractor-insurance',
+            'HI': 'https://contractorschoiceagency.com/states/hawaii-contractor-insurance',
+            'ID': 'https://contractorschoiceagency.com/states/idaho-contractor-insurance',
+            'IL': 'https://contractorschoiceagency.com/states/illinois-contractor-insurance',
+            'IN': 'https://contractorschoiceagency.com/states/indiana-contractor-insurance',
+            'IA': 'https://contractorschoiceagency.com/states/iowa-contractor-insurance',
+            'KS': 'https://contractorschoiceagency.com/states/kansas-contractor-insurance',
+            'KY': 'https://contractorschoiceagency.com/states/kentucky-contractor-insurance',
+            'LA': 'https://contractorschoiceagency.com/states/louisiana-contractor-insurance',
+            'ME': 'https://contractorschoiceagency.com/states/maine-contractor-insurance',
+            'MD': 'https://contractorschoiceagency.com/states/maryland-contractor-insurance',
+            'MA': 'https://contractorschoiceagency.com/states/massachusetts-contractor-insurance',
+            'MI': 'https://contractorschoiceagency.com/states/michigan-contractor-insurance',
+            'MN': 'https://contractorschoiceagency.com/states/minnesota-contractor-insurance',
+            'MS': 'https://contractorschoiceagency.com/states/mississippi-contractor-insurance',
+            'MO': 'https://contractorschoiceagency.com/states/missouri-contractor-insurance',
+            'MT': 'https://contractorschoiceagency.com/states/montana-contractor-insurance',
+            'NE': 'https://contractorschoiceagency.com/states/nebraska-contractor-insurance',
+            'NV': 'https://contractorschoiceagency.com/states/nevada-contractor-insurance',
+            'NH': 'https://contractorschoiceagency.com/states/new-hampshire-contractor-insurance',
+            'NJ': 'https://contractorschoiceagency.com/states/new-jersey-contractor-insurance',
+            'NM': 'https://contractorschoiceagency.com/states/new-mexico-contractor-insurance',
+            'NY': 'https://contractorschoiceagency.com/states/new-york-contractor-insurance',
+            'NC': 'https://contractorschoiceagency.com/states/north-carolina-contractor-insurance',
+            'ND': 'https://contractorschoiceagency.com/states/north-dakota-contractor-insurance',
+            'OH': 'https://contractorschoiceagency.com/states/ohio-contractor-insurance',
+            'OK': 'https://contractorschoiceagency.com/states/oklahoma-contractor-insurance',
+            'OR': 'https://contractorschoiceagency.com/states/oregon-contractor-insurance',
+            'PA': 'https://contractorschoiceagency.com/states/pennsylvania-contractor-insurance',
+            'RI': 'https://contractorschoiceagency.com/states/rhode-island-contractor-insurance',
+            'SC': 'https://contractorschoiceagency.com/states/south-carolina-contractor-insurance',
+            'SD': 'https://contractorschoiceagency.com/states/south-dakota-contractor-insurance',
+            'TN': 'https://contractorschoiceagency.com/states/tennessee-contractor-insurance',
+            'TX': 'https://contractorschoiceagency.com/states/texas-contractor-insurance',
+            'UT': 'https://contractorschoiceagency.com/states/utah-contractor-insurance',
+            'VT': 'https://contractorschoiceagency.com/states/vermont-contractor-insurance',
+            'VA': 'https://contractorschoiceagency.com/states/virginia-contractor-insurance',
+            'WA': 'https://contractorschoiceagency.com/states/washington-contractor-insurance',
+            'WV': 'https://contractorschoiceagency.com/states/west-virginia-contractor-insurance',
+            'WI': 'https://contractorschoiceagency.com/states/wisconsin-contractor-insurance',
+            'WY': 'https://contractorschoiceagency.com/states/wyoming-contractor-insurance'
+        };
+        
+        // Current state URL
+        let currentStateUrl = null;
+        
+        // Initialize page
+        function initializePage() {
+            if (!state || !stateRoutes[state]) {
+                showError();
+                return;
+            }
+            
+            currentStateUrl = stateRoutes[state];
+            loadStateContent(state, stateName);
+        }
+        
+        // Load state content in iframe
+        function loadStateContent(stateCode, stateName) {
+            const iframe = document.getElementById('state-iframe');
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            const stateInfoBar = document.getElementById('stateInfoBar');
+            const stateTitle = document.getElementById('stateTitle');
+            
+            // Update page title and state info
+            document.title = `${stateName} Business Insurance | [COMPANY NAME]`;
+            stateTitle.textContent = `${stateName} Contractor Insurance Information`;
+            
+            // Set iframe source
+            iframe.src = currentStateUrl;
+            
+            // Handle iframe load events
+            iframe.onload = function() {
+                loadingIndicator.style.display = 'none';
+                iframe.classList.add('loaded');
+                stateInfoBar.classList.add('active');
+                
+                // Track page view
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'page_view', {
+                        'page_title': `State Map - ${stateName}`,
+                        'page_location': window.location.href,
+                        'page_path': `/state-map.html?state=${stateCode}`
+                    });
+                }
+            };
+            
+            iframe.onerror = function() {
+                showError();
+            };
+            
+            // Timeout fallback
+            setTimeout(function() {
+                if (!iframe.classList.contains('loaded')) {
+                    showError();
+                }
+            }, 10000); // 10 second timeout
+        }
+        
+        // Show error message
+        function showError() {
+            document.getElementById('loadingIndicator').style.display = 'none';
+            document.getElementById('errorMessage').style.display = 'block';
+            document.getElementById('state-iframe').style.display = 'none';
+        }
+        
+        // Go back to map
+        function goBackToMap() {
+            window.location.href = '/#state-map';
+        }
+        
+        // Open in new tab
+        function openInNewTab() {
+            if (currentStateUrl) {
+                window.open(currentStateUrl, '_blank', 'noopener,noreferrer');
+            }
+        }
+        
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mobileNav = document.getElementById('mobileNav');
+            
+            if (mobileMenuToggle && mobileNav) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    mobileNav.classList.toggle('active');
+                    mobileMenuToggle.classList.toggle('active');
+                });
+                
+                // Close mobile menu when clicking on a link
+                const mobileNavLinks = mobileNav.querySelectorAll('.mobile-nav-link');
+                mobileNavLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileNav.classList.remove('active');
+                        mobileMenuToggle.classList.remove('active');
+                    });
+                });
+            }
+            
+            // Initialize the page
+            initializePage();
+        });
+    </script>
+    
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-[YOUR_GA_ID]"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-[YOUR_GA_ID]');
+    </script>
+</body>
+</html>
