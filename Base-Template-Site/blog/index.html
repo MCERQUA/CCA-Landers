@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Blog - Expert Insights & Industry News</title>
+    <meta name="description" content="Stay informed with our insurance blog featuring expert insights, industry news, coverage guides, and tips for businesses and contractors.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Insurance Blog",
+        "description": "Expert insights and industry news about business insurance",
+        "url": "https://yoursite.com/blog/",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Your Insurance Company"
+        }
+    }
+    </script>
+    
+    <style>
+        /* Blog-specific styles */
+        .blog-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 4rem 0;
+            color: white;
+            text-align: center;
+        }
+        
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 3rem 0;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        
+        .blog-card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .blog-card-content {
+            padding: 1.5rem;
+        }
+        
+        .blog-card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        
+        .blog-card-meta {
+            display: flex;
+            gap: 1rem;
+            color: #718096;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-card-excerpt {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-card-link {
+            display: inline-flex;
+            align-items: center;
+            color: #667eea;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .blog-card-link:hover {
+            color: #764ba2;
+        }
+        
+        .blog-card-link svg {
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .blog-card-link:hover svg {
+            transform: translateX(4px);
+        }
+        
+        .blog-nav {
+            background: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        .blog-nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .blog-nav-link {
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        
+        .blog-nav-link:hover,
+        .blog-nav-link.active {
+            background: #f7fafc;
+            color: #667eea;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .blog-hero {
+                padding: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-2xl font-bold text-primary">Your Insurance</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-primary">Home</a>
+                    <a href="../index.html#services" class="text-gray-700 hover:text-primary">Services</a>
+                    <a href="../index.html#faq" class="text-gray-700 hover:text-primary">FAQ</a>
+                    <a href="/blog/" class="text-primary font-semibold">Blog</a>
+                    <a href="../index.html#contact" class="text-gray-700 hover:text-primary">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Hero -->
+    <div class="blog-hero">
+        <div class="blog-container">
+            <h1 class="text-4xl font-bold mb-4">Insurance Blog</h1>
+            <p class="text-xl">Expert insights, industry news, and practical guides for your business</p>
+        </div>
+    </div>
+
+    <!-- Blog Navigation -->
+    <div class="blog-nav">
+        <div class="blog-container">
+            <div class="blog-nav-links">
+                <a href="#" class="blog-nav-link active">All Posts</a>
+                <a href="#" class="blog-nav-link">General Liability</a>
+                <a href="#" class="blog-nav-link">Professional Liability</a>
+                <a href="#" class="blog-nav-link">Workers Comp</a>
+                <a href="#" class="blog-nav-link">Commercial Auto</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Posts Grid -->
+    <main class="blog-container">
+        <div class="blog-grid">
+            <!-- Blog Post 1 -->
+            <article class="blog-card">
+                <div class="blog-card-image"></div>
+                <div class="blog-card-content">
+                    <h2 class="blog-card-title">Understanding General Liability Insurance: A Complete Guide</h2>
+                    <div class="blog-card-meta">
+                        <span>📅 January 15, 2025</span>
+                        <span>⏱️ 8 min read</span>
+                    </div>
+                    <p class="blog-card-excerpt">
+                        Discover everything you need to know about general liability insurance, including coverage types, costs, and why it's essential for your business protection.
+                    </p>
+                    <a href="posts/understanding-general-liability-insurance.html" class="blog-card-link">
+                        Read More 
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="blog-card">
+                <div class="blog-card-image"></div>
+                <div class="blog-card-content">
+                    <h2 class="blog-card-title">Workers Compensation Insurance: State Requirements and Costs</h2>
+                    <div class="blog-card-meta">
+                        <span>📅 January 10, 2025</span>
+                        <span>⏱️ 10 min read</span>
+                    </div>
+                    <p class="blog-card-excerpt">
+                        Learn about workers compensation requirements by state, how premiums are calculated, and strategies to reduce your workers comp insurance costs.
+                    </p>
+                    <a href="posts/workers-compensation-requirements-guide.html" class="blog-card-link">
+                        Read More 
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Blog Post 3 -->
+            <article class="blog-card">
+                <div class="blog-card-image"></div>
+                <div class="blog-card-content">
+                    <h2 class="blog-card-title">Professional Liability vs General Liability: Key Differences</h2>
+                    <div class="blog-card-meta">
+                        <span>📅 January 5, 2025</span>
+                        <span>⏱️ 7 min read</span>
+                    </div>
+                    <p class="blog-card-excerpt">
+                        Understand the critical differences between professional liability and general liability insurance, and determine which coverage your business needs.
+                    </p>
+                    <a href="posts/professional-vs-general-liability-insurance.html" class="blog-card-link">
+                        Read More 
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Your Insurance</h3>
+                    <p class="text-gray-400">Protecting businesses with comprehensive insurance solutions.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="../index.html" class="hover:text-white">Home</a></li>
+                        <li><a href="../index.html#services" class="hover:text-white">Services</a></li>
+                        <li><a href="/blog/" class="hover:text-white">Blog</a></li>
+                        <li><a href="../index.html#contact" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3">Insurance Types</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">General Liability</a></li>
+                        <li><a href="#" class="hover:text-white">Professional Liability</a></li>
+                        <li><a href="#" class="hover:text-white">Workers Compensation</a></li>
+                        <li><a href="#" class="hover:text-white">Commercial Auto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>📞 1-800-555-0100</li>
+                        <li>📧 info@yourinsurance.com</li>
+                        <li>📍 123 Main St, Suite 100</li>
+                        <li>🕐 Mon-Fri: 8AM-6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Your Insurance Company. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
