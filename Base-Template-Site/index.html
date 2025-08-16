@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Contractors Choice Agency">
-    <meta property="og:description" content="Get the best insurance solutions for contractors">
-    <meta property="og:image" content="images/optimized/company-logo-large.webp">
-    <meta property="og:url" content="https://www.contractorschoiceagency.com">
-    <meta property="og:type" content="website">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contractors Choice Agency">
-    <meta name="twitter:description" content="Get the best insurance solutions for contractors">
-    <meta name="twitter:image" content="images/optimized/company-logo-large.webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>[COMPANY NAME] | [MAIN SERVICE/VALUE PROPOSITION]</title>
     <meta name="description" content="[2-3 SENTENCES ABOUT YOUR MAIN SERVICE AND VALUE PROPOSITION. INCLUDE KEY BENEFITS AND TARGET AUDIENCE.]">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://[DOMAIN NAME]/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="[COMPANY NAME] | [MAIN SERVICE/VALUE PROPOSITION]">
+    <meta property="og:description" content="[2-3 SENTENCES ABOUT YOUR MAIN SERVICE AND VALUE PROPOSITION]">
+    <meta property="og:image" content="https://[DOMAIN NAME]/images/og-image.jpg">
+    <meta property="og:url" content="https://[DOMAIN NAME]/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="[COMPANY NAME]">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="[COMPANY NAME] | [MAIN SERVICE/VALUE PROPOSITION]">
+    <meta name="twitter:description" content="[2-3 SENTENCES ABOUT YOUR MAIN SERVICE AND VALUE PROPOSITION]">
+    <meta name="twitter:image" content="https://[DOMAIN NAME]/images/twitter-card.jpg">
+    <meta name="twitter:site" content="@[TWITTER HANDLE]">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="author" content="[COMPANY NAME]">
+    <meta name="publisher" content="[COMPANY NAME]">
+    <meta name="keywords" content="[KEYWORD 1], [KEYWORD 2], [KEYWORD 3], [KEYWORD 4], [KEYWORD 5]">
+    
+    <!-- Geo Tags for Local SEO -->
+    <meta name="geo.region" content="US-[STATE CODE]">
+    <meta name="geo.placename" content="[CITY]">
+    <meta name="geo.position" content="[LATITUDE];[LONGITUDE]">
+    <meta name="ICBM" content="[LATITUDE], [LONGITUDE]">
     
     <!-- Critical CSS -->
     <style>
@@ -55,49 +80,72 @@
     
     
     
-    <script type="application/ld+json" id="localBusinessSchema">
-      {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Contractors Choice Agency",
-  "description": "Frequently Asked Questions About [WEBSITE TOPIC] - Contractors Choice Agency",
-  "url": "https://www.contractorschoiceagency.com",
-  "telephone": "844-967-5247",
-  "priceRange": "$$",
-  "image": {
-    "@type": "ImageObject",
-    "url": "https://www.contractorschoiceagency.com/images/company-logo.webp",
-    "width": "800",
-    "height": "600"
-  },
-  "sameAs": [
-    "[FACEBOOK URL]",
-    "[LINKEDIN URL]"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "[STREET ADDRESS]",
-    "addressLocality": "[CITY]",
-    "addressRegion": "[STATE]",
-    "postalCode": "[ZIP CODE]",
-    "addressCountry": {
-      "@type": "Country",
-      "name": "US"
+    <script type="application/ld+json" id="organizationSchema">
+    {
+      "@context": "https://schema.org",
+      "@type": "InsuranceAgency",
+      "@id": "https://[DOMAIN NAME]/#organization",
+      "name": "[COMPANY NAME]",
+      "alternateName": "[COMPANY DBA NAME]",
+      "description": "[COMPANY DESCRIPTION - 1-2 SENTENCES]",
+      "url": "https://[DOMAIN NAME]",
+      "logo": "https://[DOMAIN NAME]/images/logo.png",
+      "image": "https://[DOMAIN NAME]/images/company-photo.jpg",
+      "telephone": "[PHONE NUMBER]",
+      "email": "[EMAIL ADDRESS]",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "[STREET ADDRESS]",
+        "addressLocality": "[CITY]",
+        "addressRegion": "[STATE]",
+        "postalCode": "[ZIP CODE]",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "[LATITUDE]",
+        "longitude": "[LONGITUDE]"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "17:00"
+      },
+      "sameAs": [
+        "[FACEBOOK URL]",
+        "[LINKEDIN URL]",
+        "[TWITTER URL]",
+        "[YOUTUBE URL]"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "[RATING VALUE]",
+        "reviewCount": "[REVIEW COUNT]"
+      }
     }
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday"
-    ],
-    "opens": "09:00",
-    "closes": "17:00"
-  }
-}
+    </script>
+    
+    <script type="application/ld+json" id="breadcrumbSchema">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://[DOMAIN NAME]/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://[DOMAIN NAME]/blog/"
+        }
+      ]
+    }
     </script>
     <script type="application/ld+json" id="faqSchema">
       {
@@ -190,9 +238,9 @@
         <div class="container">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
             <div style="font-size: 1.5rem; font-weight: bold;">[COMPANY NAME]</div>
-                <nav style="display: none;">
+                <nav style="display: none;" aria-label="Main navigation">
                     <!-- Hidden on mobile -->
-                    <ul style="display: flex; gap: 1.5rem;">
+                    <ul style="display: flex; gap: 1.5rem; list-style: none;">
                         <li><a href="#benefits" style="color: white;">Coverage</a></li>
                         <li><a href="#testimonials" style="color: white;">Testimonials</a></li>
                         <li><a href="blog/" style="color: white;">Blog</a></li>
@@ -200,7 +248,7 @@
                         <li><a href="#contact" class="cta-button" style="padding: 0.5rem 1rem;">Get a Quote</a></li>
                     </ul>
                 </nav>
-                <button id="menuButton" style="background-color: #2563EB; color: white; padding: 0.5rem 1rem; border-radius: 0.25rem; border: none;">Menu</button>
+                <button id="menuButton" aria-label="Toggle navigation menu" aria-expanded="false" style="background-color: #2563EB; color: white; padding: 0.5rem 1rem; border-radius: 0.25rem; border: none;">Menu</button>
             </div>
             
             <div id="mobileMenu" style="display: none; margin-bottom: 1.5rem;">

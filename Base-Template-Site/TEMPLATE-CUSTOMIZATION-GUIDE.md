@@ -24,14 +24,19 @@ This template is designed to be copied and customized for new insurance websites
 ### 2. SEO & META TAGS
 **Files to Update:** `index.html`, `success.html`, all blog posts
 
+- [ ] **[DOMAIN NAME]** - Replace in canonical URL, sitemap, robots.txt
 - [ ] **Page Title** - Update `<title>` tag with company name and service
 - [ ] **Meta Description** - Update with 150-160 character description
+- [ ] **[KEYWORD 1-5]** - Add 5 main keywords for meta keywords tag
 - [ ] **OG Title** - Update Open Graph title
 - [ ] **OG Description** - Update Open Graph description
 - [ ] **OG URL** - Update with actual domain
-- [ ] **OG Image** - Update with company logo path
+- [ ] **OG Image** - Create og-image.jpg (1200x630px)
 - [ ] **Twitter Card** - Update all Twitter meta tags
-- [ ] **Canonical URL** - Add if needed
+- [ ] **[TWITTER HANDLE]** - Add Twitter username
+- [ ] **Canonical URL** - Update with actual domain
+- [ ] **[STATE CODE]** - Two-letter state code for geo tags
+- [ ] **[LATITUDE]** and **[LONGITUDE]** - Add coordinates for local SEO
 
 ### 3. WEBSITE CONTENT
 **File to Update:** `index.html`
@@ -79,8 +84,14 @@ This template is designed to be copied and customized for new insurance websites
 ### 5. SCHEMA MARKUP
 **File to Update:** `index.html`
 
-- [ ] Update LocalBusiness schema with all company details
+- [ ] Update InsuranceAgency schema with all company details
+- [ ] **[COMPANY DBA NAME]** - Alternative business name if applicable
+- [ ] **[COMPANY DESCRIPTION]** - 1-2 sentence description
+- [ ] **[EMAIL ADDRESS]** - Add to schema
+- [ ] **[RATING VALUE]** and **[REVIEW COUNT]** - Add if available
+- [ ] **[TWITTER URL]** and **[YOUTUBE URL]** - Add social profiles
 - [ ] Update FAQPage schema with actual FAQ content
+- [ ] Update BreadcrumbList with actual domain
 - [ ] Verify all URLs point to actual domain
 - [ ] Update datePublished and dateModified
 
@@ -123,12 +134,16 @@ For each blog post:
 - [ ] Update form field requirements
 
 ### 10. DEPLOYMENT CONFIGURATION
-**Files:** `netlify.toml`, `package.json`
+**Files:** `netlify.toml`, `package.json`, `robots.txt`, `sitemap.xml`
 
 - [ ] Update build command if using FAQ system
 - [ ] Configure domain in Netlify
 - [ ] Set up form notifications in Netlify
 - [ ] Configure environment variables if needed
+- [ ] Update `robots.txt` with actual domain
+- [ ] Update `sitemap.xml` with all URLs and dates
+- [ ] Submit sitemap to Google Search Console
+- [ ] Create and upload actual favicon files
 
 ---
 
