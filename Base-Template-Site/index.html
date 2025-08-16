@@ -1389,9 +1389,12 @@
                             });
                         }
                         
-                        // Redirect to our internal state viewer page
+                        // Debug log to verify callback is being called
+                        console.log('State clicked:', stateCode, stateName);
+                        
+                        // Redirect to our internal state viewer page (using relative path)
                         // This keeps users on our site with our navigation visible
-                        window.location.href = `/state-map.html?state=${stateCode}&name=${encodeURIComponent(stateName)}`;
+                        window.location.href = `state-map.html?state=${stateCode}&name=${encodeURIComponent(stateName)}`;
                         
                         // Prevent default navigation
                         return false;
