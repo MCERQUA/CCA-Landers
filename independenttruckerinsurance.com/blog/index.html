@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Independent Trucker Insurance Blog | Owner-Operator Tips & Coverage</title>
+    <meta name="description" content="Expert insights on independent trucker insurance, owner-operator coverage, DOT compliance, and trucking business best practices for commercial drivers.">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Independent Trucker Insurance Blog | Owner-Operator Tips & Coverage">
+    <meta property="og:description" content="Expert insights on independent trucker insurance, owner-operator coverage, and trucking business best practices.">
+    <meta property="og:image" content="../images/independent-trucker-insurance.webp">
+    <meta property="og:url" content="https://www.independenttruckerinsurance.com/blog/">
+    <meta property="og:type" content="website">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.independenttruckerinsurance.com/blog/">
+    
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+    
+    <!-- Mobile responsive styles -->
+    <style>
+        /* Blog post cards - responsive layout */
+        .blog-post-card {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+        
+        .blog-post-content {
+            flex: 1;
+        }
+        
+        .blog-post-image {
+            width: 200px;
+            height: 120px;
+            background: linear-gradient(135deg, #DC2626 0%, #1F2937 100%);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 500;
+        }
+        
+        .blog-mobile-padding {
+            padding: 2rem;
+        }
+        
+        /* Sidebar layout */
+        .blog-sidebar-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+        
+        /* Mobile responsive breakpoint */
+        @media (max-width: 768px) {
+            .blog-post-card {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .blog-post-image {
+                width: 100%;
+                height: 180px;
+                order: -1; /* Move image to top */
+            }
+            
+            .blog-sidebar-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            /* Adjust padding for mobile */
+            .blog-mobile-padding {
+                padding: 1rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .blog-post-image {
+                height: 160px;
+            }
+            
+            .blog-mobile-padding {
+                padding: 0.75rem !important;
+            }
+        }
+    </style>
+    
+    <!-- Schema markup for blog -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Independent Trucker Insurance Blog",
+      "description": "Expert insights on independent trucker insurance, owner-operator coverage, and trucking business best practices",
+      "url": "https://www.independenttruckerinsurance.com/blog/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Independent Trucker Insurance",
+        "url": "https://www.independenttruckerinsurance.com"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header-section">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                <div style="font-size: 1.5rem; font-weight: bold;">
+                    <a href="../" style="color: white; text-decoration: none;">Independent Trucker Insurance</a>
+                </div>
+                <nav style="display: none;">
+                    <ul style="display: flex; gap: 1.5rem;">
+                        <li><a href="../#benefits" style="color: white;">Coverage</a></li>
+                        <li><a href="../#testimonials" style="color: white;">Testimonials</a></li>
+                        <li><a href="../#faq" style="color: white;">FAQ</a></li>
+                        <li><a href="./" style="color: #DC2626;">Blog</a></li>
+                        <li><a href="../#contact" class="cta-button" style="padding: 0.5rem 1rem;">Get a Quote</a></li>
+                    </ul>
+                </nav>
+                <button id="menuButton" style="background-color: #DC2626; color: white; padding: 0.5rem 1rem; border-radius: 0.25rem; border: none;">Menu</button>
+            </div>
+            
+            <div id="mobileMenu" style="display: none; margin-bottom: 1.5rem;">
+                <div style="background-color: #DC2626; border-radius: 0.25rem; overflow: hidden;">
+                    <a href="../#benefits" style="display: block; padding: 0.75rem 1rem; color: white; border-bottom: 1px solid rgba(255,255,255,0.1);">Coverage</a>
+                    <a href="../#testimonials" style="display: block; padding: 0.75rem 1rem; color: white; border-bottom: 1px solid rgba(255,255,255,0.1);">Testimonials</a>
+                    <a href="../#faq" style="display: block; padding: 0.75rem 1rem; color: white; border-bottom: 1px solid rgba(255,255,255,0.1);">FAQ</a>
+                    <a href="./" style="display: block; padding: 0.75rem 1rem; color: #1F2937; border-bottom: 1px solid rgba(255,255,255,0.1);">Blog</a>
+                    <a href="../#contact" style="display: block; padding: 0.75rem 1rem; color: white; background-color: #1F2937; text-align: center; font-weight: bold;">Get a Quote</a>
+                </div>
+            </div>
+            
+            <div>
+                <h1 class="hero-title">Independent Trucker Insurance Blog</h1>
+                <p style="font-size: 1.125rem; margin-bottom: 1.5rem;">Expert insights, compliance tips, and industry news for independent truckers and owner-operators</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Content Section -->
+    <section class="section">
+        <div class="container">
+            <!-- Featured Post -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">Latest Posts</h2>
+                
+                <article style="background: white; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;" class="blog-mobile-padding">
+                    <div class="blog-post-card">
+                        <div class="blog-post-content">
+                            <span style="background-color: #DC2626; color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: bold;">Insurance</span>
+                            <h3 style="font-size: 1.5rem; font-weight: bold; margin: 1rem 0;">
+                                <a href="posts/owner-operator-insurance-essentials.html" style="color: #DC2626; text-decoration: none;">
+                                    Owner-Operator Insurance Essentials: Complete Coverage Guide for Independent Truckers
+                                </a>
+                            </h3>
+                            <p style="color: #666; margin-bottom: 1rem;">Comprehensive guide to essential insurance coverage for owner-operators, including commercial auto liability, cargo coverage, physical damage protection, and compliance requirements to protect your trucking business.</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; color: #888; font-size: 0.875rem;">
+                                <span>January 15, 2025</span>
+                                <a href="posts/owner-operator-insurance-essentials.html" style="color: #1F2937; font-weight: bold; text-decoration: none;">Read More →</a>
+                            </div>
+                        </div>
+                        <div class="blog-post-image">
+                            🚛 Blog Image
+                        </div>
+                    </div>
+                </article>
+
+                <article style="background: white; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;" class="blog-mobile-padding">
+                    <div class="blog-post-card">
+                        <div class="blog-post-content">
+                            <span style="background-color: #1F2937; color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: bold;">Compliance</span>
+                            <h3 style="font-size: 1.5rem; font-weight: bold; margin: 1rem 0;">
+                                <a href="posts/dot-compliance-insurance-requirements.html" style="color: #DC2626; text-decoration: none;">
+                                    DOT Compliance and Insurance Requirements for Commercial Truckers
+                                </a>
+                            </h3>
+                            <p style="color: #666; margin-bottom: 1rem;">Master DOT compliance requirements, understand federal insurance minimums, and learn best practices for maintaining proper documentation and coverage levels as an independent trucker.</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; color: #888; font-size: 0.875rem;">
+                                <span>January 10, 2025</span>
+                                <a href="posts/dot-compliance-insurance-requirements.html" style="color: #1F2937; font-weight: bold; text-decoration: none;">Read More →</a>
+                            </div>
+                        </div>
+                        <div class="blog-post-image">
+                            📋 Blog Image
+                        </div>
+                    </div>
+                </article>
+
+                <article style="background: white; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;" class="blog-mobile-padding">
+                    <div class="blog-post-card">
+                        <div class="blog-post-content">
+                            <span style="background-color: #059669; color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: bold;">Business</span>
+                            <h3 style="font-size: 1.5rem; font-weight: bold; margin: 1rem 0;">
+                                <a href="posts/trucking-business-liability-protection.html" style="color: #DC2626; text-decoration: none;">
+                                    Trucking Business Liability Protection: Managing Risk and Reducing Costs
+                                </a>
+                            </h3>
+                            <p style="color: #666; margin-bottom: 1rem;">Protect your trucking business with comprehensive liability strategies, learn to minimize risk exposure, and discover cost-effective approaches to managing insurance premiums while maintaining proper coverage.</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; color: #888; font-size: 0.875rem;">
+                                <span>January 5, 2025</span>
+                                <a href="posts/trucking-business-liability-protection.html" style="color: #1F2937; font-weight: bold; text-decoration: none;">Read More →</a>
+                            </div>
+                        </div>
+                        <div class="blog-post-image">
+                            🛡️ Blog Image
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Categories Sidebar -->
+            <div class="blog-sidebar-grid">
+                <div>
+                    <h2 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 1rem;">All Posts</h2>
+                    <div style="background: white; border-radius: 0.5rem; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 1.5rem;">
+                        <p style="color: #666; text-align: center; padding: 2rem 0;">More blog posts coming soon! Check back regularly for the latest insights on independent trucker insurance, DOT compliance, and owner-operator business best practices.</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 1.125rem; font-weight: bold; margin-bottom: 1rem;">Categories</h3>
+                    <div style="background: white; border-radius: 0.5rem; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 1.5rem;">
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 0.5rem;">
+                                <a href="#" style="color: #DC2626; text-decoration: none; display: flex; justify-content: space-between;">
+                                    <span>Insurance Tips</span>
+                                    <span style="color: #666;">(3)</span>
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.5rem;">
+                                <a href="#" style="color: #DC2626; text-decoration: none; display: flex; justify-content: space-between;">
+                                    <span>DOT Compliance</span>
+                                    <span style="color: #666;">(2)</span>
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.5rem;">
+                                <a href="#" style="color: #DC2626; text-decoration: none; display: flex; justify-content: space-between;">
+                                    <span>Business Protection</span>
+                                    <span style="color: #666;">(2)</span>
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.5rem;">
+                                <a href="#" style="color: #DC2626; text-decoration: none; display: flex; justify-content: space-between;">
+                                    <span>Owner-Operator Tips</span>
+                                    <span style="color: #666;">(1)</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h3 style="font-size: 1.125rem; font-weight: bold; margin: 2rem 0 1rem 0;">Quick Links</h3>
+                    <div style="background: white; border-radius: 0.5rem; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 1.5rem;">
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 0.5rem;">
+                                <a href="../#contact" style="color: #DC2626; text-decoration: none;">Get a Quote</a>
+                            </li>
+                            <li style="margin-bottom: 0.5rem;">
+                                <a href="../#faq" style="color: #DC2626; text-decoration: none;">Insurance FAQ</a>
+                            </li>
+                            <li style="margin-bottom: 0.5rem;">
+                                <a href="../#benefits" style="color: #DC2626; text-decoration: none;">Coverage Options</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #DC2626; color: white; padding: 2rem 0; margin-top: 3rem;">
+        <div class="container">
+            <div style="text-align: center;">
+                <p>&copy; 2025 Independent Trucker Insurance. All rights reserved.</p>
+                <p style="margin-top: 0.5rem;">
+                    <a href="../" style="color: #1F2937; text-decoration: none;">Home</a> | 
+                    <a href="../#contact" style="color: #1F2937; text-decoration: none;">Contact</a> | 
+                    <a href="./" style="color: #1F2937; text-decoration: none;">Blog</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
