@@ -447,12 +447,21 @@
       "@id": "https://[DOMAIN NAME]/#organization",
       "name": "[COMPANY NAME]",
       "alternateName": "[COMPANY DBA NAME]",
-      "description": "[COMPANY DESCRIPTION - 1-2 SENTENCES]",
+      "description": "[COMPANY DESCRIPTION - 1-2 SENTENCES ABOUT YOUR INSURANCE SERVICES]",
       "url": "https://[DOMAIN NAME]",
-      "logo": "https://[DOMAIN NAME]/images/logo.png",
-      "image": "https://[DOMAIN NAME]/images/company-photo.jpg",
-      "telephone": "[PHONE NUMBER]",
-      "email": "[EMAIL ADDRESS]",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://[DOMAIN NAME]/images/logo.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": [
+        "https://[DOMAIN NAME]/images/company-photo.jpg",
+        "https://[DOMAIN NAME]/images/office-photo.jpg",
+        "https://[DOMAIN NAME]/images/team-photo.jpg"
+      ],
+      "telephone": "844-967-5247",
+      "email": "josh@contractorschoiceagency.com",
       "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
@@ -467,23 +476,176 @@
         "latitude": "[LATITUDE]",
         "longitude": "[LONGITUDE]"
       },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "17:00"
+      "areaServed": [
+        {
+          "@type": "State",
+          "name": "[STATE]",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "United States"
+          }
+        }
+      ],
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "[LATITUDE]",
+          "longitude": "[LONGITUDE]"
+        },
+        "geoRadius": "100"
       },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
       "sameAs": [
         "[FACEBOOK URL]",
         "[LINKEDIN URL]",
         "[TWITTER URL]",
-        "[YOUTUBE URL]"
+        "[YOUTUBE URL]",
+        "[INSTAGRAM URL]"
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "[RATING VALUE]",
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "[REVIEW COUNT]",
         "reviewCount": "[REVIEW COUNT]"
-      }
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "[REVIEWER NAME]"
+          },
+          "reviewBody": "[REVIEW TEXT]",
+          "datePublished": "2025-01-01"
+        }
+      ],
+      "parentOrganization": {
+        "@type": "InsuranceAgency",
+        "name": "Contractor's Choice Agency",
+        "url": "https://contractorschoiceagency.com",
+        "telephone": "844-967-5247",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "9744 E Riggs Rd",
+          "addressLocality": "Sun Lakes",
+          "addressRegion": "AZ",
+          "postalCode": "85248",
+          "addressCountry": "US"
+        },
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "license",
+          "name": "Arizona Insurance License",
+          "identifier": "3001409680",
+          "issuedBy": {
+            "@type": "Organization",
+            "name": "Arizona Department of Insurance"
+          }
+        }
+      },
+      "knowsAbout": [
+        "[PRIMARY INSURANCE TYPE]",
+        "General Liability Insurance",
+        "Commercial Auto Insurance",
+        "Workers Compensation Insurance",
+        "Professional Liability Insurance",
+        "Property Insurance",
+        "Umbrella Insurance",
+        "Business Insurance"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Insurance Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "[PRIMARY SERVICE]",
+              "description": "[SERVICE DESCRIPTION]"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Certificate of Insurance",
+              "description": "Generate instant certificates of insurance online",
+              "url": "https://contractorschoiceagency.com/certificates"
+            }
+          }
+        ]
+      },
+      "potentialAction": [
+        {
+          "@type": "GetQuote",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://[DOMAIN NAME]/#contact",
+            "actionPlatform": [
+              "http://schema.org/DesktopWebPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          },
+          "result": {
+            "@type": "Quotation",
+            "name": "Insurance Quote"
+          }
+        },
+        {
+          "@type": "ContactAction",
+          "target": {
+            "@type": "ContactPoint",
+            "telephone": "844-967-5247",
+            "contactType": "sales",
+            "availableLanguage": ["English", "Spanish"]
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script type="application/ld+json" id="websiteSchema">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://[DOMAIN NAME]/#website",
+      "url": "https://[DOMAIN NAME]",
+      "name": "[COMPANY NAME]",
+      "description": "[WEBSITE DESCRIPTION]",
+      "publisher": {
+        "@id": "https://[DOMAIN NAME]/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://[DOMAIN NAME]/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "inLanguage": "en-US"
     }
     </script>
     
@@ -516,24 +678,26 @@
   "datePublished": "2025-04-05",
   "dateModified": "2025-04-05",
   "publisher": {
+    "@id": "https://[DOMAIN NAME]/#organization"
+  },
+  "author": {
     "@type": "Organization",
-    "name": "Contractors Choice Agency",
-    "url": "https://www.contractorschoiceagency.com",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.contractorschoiceagency.com/images/company-logo.webp",
-      "width": 800,
-      "height": 600
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "[STREET ADDRESS]",
-      "addressLocality": "[CITY]",
-      "addressRegion": "[STATE]",
-      "postalCode": "[ZIP CODE]",
-      "addressCountry": "US"
-    },
-    "telephone": "844-967-5247"
+    "name": "[COMPANY NAME]",
+    "url": "https://[DOMAIN NAME]",
+    "parentOrganization": {
+      "@type": "InsuranceAgency",
+      "name": "Contractor's Choice Agency",
+      "url": "https://contractorschoiceagency.com",
+      "telephone": "844-967-5247",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "9744 E Riggs Rd",
+        "addressLocality": "Sun Lakes",
+        "addressRegion": "AZ",
+        "postalCode": "85248",
+        "addressCountry": "US"
+      }
+    }
   },
   "mainEntity": [
     {
@@ -583,6 +747,45 @@
     }
   ]
 }
+    </script>
+    
+    <script type="application/ld+json" id="localBusinessSchema">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://[DOMAIN NAME]/#localbusiness",
+      "name": "[COMPANY NAME]",
+      "description": "[LOCAL BUSINESS DESCRIPTION]",
+      "url": "https://[DOMAIN NAME]",
+      "telephone": "844-967-5247",
+      "email": "josh@contractorschoiceagency.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "[STREET ADDRESS]",
+        "addressLocality": "[CITY]",
+        "addressRegion": "[STATE]",
+        "postalCode": "[ZIP CODE]",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "[LATITUDE]",
+        "longitude": "[LONGITUDE]"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
+      "paymentAccepted": ["Cash", "Credit Card", "Check", "Wire Transfer"],
+      "currenciesAccepted": "USD",
+      "publicAccess": true,
+      "isAccessibleForFree": true,
+      "hasMap": "https://maps.google.com/?q=[LATITUDE],[LONGITUDE]"
+    }
     </script>
 </head>
 <body>
