@@ -1,0 +1,44 @@
+{
+  "name": "@cca/interactive-map",
+  "version": "1.0.0",
+  "description": "Interactive US map component for Contractor's Choice Agency state insurance pages",
+  "main": "dist/cca-interactive-map-combined.js",
+  "style": "dist/cca-interactive-map.css",
+  "files": [
+    "dist/",
+    "examples/",
+    "README.md",
+    "INTEGRATION-GUIDE.md"
+  ],
+  "scripts": {
+    "build": "node build-combined.js",
+    "demo": "npx http-server . -o /examples/demo.html -p 8080",
+    "test": "echo \"Open examples/demo.html in browser to test\""
+  },
+  "keywords": [
+    "interactive-map",
+    "us-map",
+    "contractor-insurance",
+    "cca",
+    "state-navigation",
+    "svg-map",
+    "insurance-map"
+  ],
+  "author": "Contractor's Choice Agency",
+  "license": "Proprietary",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/contractorschoiceagency/cca-map-component"
+  },
+  "homepage": "https://contractorschoiceagency.com",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "browser": {
+    "./dist/cca-interactive-map.js": "./dist/cca-interactive-map-combined.js"
+  },
+  "cdn": {
+    "js": "https://contractorschoiceagency.com/assets/cca-interactive-map-combined.js",
+    "css": "https://contractorschoiceagency.com/assets/cca-interactive-map.css"
+  }
+}

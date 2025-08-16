@@ -798,6 +798,7 @@
             <div class="desktop-nav">
                 <a href="#benefits" class="nav-link">Coverage</a>
                 <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#state-map" class="nav-link">Find by State</a>
                 <a href="blog/" class="nav-link">Blog</a>
                 <a href="#faq" class="nav-link">FAQ</a>
                 <a href="#contact" class="nav-cta">Get a Quote</a>
@@ -817,6 +818,7 @@
         <div class="mobile-menu-content">
             <a href="#benefits" class="mobile-nav-link">Coverage</a>
             <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
+            <a href="#state-map" class="mobile-nav-link">Find by State</a>
             <a href="blog/" class="mobile-nav-link">Blog</a>
             <a href="#faq" class="mobile-nav-link">FAQ</a>
             <a href="#contact" class="mobile-nav-cta">Get Your Free Quote</a>
@@ -999,6 +1001,31 @@
                 </div>
             </div>
             
+        </div>
+    </section>
+
+    <!-- Interactive State Map Section -->
+    <section id="state-map" class="section" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 4rem 1rem;">
+        <div class="container">
+            <h2 class="section-title" style="font-size: clamp(1.5rem, 3.5vw, 2.25rem); font-weight: 600; margin-bottom: 1rem;">Find Contractor Insurance by State</h2>
+            <p style="text-align: center; color: #64748b; max-width: 600px; margin: 0 auto 2rem; font-size: 1.1rem;">
+                Click on any state to explore comprehensive contractor insurance guides from our parent company, Contractor's Choice Agency
+            </p>
+            
+            <!-- CCA Interactive Map Container -->
+            <div id="cca-state-map" style="max-width: 1200px; margin: 0 auto; background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);"></div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 1rem;">
+                    <span style="display: inline-block; width: 12px; height: 12px; background: #3b82f6; border-radius: 2px; margin-right: 5px;"></span>
+                    Available Now
+                    <span style="display: inline-block; width: 12px; height: 12px; background: #e2e8f0; border-radius: 2px; margin-left: 20px; margin-right: 5px;"></span>
+                    Coming Soon
+                </p>
+                <a href="https://contractorschoiceagency.com/states" target="_blank" rel="noopener" style="color: #3b82f6; text-decoration: none; font-weight: 600; transition: color 0.3s ease;" onmouseover="this.style.color='#1e40af'" onmouseout="this.style.color='#3b82f6'">
+                    View All State Insurance Guides →
+                </a>
+            </div>
         </div>
     </section>
 
@@ -1323,5 +1350,38 @@
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
+    
+    <!-- CCA Interactive Map Component -->
+    <link rel="stylesheet" href="CCA-map-component/dist/cca-interactive-map.css">
+    <script src="CCA-map-component/dist/cca-interactive-map-combined.js"></script>
+    <script>
+        // Initialize the CCA Interactive Map
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if map container exists
+            const mapContainer = document.getElementById('cca-state-map');
+            if (mapContainer && typeof CCAInteractiveMap !== 'undefined') {
+                new CCAInteractiveMap('cca-state-map', {
+                    height: '500px',
+                    backgroundColor: '#f0f9ff',
+                    availableColor: '#3b82f6',
+                    hoverColor: '#1e40af',
+                    unavailableColor: '#e2e8f0',
+                    openInNewTab: true,
+                    showTooltip: true,
+                    onStateClick: function(stateCode, stateName, url) {
+                        // Track click event (optional - for analytics)
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'click', {
+                                'event_category': 'State Map',
+                                'event_label': stateName,
+                                'value': stateCode
+                            });
+                        }
+                        // Map component handles the navigation
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>

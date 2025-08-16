@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCA Interactive Map Component - Demo</title>
+    
+    <!-- Include the CSS -->
+    <link rel="stylesheet" href="../dist/cca-interactive-map.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .demo-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .demo-header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            animation: fadeInDown 0.5s ease-out;
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .demo-header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .demo-header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+        
+        .demo-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .demo-section h2 {
+            color: #1e293b;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .demo-section h2::before {
+            content: "🗺️";
+            font-size: 1.2em;
+        }
+        
+        .controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .control-group label {
+            font-weight: 600;
+            color: #475569;
+            font-size: 0.9em;
+        }
+        
+        .control-group input,
+        .control-group select {
+            padding: 8px 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+        
+        .control-group input:focus,
+        .control-group select:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #f6f8fb 0%, #e9ecef 100%);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .stat-card .value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #3b82f6;
+        }
+        
+        .stat-card .label {
+            color: #64748b;
+            margin-top: 5px;
+            font-size: 0.9em;
+        }
+        
+        .event-log {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 15px;
+            height: 200px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        .event-log .event {
+            padding: 5px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .event-log .event:last-child {
+            border-bottom: none;
+        }
+        
+        .event-log .timestamp {
+            color: #94a3b8;
+            margin-right: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            padding: 20px;
+            opacity: 0.9;
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <div class="demo-header">
+            <h1>CCA Interactive Map Component</h1>
+            <p>Interactive US map for Contractor's Choice Agency state insurance pages</p>
+        </div>
+        
+        <!-- Main Map Section -->
+        <div class="demo-section">
+            <h2>Interactive Map Demo</h2>
+            <div id="main-map"></div>
+        </div>
+        
+        <!-- Customization Controls -->
+        <div class="demo-section">
+            <h2 style="margin-bottom: 20px;">Customization Options</h2>
+            
+            <div class="controls">
+                <div class="control-group">
+                    <label>Background Color</label>
+                    <input type="color" id="bgColor" value="#f0f9ff">
+                </div>
+                
+                <div class="control-group">
+                    <label>Available State Color</label>
+                    <input type="color" id="availableColor" value="#3b82f6">
+                </div>
+                
+                <div class="control-group">
+                    <label>Hover Color</label>
+                    <input type="color" id="hoverColor" value="#1e40af">
+                </div>
+                
+                <div class="control-group">
+                    <label>Unavailable Color</label>
+                    <input type="color" id="unavailableColor" value="#e2e8f0">
+                </div>
+                
+                <div class="control-group">
+                    <label>Map Height</label>
+                    <select id="mapHeight">
+                        <option value="400px">400px</option>
+                        <option value="500px">500px</option>
+                        <option value="600px" selected>600px</option>
+                        <option value="700px">700px</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label>Open Links In</label>
+                    <select id="openInNewTab">
+                        <option value="true">New Tab</option>
+                        <option value="false">Same Tab</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="button-group">
+                <button onclick="applyCustomization()">Apply Changes</button>
+                <button onclick="resetMap()">Reset to Default</button>
+            </div>
+        </div>
+        
+        <!-- Statistics -->
+        <div class="demo-section">
+            <h2>Map Statistics</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="value">50</div>
+                    <div class="label">Total States</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value" id="availableCount">36</div>
+                    <div class="label">Available States</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value" id="comingSoonCount">14</div>
+                    <div class="label">Coming Soon</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value" id="clickCount">0</div>
+                    <div class="label">Clicks Today</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Event Log -->
+        <div class="demo-section">
+            <h2>Event Log</h2>
+            <div class="event-log" id="eventLog">
+                <div class="event">
+                    <span class="timestamp">[ READY ]</span>
+                    <span>Map component initialized successfully</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Code Examples -->
+        <div class="demo-section">
+            <h2>Quick Integration Code</h2>
+            <pre style="background: #1e293b; color: #e2e8f0; padding: 20px; border-radius: 8px; overflow-x: auto;">
+&lt;!-- Add this to your HTML --&gt;
+&lt;div id="cca-map"&gt;&lt;/div&gt;
+&lt;script src="https://contractorschoiceagency.com/assets/cca-interactive-map-combined.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  new CCAInteractiveMap('cca-map');
+&lt;/script&gt;</pre>
+        </div>
+        
+        <div class="footer">
+            <p>© 2024 Contractor's Choice Agency | <a href="https://contractorschoiceagency.com" target="_blank">Visit Main Site</a></p>
+        </div>
+    </div>
+    
+    <!-- Include the map component -->
+    <script src="../dist/cca-interactive-map-combined.js"></script>
+    
+    <script>
+        // Initialize the main map
+        let mainMap = new CCAInteractiveMap('main-map', {
+            height: '600px',
+            onStateClick: function(stateCode, stateName, url) {
+                logEvent(`Clicked: ${stateName} (${stateCode})`);
+                incrementClickCount();
+                
+                // For demo, prevent navigation
+                if (confirm(`Navigate to ${stateName} contractor insurance page?`)) {
+                    window.open(url, '_blank');
+                }
+                return false;
+            }
+        });
+        
+        // Event logging
+        function logEvent(message) {
+            const log = document.getElementById('eventLog');
+            const time = new Date().toLocaleTimeString();
+            const event = document.createElement('div');
+            event.className = 'event';
+            event.innerHTML = `
+                <span class="timestamp">[${time}]</span>
+                <span>${message}</span>
+            `;
+            log.insertBefore(event, log.firstChild);
+            
+            // Keep only last 10 events
+            while (log.children.length > 10) {
+                log.removeChild(log.lastChild);
+            }
+        }
+        
+        // Click counter
+        let clickCount = 0;
+        function incrementClickCount() {
+            clickCount++;
+            document.getElementById('clickCount').textContent = clickCount;
+        }
+        
+        // Apply customization
+        function applyCustomization() {
+            // Destroy old map
+            if (mainMap) {
+                mainMap.destroy();
+            }
+            
+            // Create new map with custom options
+            mainMap = new CCAInteractiveMap('main-map', {
+                backgroundColor: document.getElementById('bgColor').value,
+                availableColor: document.getElementById('availableColor').value,
+                hoverColor: document.getElementById('hoverColor').value,
+                unavailableColor: document.getElementById('unavailableColor').value,
+                height: document.getElementById('mapHeight').value,
+                openInNewTab: document.getElementById('openInNewTab').value === 'true',
+                onStateClick: function(stateCode, stateName, url) {
+                    logEvent(`Clicked: ${stateName} (${stateCode})`);
+                    incrementClickCount();
+                    
+                    if (confirm(`Navigate to ${stateName} contractor insurance page?`)) {
+                        window.open(url, '_blank');
+                    }
+                    return false;
+                }
+            });
+            
+            logEvent('Map customization applied');
+        }
+        
+        // Reset map to defaults
+        function resetMap() {
+            document.getElementById('bgColor').value = '#f0f9ff';
+            document.getElementById('availableColor').value = '#3b82f6';
+            document.getElementById('hoverColor').value = '#1e40af';
+            document.getElementById('unavailableColor').value = '#e2e8f0';
+            document.getElementById('mapHeight').value = '600px';
+            document.getElementById('openInNewTab').value = 'true';
+            
+            applyCustomization();
+            logEvent('Map reset to default settings');
+        }
+        
+        // Log initial load
+        logEvent('Demo page loaded successfully');
+    </script>
+</body>
+</html>
