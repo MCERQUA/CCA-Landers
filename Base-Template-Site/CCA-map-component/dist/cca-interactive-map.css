@@ -1,0 +1,124 @@
+/**
+ * CCA Interactive Map - Default Styles
+ * Optional CSS for enhanced styling
+ */
+
+.cca-map-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cca-map-wrapper {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cca-map-tooltip {
+  animation: tooltipFadeIn 0.2s ease-out;
+}
+
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -90%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -100%);
+  }
+}
+
+/* Optional styling for embedding in different themes */
+.cca-map-dark .cca-map-wrapper {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+}
+
+.cca-map-dark .cca-map-tooltip {
+  background: #1e293b !important;
+  border-color: #60a5fa !important;
+  color: #f1f5f9 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cca-map-container {
+    padding: 10px;
+  }
+  
+  .cca-map-wrapper {
+    height: 400px !important;
+  }
+  
+  .cca-map-tooltip {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
+
+/* Loading animation */
+.cca-map-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 400px;
+}
+
+.cca-map-loading::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e2e8f0;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* State hover effects */
+.cca-state-path {
+  transition: all 0.3s ease;
+}
+
+.cca-state-path:hover {
+  filter: brightness(1.1);
+}
+
+/* Custom scrollbar for map container */
+.cca-map-wrapper::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.cca-map-wrapper::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+.cca-map-wrapper::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.cca-map-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
