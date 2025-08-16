@@ -13,32 +13,61 @@ const passiveSupported = () => {
 
 const passiveListener = passiveSupported() ? { passive: true } : false;
 
-// Initialize menu functionality
-const initMenu = () => {
-    const menuButton = document.getElementById('menuButton');
+// Initialize modern navigation
+const initNavigation = () => {
+    const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
+    const navigation = document.getElementById('navigation');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link, .mobile-nav-cta');
     
-    if (menuButton && mobileMenu) {
+    if (hamburger && mobileMenu) {
         const toggleMenu = (show) => {
-            mobileMenu.style.display = show ? 'block' : 'none';
             if (show) {
+                hamburger.classList.add('active');
+                mobileMenu.classList.add('active');
+                hamburger.setAttribute('aria-expanded', 'true');
                 document.body.style.overflow = 'hidden';
             } else {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
                 document.body.style.overflow = '';
             }
         };
 
-        menuButton.addEventListener('click', () => {
-            const isVisible = mobileMenu.style.display === 'block';
-            toggleMenu(!isVisible);
-        }, passiveListener);
+        hamburger.addEventListener('click', () => {
+            const isActive = hamburger.classList.contains('active');
+            toggleMenu(!isActive);
+        });
+        
+        // Close menu when clicking mobile links
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                toggleMenu(false);
+            });
+        });
         
         // Close menu when clicking outside
         document.addEventListener('click', (event) => {
-            if (event.target !== menuButton && !menuButton.contains(event.target) && 
-                event.target !== mobileMenu && !mobileMenu.contains(event.target)) {
+            if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target)) {
                 toggleMenu(false);
             }
+        });
+    }
+    
+    // Add scroll effect to navigation
+    if (navigation) {
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 50) {
+                navigation.classList.add('scrolled');
+            } else {
+                navigation.classList.remove('scrolled');
+            }
+            
+            lastScroll = currentScroll;
         }, passiveListener);
     }
 };
@@ -147,7 +176,7 @@ const initFAQ = () => {
 
 // Initialize on DOM load
 document.addEventListener('DOMContentLoaded', () => {
-    initMenu();
+    initNavigation();
     initModal();
     initScrollAnimations();
     initFAQ();
