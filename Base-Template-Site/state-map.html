@@ -405,6 +405,11 @@
         const state = urlParams.get('state');
         const stateName = urlParams.get('name') || state;
         
+        // Debug logging
+        console.log('URL Search:', window.location.search);
+        console.log('State parameter:', state);
+        console.log('Name parameter:', stateName);
+        
         // State code to URL mapping - matches CCA site structure
         const stateRoutes = {
             'AL': 'https://contractorschoiceagency.com/states/alabama-contractor-insurance',
@@ -464,12 +469,18 @@
         
         // Initialize page
         function initializePage() {
+            console.log('Initializing page with state:', state);
+            console.log('State exists in routes:', state in stateRoutes);
+            console.log('State route URL:', stateRoutes[state]);
+            
             if (!state || !stateRoutes[state]) {
+                console.error('State not found or invalid:', state);
                 showError();
                 return;
             }
             
             currentStateUrl = stateRoutes[state];
+            console.log('Loading state content for:', state, 'URL:', currentStateUrl);
             loadStateContent(state, stateName);
         }
         

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test State Map - Montana</title>
+</head>
+<body>
+    <h1>State Map Test</h1>
+    <p>Testing Montana state link functionality</p>
+    
+    <div style="padding: 20px; background: #f0f0f0; margin: 20px 0;">
+        <h2>Test Links:</h2>
+        <ul>
+            <li><a href="state-map.html?state=MT&name=Montana">Montana (MT) - Relative Link</a></li>
+            <li><a href="/state-map.html?state=MT&name=Montana">Montana (MT) - Absolute Path</a></li>
+            <li><a href="state-map.html?state=CA&name=California">California (CA) - Test Another State</a></li>
+        </ul>
+    </div>
+    
+    <div style="padding: 20px; background: #e0f0ff; margin: 20px 0;">
+        <h2>Direct URL Test:</h2>
+        <button onclick="testMontana()">Test Montana URL</button>
+        <button onclick="testCalifornia()">Test California URL</button>
+        <div id="result" style="margin-top: 10px; padding: 10px; background: white;"></div>
+    </div>
+    
+    <script>
+        function testMontana() {
+            const url = 'state-map.html?state=MT&name=Montana';
+            document.getElementById('result').innerHTML = `
+                <strong>Testing:</strong> ${url}<br>
+                <strong>Decoded:</strong> state=MT, name=Montana<br>
+                <a href="${url}" target="_blank">Open in new tab</a>
+            `;
+        }
+        
+        function testCalifornia() {
+            const url = 'state-map.html?state=CA&name=California';
+            document.getElementById('result').innerHTML = `
+                <strong>Testing:</strong> ${url}<br>
+                <strong>Decoded:</strong> state=CA, name=California<br>
+                <a href="${url}" target="_blank">Open in new tab</a>
+            `;
+        }
+        
+        // Test URL parameters on load
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            console.log('Current URL parameters:', {
+                state: params.get('state'),
+                name: params.get('name')
+            });
+        };
+    </script>
+</body>
+</html>
