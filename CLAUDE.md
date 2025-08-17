@@ -35,25 +35,7 @@ This repository uses a specialized agent identity system where each site has its
 ### Agent Identity Format: CC-CCA-LANDER-{SITE-CODE}
 
 **Site Directory → Agent Identity Mapping:**
-- accountreceivablesinsurance.com → **CC-CCA-LANDER-ACC-REC-INS**
-- barandnightclubinsurance.com → **CC-CCA-LANDER-BNB-INS**  
-- cabincruiserinsurance.com → **CC-CCA-LANDER-CRUISE-INS**
-- chandlermortgages.com → **CC-CCA-LANDER-MORT-CHA**
-- concreterepairinsurance.com → **CC-CCA-LANDER-CONC-INS**
-- dirtworkinsurance → **CC-CCA-LANDER-DIRT-INS**
-- fightclubinsurance.com → **CC-CCA-LANDER-FIGHT-INS**
-- froyoinsurance.com → **CC-CCA-LANDER-FROYO-INS**
-- glazinginsurance.com → **CC-CCA-LANDER-GLAZE-INS**
-- hiredautoinsurance.com → **CC-CCA-LANDER-HIRED-AUTO**
-- hoodventcleaninginsurance.com → **CC-CCA-LANDER-VENT-INS**
-- independenttruckerinsurance.com → **CC-CCA-LANDER-TRUCK-INS**
-- indoorskitrainer.com → **CC-CCA-LANDER-SKI-INS**
-- mobiledetailinsurance.com → **CC-CCA-LANDER-DETAIL-INS**
-- oilfieldweldinginsurance.com → **CC-CCA-LANDER-WELD-INS**
-- puroseguro.com → **CC-CCA-LANDER-PURO-SEG**
-- ufcinsurance.com → **CC-CCA-LANDER-UFC-INS**
-- vanlifeinsurance.com → **CC-CCA-LANDER-VAN-INS**
-- waterproofinginsurance.com → **CC-CCA-LANDER-WATER-INS**
+
 
 ### Agent System Usage
 When working on any specific site, use the corresponding agent identity in:
@@ -147,7 +129,7 @@ A: Another answer here.
 ### 🚀 CCA-Landers Blog System (HTML-Based)
 
 **REFERENCE IMPLEMENTATION**: froyoinsurance.com - fully working blog system with zero build issues  
-**COMPLETE GUIDE**: `/home/mikecerqua/docs/cca-landers-blog-implementation-guide.md`
+**COMPLETE GUIDE**: `../docs/cca-landers-blog-implementation-guide.md`
 
 ### ✅ BUILD-SAFE BLOG ARCHITECTURE
 
@@ -187,7 +169,7 @@ A: Another answer here.
 
 ### 📝 Blog Content Requirements
 
-**Article Length**: 2,000-3,000 words per article (comprehensive but not overwhelming)
+**Article Length**: 4,000-5,000 words per article (comprehensive but not overwhelming)
 **Meta Description**: 150-160 characters
 **Title**: 60-70 characters, keyword-rich
 **Schema Markup**: Required for SEO

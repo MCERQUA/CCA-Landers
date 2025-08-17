@@ -410,58 +410,58 @@
         console.log('State parameter:', state);
         console.log('Name parameter:', stateName);
         
-        // State code to URL mapping - matches CCA site structure
+        // State code to URL mapping - uses relative paths for local state pages
         const stateRoutes = {
-            'AL': 'https://contractorschoiceagency.com/states/alabama-contractor-insurance',
-            'AK': 'https://contractorschoiceagency.com/states/alaska-contractor-insurance',
-            'AZ': 'https://contractorschoiceagency.com/states/arizona-contractor-insurance',
-            'AR': 'https://contractorschoiceagency.com/states/arkansas-contractor-insurance',
-            'CA': 'https://contractorschoiceagency.com/states/california-contractor-insurance',
-            'CO': 'https://contractorschoiceagency.com/states/colorado-contractor-insurance',
-            'CT': 'https://contractorschoiceagency.com/states/connecticut-contractor-insurance',
-            'DE': 'https://contractorschoiceagency.com/states/delaware-contractor-insurance',
-            'FL': 'https://contractorschoiceagency.com/states/florida-contractor-insurance',
-            'GA': 'https://contractorschoiceagency.com/states/georgia-contractor-insurance',
-            'HI': 'https://contractorschoiceagency.com/states/hawaii-contractor-insurance',
-            'ID': 'https://contractorschoiceagency.com/states/idaho-contractor-insurance',
-            'IL': 'https://contractorschoiceagency.com/states/illinois-contractor-insurance',
-            'IN': 'https://contractorschoiceagency.com/states/indiana-contractor-insurance',
-            'IA': 'https://contractorschoiceagency.com/states/iowa-contractor-insurance',
-            'KS': 'https://contractorschoiceagency.com/states/kansas-contractor-insurance',
-            'KY': 'https://contractorschoiceagency.com/states/kentucky-contractor-insurance',
-            'LA': 'https://contractorschoiceagency.com/states/louisiana-contractor-insurance',
-            'ME': 'https://contractorschoiceagency.com/states/maine-contractor-insurance',
-            'MD': 'https://contractorschoiceagency.com/states/maryland-contractor-insurance',
-            'MA': 'https://contractorschoiceagency.com/states/massachusetts-contractor-insurance',
-            'MI': 'https://contractorschoiceagency.com/states/michigan-contractor-insurance',
-            'MN': 'https://contractorschoiceagency.com/states/minnesota-contractor-insurance',
-            'MS': 'https://contractorschoiceagency.com/states/mississippi-contractor-insurance',
-            'MO': 'https://contractorschoiceagency.com/states/missouri-contractor-insurance',
-            'MT': 'https://contractorschoiceagency.com/states/montana-contractor-insurance',
-            'NE': 'https://contractorschoiceagency.com/states/nebraska-contractor-insurance',
-            'NV': 'https://contractorschoiceagency.com/states/nevada-contractor-insurance',
-            'NH': 'https://contractorschoiceagency.com/states/new-hampshire-contractor-insurance',
-            'NJ': 'https://contractorschoiceagency.com/states/new-jersey-contractor-insurance',
-            'NM': 'https://contractorschoiceagency.com/states/new-mexico-contractor-insurance',
-            'NY': 'https://contractorschoiceagency.com/states/new-york-contractor-insurance',
-            'NC': 'https://contractorschoiceagency.com/states/north-carolina-contractor-insurance',
-            'ND': 'https://contractorschoiceagency.com/states/north-dakota-contractor-insurance',
-            'OH': 'https://contractorschoiceagency.com/states/ohio-contractor-insurance',
-            'OK': 'https://contractorschoiceagency.com/states/oklahoma-contractor-insurance',
-            'OR': 'https://contractorschoiceagency.com/states/oregon-contractor-insurance',
-            'PA': 'https://contractorschoiceagency.com/states/pennsylvania-contractor-insurance',
-            'RI': 'https://contractorschoiceagency.com/states/rhode-island-contractor-insurance',
-            'SC': 'https://contractorschoiceagency.com/states/south-carolina-contractor-insurance',
-            'SD': 'https://contractorschoiceagency.com/states/south-dakota-contractor-insurance',
-            'TN': 'https://contractorschoiceagency.com/states/tennessee-contractor-insurance',
-            'TX': 'https://contractorschoiceagency.com/states/texas-contractor-insurance',
-            'UT': 'https://contractorschoiceagency.com/states/utah-contractor-insurance',
-            'VT': 'https://contractorschoiceagency.com/states/vermont-contractor-insurance',
-            'VA': 'https://contractorschoiceagency.com/states/virginia-contractor-insurance',
-            'WA': 'https://contractorschoiceagency.com/states/washington-contractor-insurance',
-            'WV': 'https://contractorschoiceagency.com/states/west-virginia-contractor-insurance',
-            'WI': 'https://contractorschoiceagency.com/states/wisconsin-contractor-insurance',
-            'WY': 'https://contractorschoiceagency.com/states/wyoming-contractor-insurance'
+            'AL': '/states/alabama-contractor-insurance.html',
+            'AK': '/states/alaska-contractor-insurance.html',
+            'AZ': '/states/arizona-contractor-insurance.html',
+            'AR': '/states/arkansas-contractor-insurance.html',
+            'CA': '/states/california-contractor-insurance.html',
+            'CO': '/states/colorado-contractor-insurance.html',
+            'CT': '/states/connecticut-contractor-insurance.html',
+            'DE': '/states/delaware-contractor-insurance.html',
+            'FL': '/states/florida-contractor-insurance.html',
+            'GA': '/states/georgia-contractor-insurance.html',
+            'HI': '/states/hawaii-contractor-insurance.html',
+            'ID': '/states/idaho-contractor-insurance.html',
+            'IL': '/states/illinois-contractor-insurance.html',
+            'IN': '/states/indiana-contractor-insurance.html',
+            'IA': '/states/iowa-contractor-insurance.html',
+            'KS': '/states/kansas-contractor-insurance.html',
+            'KY': '/states/kentucky-contractor-insurance.html',
+            'LA': '/states/louisiana-contractor-insurance.html',
+            'ME': '/states/maine-contractor-insurance.html',
+            'MD': '/states/maryland-contractor-insurance.html',
+            'MA': '/states/massachusetts-contractor-insurance.html',
+            'MI': '/states/michigan-contractor-insurance.html',
+            'MN': '/states/minnesota-contractor-insurance.html',
+            'MS': '/states/mississippi-contractor-insurance.html',
+            'MO': '/states/missouri-contractor-insurance.html',
+            'MT': '/states/montana-contractor-insurance.html',
+            'NE': '/states/nebraska-contractor-insurance.html',
+            'NV': '/states/nevada-contractor-insurance.html',
+            'NH': '/states/new-hampshire-contractor-insurance.html',
+            'NJ': '/states/new-jersey-contractor-insurance.html',
+            'NM': '/states/new-mexico-contractor-insurance.html',
+            'NY': '/states/new-york-contractor-insurance.html',
+            'NC': '/states/north-carolina-contractor-insurance.html',
+            'ND': '/states/north-dakota-contractor-insurance.html',
+            'OH': '/states/ohio-contractor-insurance.html',
+            'OK': '/states/oklahoma-contractor-insurance.html',
+            'OR': '/states/oregon-contractor-insurance.html',
+            'PA': '/states/pennsylvania-contractor-insurance.html',
+            'RI': '/states/rhode-island-contractor-insurance.html',
+            'SC': '/states/south-carolina-contractor-insurance.html',
+            'SD': '/states/south-dakota-contractor-insurance.html',
+            'TN': '/states/tennessee-contractor-insurance.html',
+            'TX': '/states/texas-contractor-insurance.html',
+            'UT': '/states/utah-contractor-insurance.html',
+            'VT': '/states/vermont-contractor-insurance.html',
+            'VA': '/states/virginia-contractor-insurance.html',
+            'WA': '/states/washington-contractor-insurance.html',
+            'WV': '/states/west-virginia-contractor-insurance.html',
+            'WI': '/states/wisconsin-contractor-insurance.html',
+            'WY': '/states/wyoming-contractor-insurance.html'
         };
         
         // Current state URL
@@ -545,27 +545,9 @@
         
         // Show error message
         function showError() {
-            // Special handling for Montana
-            if (state === 'MT') {
-                console.log('Montana failed to load in iframe, attempting direct navigation');
-                // Option 1: Try opening in same window after a delay
-                const errorMsg = document.getElementById('errorMessage');
-                errorMsg.innerHTML = `
-                    <h2>Loading Montana Information</h2>
-                    <p>The Montana page is taking longer than expected. You'll be redirected shortly.</p>
-                    <a href="https://contractorschoiceagency.com/states/montana-contractor-insurance" target="_blank">Click here if not redirected</a>
-                `;
-                errorMsg.style.display = 'block';
-                
-                // Auto-redirect after 2 seconds
-                setTimeout(() => {
-                    window.location.href = 'https://contractorschoiceagency.com/states/montana-contractor-insurance';
-                }, 2000);
-            } else {
-                document.getElementById('loadingIndicator').style.display = 'none';
-                document.getElementById('errorMessage').style.display = 'block';
-                document.getElementById('state-iframe').style.display = 'none';
-            }
+            document.getElementById('loadingIndicator').style.display = 'none';
+            document.getElementById('errorMessage').style.display = 'block';
+            document.getElementById('state-iframe').style.display = 'none';
         }
         
         // Go back to map

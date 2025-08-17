@@ -11,7 +11,7 @@ import re
 from datetime import datetime
 from pathlib import Path
 
-BASE_DIR = "/home/mikecerqua/projects/CCA-Landers"
+BASE_DIR = "/home/mikecerqua/projects/CCA-New-Landers"
 CLAUDE_DIR = f"{BASE_DIR}/.claude"
 BLOG_MGMT_DIR = f"{CLAUDE_DIR}/blog-management"
 RESEARCH_TEMPLATES = f"{CLAUDE_DIR}/research/templates"

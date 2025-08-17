@@ -2,7 +2,7 @@
 
 **Last Updated:** [DATE]
 **Total Articles:** [CURRENT_COUNT]
-**Broken URLs Identified:** 14
+**Broken URLs Identified:** 
 **Articles in Pipeline:** [PIPELINE_COUNT]
 
 ## New Articles Required

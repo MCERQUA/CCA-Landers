@@ -1,7 +1,7 @@
 # /FAQ-FIX Command Workflow
 
 ## Command Purpose
-Automated diagnostic and resolution tool for FAQ section visibility issues across CCA-Landers sites.
+Automated diagnostic and resolution tool for FAQ section visibility issues across CCA-New-Landers sites.
 
 ## Usage
 ```
@@ -12,7 +12,7 @@ Automated diagnostic and resolution tool for FAQ section visibility issues acros
 
 ### Phase 1: Diagnostic
 1. **Identify Current Site**
-   - Check if in CCA-Landers project directory
+   - Check if in CCA-New-Landers project directory
    - Detect specific site (*.com folder)
    - Verify site has FAQ section
 
@@ -96,7 +96,7 @@ Automated diagnostic and resolution tool for FAQ section visibility issues acros
 ## Command Implementation
 
 ### Prerequisites Check
-- Must be in CCA-Landers project
+- Must be in CCA-New-Landers project
 - Must have Node.js/npm available
 - Must have git repository
 - CSS files must be editable

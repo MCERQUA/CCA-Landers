@@ -3,7 +3,7 @@
 ## 🚨 CRITICAL ISSUE: FAQ Section Invisible White Space Overlay
 
 ### Problem Description
-Multiple CCA-Landers sites experience an issue where the FAQ section appears as empty white space, despite having content. Users can see the FAQ content flash briefly before disappearing behind an invisible overlay.
+Multiple CCA-New-Landers sites experience an issue where the FAQ section appears as empty white space, despite having content. Users can see the FAQ content flash briefly before disappearing behind an invisible overlay.
 
 ### Root Cause Analysis
 **EXACT TECHNICAL CAUSE:**
