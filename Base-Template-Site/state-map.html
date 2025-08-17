@@ -491,15 +491,28 @@
             const stateInfoBar = document.getElementById('stateInfoBar');
             const stateTitle = document.getElementById('stateTitle');
             
+            // Special debugging for Montana
+            if (stateCode === 'MT') {
+                console.log('MONTANA DEBUG: Attempting to load Montana');
+                console.log('MONTANA URL:', currentStateUrl);
+                console.log('Iframe element:', iframe);
+            }
+            
             // Update page title and state info
             document.title = `${stateName} Business Insurance | [COMPANY NAME]`;
             stateTitle.textContent = `${stateName} Contractor Insurance Information`;
             
             // Set iframe source
+            console.log('Setting iframe src to:', currentStateUrl);
             iframe.src = currentStateUrl;
+            
+            // Track loading state
+            let loadTimeout;
             
             // Handle iframe load events
             iframe.onload = function() {
+                console.log('Iframe loaded successfully for:', stateCode);
+                clearTimeout(loadTimeout);
                 loadingIndicator.style.display = 'none';
                 iframe.classList.add('loaded');
                 stateInfoBar.classList.add('active');
@@ -514,23 +527,45 @@
                 }
             };
             
-            iframe.onerror = function() {
+            iframe.onerror = function(error) {
+                console.error('Iframe error for state:', stateCode, error);
+                clearTimeout(loadTimeout);
                 showError();
             };
             
-            // Timeout fallback
-            setTimeout(function() {
+            // Timeout fallback with more debugging
+            loadTimeout = setTimeout(function() {
                 if (!iframe.classList.contains('loaded')) {
+                    console.error('Timeout loading state:', stateCode, 'after 15 seconds');
+                    console.error('Failed URL was:', currentStateUrl);
                     showError();
                 }
-            }, 10000); // 10 second timeout
+            }, 15000); // Increased to 15 second timeout
         }
         
         // Show error message
         function showError() {
-            document.getElementById('loadingIndicator').style.display = 'none';
-            document.getElementById('errorMessage').style.display = 'block';
-            document.getElementById('state-iframe').style.display = 'none';
+            // Special handling for Montana
+            if (state === 'MT') {
+                console.log('Montana failed to load in iframe, attempting direct navigation');
+                // Option 1: Try opening in same window after a delay
+                const errorMsg = document.getElementById('errorMessage');
+                errorMsg.innerHTML = `
+                    <h2>Loading Montana Information</h2>
+                    <p>The Montana page is taking longer than expected. You'll be redirected shortly.</p>
+                    <a href="https://contractorschoiceagency.com/states/montana-contractor-insurance" target="_blank">Click here if not redirected</a>
+                `;
+                errorMsg.style.display = 'block';
+                
+                // Auto-redirect after 2 seconds
+                setTimeout(() => {
+                    window.location.href = 'https://contractorschoiceagency.com/states/montana-contractor-insurance';
+                }, 2000);
+            } else {
+                document.getElementById('loadingIndicator').style.display = 'none';
+                document.getElementById('errorMessage').style.display = 'block';
+                document.getElementById('state-iframe').style.display = 'none';
+            }
         }
         
         // Go back to map
