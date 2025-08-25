@@ -1,0 +1,7 @@
+[build]
+  # No build command needed for static HTML template
+  command = "echo 'Skipping build for template site'"
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "16"

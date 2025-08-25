@@ -1,0 +1,44 @@
+{
+  "companyName": "Waterproofing Insurance Solutions",
+  "businessType": "Insurance Agency",
+  "description": "Professional waterproofing contractor insurance solutions. Comprehensive coverage for basement waterproofing, foundation sealing, and moisture control specialists. Get instant quotes and expert guidance.",
+  "keywords": "waterproofing insurance, basement waterproofing contractor insurance, foundation sealing insurance, moisture control contractor coverage, waterproofing business insurance, contractor liability insurance",
+  "serviceAreas": [
+    "United States",
+    "Nationwide Coverage"
+  ],
+  "phone": "1-800-WATERPROOF",
+  "email": "info@waterproofinginsurance.com",
+  "address": {
+    "streetAddress": "123 Insurance Plaza",
+    "city": "Nationwide",
+    "state": "US",
+    "zipCode": "00000"
+  },
+  "services": [
+    "General Liability Insurance for Waterproofing Contractors",
+    "Professional Liability Coverage",
+    "Workers' Compensation Insurance",
+    "Commercial Auto Insurance",
+    "Tools & Equipment Coverage",
+    "Pollution Liability Insurance",
+    "Completed Operations Coverage",
+    "Contractors Bond Services"
+  ],
+  "specializations": [
+    "Basement Waterproofing Insurance",
+    "Foundation Sealing Coverage",
+    "Moisture Control Contractor Insurance",
+    "Drainage System Installation Coverage",
+    "Exterior Waterproofing Insurance",
+    "Sump Pump Installation Coverage",
+    "Waterproofing Equipment Protection",
+    "Environmental Liability Coverage"
+  ],
+  "socialProof": {
+    "yearsInBusiness": "15+",
+    "clientsSaved": "$2.5M+",
+    "averageSavings": "27%",
+    "responseTime": "24 hours"
+  }
+}

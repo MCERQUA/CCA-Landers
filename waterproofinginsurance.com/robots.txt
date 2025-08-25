@@ -1,0 +1,19 @@
+# Robots.txt for [DOMAIN NAME]
+# Update [DOMAIN NAME] with your actual domain
+
+User-agent: *
+Allow: /
+Disallow: /success.html
+
+# Sitemap location (update with your domain)
+Sitemap: https://[DOMAIN NAME]/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Block bad bots (optional)
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SEMrushBot
+Crawl-delay: 10
