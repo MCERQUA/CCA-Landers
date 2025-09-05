@@ -362,7 +362,60 @@ body {
     }
 }
 
+/* Mobile Menu Styles */
+@media (max-width: 767px) {
+    /* Hide desktop nav on mobile */
+    nav[style*="display: block"] {
+        display: none !important;
+    }
+    
+    /* Show mobile menu button */
+    #menuButton {
+        display: block !important;
+    }
+    
+    /* Mobile menu container styles */
+    #mobileMenu {
+        position: relative;
+        z-index: 50;
+        margin-top: 1rem;
+    }
+    
+    #mobileMenu a {
+        display: block;
+        padding: 0.75rem 1rem;
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    #mobileMenu a:last-child {
+        border-bottom: none;
+    }
+    
+    #mobileMenu a:hover {
+        background-color: rgba(255,255,255,0.1);
+    }
+}
+
+/* Desktop Menu Styles */
 @media (min-width: 768px) {
+    /* Show desktop nav */
+    nav[style*="display: block"],
+    nav {
+        display: block !important;
+    }
+    
+    /* Hide mobile menu button on desktop */
+    #menuButton {
+        display: none !important;
+    }
+    
+    /* Hide mobile menu on desktop */
+    #mobileMenu {
+        display: none !important;
+    }
+    
     #contactModal > div {
         width: 500px;
         max-width: 90%;
