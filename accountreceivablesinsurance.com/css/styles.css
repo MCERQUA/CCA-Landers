@@ -185,7 +185,20 @@ input:focus, textarea:focus, select:focus {
   display: none;
 }
 
-/* Media Queries */
+/* Mobile Menu Styles */
+@media (max-width: 767px) {
+  /* Hide desktop nav on mobile */
+  nav.hidden {
+    display: none !important;
+  }
+  
+  /* Show mobile menu button */
+  #menuButton {
+    display: block !important;
+  }
+}
+
+/* Desktop Menu Styles */
 @media (min-width: 768px) {
   .flex-half {
     flex: 0 0 50%;
@@ -199,12 +212,19 @@ input:focus, textarea:focus, select:focus {
     grid-template-columns: repeat(3, 1fr);
   }
   
-  nav {
+  /* Show desktop nav */
+  nav.hidden.md\:block {
     display: block !important;
   }
   
-  #menuButton {
-    display: none;
+  /* Hide mobile menu button on desktop */
+  #menuButton.block.md\:hidden {
+    display: none !important;
+  }
+  
+  /* Hide mobile menu on desktop */
+  #mobileMenu {
+    display: none !important;
   }
 }
 

@@ -227,6 +227,37 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.05);
 }
 
+/* Mobile Menu Styles */
+@media (max-width: 767px) {
+    /* Hide desktop nav on mobile */
+    nav.hidden {
+        display: none !important;
+    }
+    
+    /* Show mobile menu button */
+    #menuButton {
+        display: block !important;
+    }
+}
+
+/* Desktop Menu Styles */
+@media (min-width: 768px) {
+    /* Show desktop nav */
+    nav.hidden.md\:block {
+        display: block !important;
+    }
+    
+    /* Hide mobile menu button on desktop */
+    #menuButton.block.md\:hidden {
+        display: none !important;
+    }
+    
+    /* Hide mobile menu on desktop */
+    #mobileMenu {
+        display: none !important;
+    }
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
     .hero-title {
         font-size: 2.2rem;

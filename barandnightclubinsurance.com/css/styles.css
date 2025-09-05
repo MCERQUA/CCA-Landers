@@ -287,7 +287,18 @@ body {
     transform: scale(1);
 }
 
+/* Mobile Menu Styles */
 @media (max-width: 767px) {
+    /* Hide desktop nav on mobile */
+    nav.hidden {
+        display: none !important;
+    }
+    
+    /* Show mobile menu button */
+    #menuButton {
+        display: block !important;
+    }
+    
     #contactModal > div {
         margin: 1rem;
         padding: 1rem;
@@ -297,7 +308,23 @@ body {
     }
 }
 
+/* Desktop Menu Styles */
 @media (min-width: 768px) {
+    /* Show desktop nav */
+    nav.hidden.md\:block {
+        display: block !important;
+    }
+    
+    /* Hide mobile menu button on desktop */
+    #menuButton.block.md\:hidden {
+        display: none !important;
+    }
+    
+    /* Hide mobile menu on desktop */
+    #mobileMenu {
+        display: none !important;
+    }
+    
     #contactModal > div {
         width: 500px;
         max-width: 90%;
