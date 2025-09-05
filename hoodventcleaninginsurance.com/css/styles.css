@@ -6,6 +6,37 @@ body {
     margin: 0;
 }
 
+/* Mobile Menu Styles */
+@media (max-width: 767px) {
+    /* Hide desktop nav on mobile */
+    nav[style*="display: block"] {
+        display: none !important;
+    }
+    
+    /* Show mobile menu button */
+    #menuButton {
+        display: block !important;
+    }
+}
+
+/* Desktop Menu Styles */
+@media (min-width: 768px) {
+    /* Show desktop nav */
+    nav[style*="display: block"] {
+        display: block !important;
+    }
+    
+    /* Hide mobile menu button on desktop */
+    #menuButton {
+        display: none !important;
+    }
+    
+    /* Hide mobile menu on desktop */
+    #mobileMenu {
+        display: none !important;
+    }
+}
+
 .announcement-bar {
     background-color: #F47B20;
     color: white;
