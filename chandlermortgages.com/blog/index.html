@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandler Mortgage Blog | Home Buying Tips & Market Insights</title>
+    <meta name="description" content="Expert mortgage advice for Chandler homebuyers. Get insights on home buying, market trends, credit scores, and loan qualification tips from local mortgage professionals.">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Chandler Mortgage Blog | Home Buying Tips & Market Insights">
+    <meta property="og:description" content="Expert mortgage advice for Chandler homebuyers and local market insights from professional mortgage brokers.">
+    <meta property="og:image" content="../images/chandler-morgages.webp">
+    <meta property="og:url" content="https://www.chandlermortgages.com/blog/">
+    <meta property="og:type" content="website">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.chandlermortgages.com/blog/">
+    
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+    
+    <!-- Mobile responsive styles -->
+    <style>
+        /* Blog post cards - responsive layout */
+        .blog-post-card {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+        
+        .blog-post-content {
+            flex: 1;
+        }
+        
+        .blog-post-image {
+            width: 200px;
+            height: 120px;
+            background-color: #f3f4f6;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            flex-shrink: 0;
+        }
+        
+        .blog-mobile-padding {
+            padding: 2rem;
+        }
+        
+        /* Sidebar layout */
+        .blog-sidebar-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+        
+        /* Mobile responsive breakpoint */
+        @media (max-width: 768px) {
+            .blog-post-card {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .blog-post-image {
+                width: 100%;
+                height: 180px;
+                order: -1; /* Move image to top */
+            }
+            
+            .blog-sidebar-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            /* Adjust padding for mobile */
+            .blog-mobile-padding {
+                padding: 1rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .blog-post-image {
+                height: 160px;
+            }
+            
+            .blog-mobile-padding {
+                padding: 0.75rem !important;
+            }
+        }
+    </style>
+    
+    <!-- Schema markup for blog -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Chandler Mortgage Blog",
+      "description": "Expert mortgage advice and home buying insights for Chandler, Arizona homebuyers",
+      "url": "https://www.chandlermortgages.com/blog/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Chandler Mortgages",
+        "url": "https://www.chandlermortgages.com"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header-section">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                <div style="font-size: 1.5rem; font-weight: bold; font-family: 'Montserrat', sans-serif; color: white;">
+                    <a href="../" style="color: white; text-decoration: none;">CHANDLER <span style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: normal;">Mortgages</span></a>
+                </div>
+                <nav style="display: none;">
+                    <ul style="display: flex; gap: 1.5rem;">
+                        <li><a href="../#benefits" style="color: white;">Coverage</a></li>
+                        <li><a href="../#testimonials" style="color: white;">Testimonials</a></li>
+                        <li><a href="../#faq" style="color: white;">FAQ</a></li>
+                        <li><a href="./" style="color: #EAB308;">Blog</a></li>
+                        <li><a href="../#contact" class="cta-button" style="padding: 0.5rem 1rem;">Get a Quote</a></li>
+                    </ul>
+                </nav>
+                <button id="menuButton" style="background-color: #BC2323; color: white; padding: 0.5rem 1.5rem; border-radius: 0.25rem; border: none; font-family: 'Montserrat', sans-serif; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em;">Menu</button>
+            </div>
+            
+            <div id="mobileMenu" style="display: none; margin-bottom: 1.5rem;">
+                <div style="background-color: #0A1E3F; border-radius: 0.25rem; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
+                    <a href="../#benefits" style="display: block; padding: 0.75rem 1rem; color: white; border-bottom: 1px solid rgba(255,255,255,0.1); font-family: 'Montserrat', sans-serif;">Coverage</a>
+                    <a href="../#testimonials" style="display: block; padding: 0.75rem 1rem; color: white; border-bottom: 1px solid rgba(255,255,255,0.1); font-family: 'Montserrat', sans-serif;">Testimonials</a>
+                    <a href="../#faq" style="display: block; padding: 0.75rem 1rem; color: white; border-bottom: 1px solid rgba(255,255,255,0.1); font-family: 'Montserrat', sans-serif;">FAQ</a>
+                    <a href="./" style="display: block; padding: 0.75rem 1rem; color: #EAB308; border-bottom: 1px solid rgba(255,255,255,0.1); font-family: 'Montserrat', sans-serif;">Blog</a>
+                    <a href="../#contact" style="display: block; padding: 0.75rem 1rem; color: white; background-color: #BC2323; text-align: center; font-weight: bold; font-family: 'Montserrat', sans-serif;">Get a Quote</a>
+                </div>
+            </div>
+            
+            <div>
+                <h1 class="hero-title">Chandler Mortgage Blog</h1>
+                <p style="font-size: 1.125rem; margin-bottom: 1.5rem;">Expert home buying advice, market insights, and mortgage tips for Chandler homebuyers</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Content Section -->
+    <section class="section">
+        <div class="container">
+            <!-- Featured Post -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">Latest Posts</h2>
+                
+                <article style="background: white; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;" class="blog-mobile-padding">
+                    <div class="blog-post-card">
+                        <div class="blog-post-content">
+                            <span style="background-color: #EAB308; color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: bold;">Home Buying</span>
+                            <h3 style="font-size: 1.5rem; font-weight: bold; margin: 1rem 0;">
+                                <a href="posts/home-buying-process-mortgage-basics.html" style="color: #0A1E3F; text-decoration: none;">
+                                    Complete Guide to the Home Buying Process and Mortgage Basics
+                                </a>
+                            </h3>
+                            <p style="color: #666; margin-bottom: 1rem;">Everything you need to know about buying your first home in Chandler, AZ. From pre-approval to closing, we'll guide you through every step of the mortgage process.</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; color: #888; font-size: 0.875rem;">
+                                <span>January 29, 2025</span>
+                                <a href="posts/home-buying-process-mortgage-basics.html" style="color: #EAB308; font-weight: bold; text-decoration: none;">Read More →</a>
+                            </div>
+                        </div>
+                        <div class="blog-post-image">
+                            Blog Image
+                        </div>
+                    </div>
+                </article>
+
+                <article style="background: white; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;" class="blog-mobile-padding">
+                    <div class="blog-post-card">
+                        <div class="blog-post-content">
+                            <span style="background-color: #0A1E3F; color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: bold;">Market Trends</span>
+                            <h3 style="font-size: 1.5rem; font-weight: bold; margin: 1rem 0;">
+                                <a href="posts/chandler-market-trends-investment-opportunities.html" style="color: #0A1E3F; text-decoration: none;">
+                                    Chandler Real Estate Market Trends and Investment Opportunities 2025
+                                </a>
+                            </h3>
+                            <p style="color: #666; margin-bottom: 1rem;">Discover the latest market trends in Chandler, AZ and identify prime investment opportunities in this growing Phoenix suburb with insider market analysis.</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; color: #888; font-size: 0.875rem;">
+                                <span>January 29, 2025</span>
+                                <a href="posts/chandler-market-trends-investment-opportunities.html" style="color: #EAB308; font-weight: bold; text-decoration: none;">Read More →</a>
+                            </div>
+                        </div>
+                        <div class="blog-post-image">
+                            Blog Image
+                        </div>
+                    </div>
+                </article>
+
+                <article style="background: white; border-radius: 0.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;" class="blog-mobile-padding">
+                    <div class="blog-post-card">
+                        <div class="blog-post-content">
+                            <span style="background-color: #059669; color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; font-weight: bold;">Credit Tips</span>
+                            <h3 style="font-size: 1.5rem; font-weight: bold; margin: 1rem 0;">
+                                <a href="posts/credit-score-improvement-loan-qualification.html" style="color: #0A1E3F; text-decoration: none;">
+                                    Credit Score Improvement and Loan Qualification Tips for Arizona Homebuyers
+                                </a>
+                            </h3>
+                            <p style="color: #666; margin-bottom: 1rem;">Learn proven strategies to improve your credit score and qualify for better mortgage rates. Essential tips for Arizona homebuyers to secure favorable loan terms.</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; color: #888; font-size: 0.875rem;">
+                                <span>January 29, 2025</span>
+                                <a href="posts/credit-score-improvement-loan-qualification.html" style="color: #EAB308; font-weight: bold; text-decoration: none;">Read More →</a>
+                            </div>
+                        </div>
+                        <div class="blog-post-image">
+                            Blog Image
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Categories Sidebar -->
+            <div class="blog-sidebar-grid">
+                <div>
+                    <h2 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 1rem;">All Posts</h2>
+                    <div style="background: white; border-radius: 0.5rem; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 1.5rem;">
+                        <p style="color: #666; text-align: center; padding: 2rem 0;">More mortgage and home buying insights coming soon! Check back regularly for the latest market trends, loan tips, and Chandler area real estate advice.</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 1.125rem; font-weight: bold; margin-bottom: 1rem;">Categories</h3>
+                    <div style="background: white; border-radius: 0.5rem; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 1.5rem;">
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 0.5rem;">
+                                <a href="#" style="color: #0A1E3F; text-decoration: none; display: flex; justify-content: space-between;">
+                                    <span>Home Buying Tips</span>
+                                    <span style="color: #666;">(3)</span>
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.5rem;">
+                                <a href="#" style="color: #0A1E3F; text-decoration: none; display: flex; justify-content: space-between;">
+                                    <span>Market Analysis</span>
+                                    <span style="color: #666;">(2)</span>
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.5rem;">
+                                <a href="#" style="color: #0A1E3F; text-decoration: none; display: flex; justify-content: space-between;">
+                                    <span>Credit & Finance</span>
+                                    <span style="color: #666;">(1)</span>
+                                </a>
+                            </li>
+                            <li style="margin-bottom: 0.5rem;">
+                                <a href="#" style="color: #0A1E3F; text-decoration: none; display: flex; justify-content: space-between;">
+                                    <span>Loan Programs</span>
+                                    <span style="color: #666;">(2)</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h3 style="font-size: 1.125rem; font-weight: bold; margin: 2rem 0 1rem 0;">Quick Links</h3>
+                    <div style="background: white; border-radius: 0.5rem; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 1.5rem;">
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 0.5rem;">
+                                <a href="../#contact" style="color: #0A1E3F; text-decoration: none;">Get Pre-Approved</a>
+                            </li>
+                            <li style="margin-bottom: 0.5rem;">
+                                <a href="../#faq" style="color: #0A1E3F; text-decoration: none;">Mortgage FAQ</a>
+                            </li>
+                            <li style="margin-bottom: 0.5rem;">
+                                <a href="../#benefits" style="color: #0A1E3F; text-decoration: none;">Loan Options</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #0A1E3F; color: white; padding: 2rem 0; margin-top: 3rem;">
+        <div class="container">
+            <div style="text-align: center;">
+                <p>&copy; 2025 Chandler Mortgages. All rights reserved.</p>
+                <p style="margin-top: 0.5rem;">
+                    <a href="../" style="color: #EAB308; text-decoration: none;">Home</a> | 
+                    <a href="../#contact" style="color: #EAB308; text-decoration: none;">Contact</a> | 
+                    <a href="./" style="color: #EAB308; text-decoration: none;">Blog</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

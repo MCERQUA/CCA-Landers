@@ -1,0 +1,301 @@
+/* Base Styles */
+:root {
+  --primary: #003366; /* Deep Navy Blue */
+  --primary-light: #4D88CC; /* Light Blue */
+  --secondary: #0055A4; /* Royal Blue */
+  --accent: #6B7A8F; /* Slate Gray */
+  --text: #333333;
+  --text-light: #6B7280;
+  --background: #FFFFFF;
+  --error: #DC2626;
+  --success: #059669;
+  --warning: #EAB308;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Header Styles */
+.header-section {
+  background-color: var(--primary);
+  color: white;
+}
+
+.header-section .hero-title {
+  color: var(--primary-light);
+}
+
+.announcement-bar {
+  background-color: var(--secondary);
+  color: white;
+}
+
+/* Button Styles */
+.cta-button {
+  background-color: var(--secondary);
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Styles */
+.section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.section-title:after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: var(--secondary);
+  margin: 1rem auto 0;
+}
+
+/* Card Styles */
+.feature-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.testimonial-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Form Styles */
+input, textarea, select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #D1D5DB;
+  border-radius: 0.25rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(0, 85, 164, 0.1);
+}
+
+/* Footer Styles */
+.footer {
+  background-color: var(--primary);
+  color: white;
+  padding: 4rem 0 2rem;
+}
+
+.footer-heading {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-link {
+  margin-bottom: 0.5rem;
+}
+
+.footer-link a:hover {
+  color: var(--primary-light);
+}
+
+/* Responsive Grid */
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+}
+
+.flex-half {
+  flex: 0 0 100%;
+  padding: 0 1rem;
+}
+
+.grid-2, .grid-3 {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+/* FAQ Styles */
+.faq-item {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.faq-item h3 {
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+#mobileMenu {
+  display: none;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .flex-half {
+    flex: 0 0 50%;
+  }
+  
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  nav {
+    display: block !important;
+  }
+  
+  #menuButton {
+    display: none;
+  }
+}
+
+/* Font Faces */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+       url('../fonts/montserrat-v14-latin-700.woff2') format('woff2'),
+       url('../fonts/montserrat-v14-latin-700.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+       url('../fonts/open-sans-v18-latin-regular.woff2') format('woff2'),
+       url('../fonts/open-sans-v18-latin-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
+         url('../fonts/open-sans-v18-latin-600.woff2') format('woff2'),
+         url('../fonts/open-sans-v18-latin-600.woff') format('woff');
+}
+
+/* Floating Contact Button */
+.floating-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--secondary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    transition: all 0.3s ease;
+}
+
+.floating-button:hover {
+    background-color: var(--primary);
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Contact Modal Styles */
+#contactModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+}
+
+#contactModal > div {
+    background-color: white;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+#closeModal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-light);
+}
+
+#closeModal:hover {
+    color: var(--text);
+}

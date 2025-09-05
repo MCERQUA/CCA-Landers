@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Seguros para Contratistas | PuroSeguro</title>
+    <meta name="description" content="Consejos expertos sobre seguros para contratistas, coberturas especializadas, y estrategias de gestión de riesgos para empresas de construcción.">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Blog de Seguros para Contratistas | PuroSeguro">
+    <meta property="og:description" content="Consejos expertos sobre seguros para contratistas, coberturas especializadas, y gestión de riesgos.">
+    <meta property="og:image" content="../images/puroseguro2.webp">
+    <meta property="og:url" content="https://www.puroseguro.com/blog/">
+    <meta property="og:type" content="website">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.puroseguro.com/blog/">
+    
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+    
+    <!-- Mobile responsive styles -->
+    <style>
+        /* Blog post cards - responsive layout */
+        .blog-post-card {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+        
+        .blog-post-content {
+            flex: 1;
+        }
+        
+        .blog-post-image {
+            width: 200px;
+            height: 120px;
+            background: linear-gradient(135deg, #2563EB 0%, #EAB308 100%);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+        }
+        
+        .blog-mobile-padding {
+            padding: 2rem;
+        }
+        
+        /* Sidebar layout */
+        .blog-sidebar-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+        
+        /* Mobile responsive breakpoint */
+        @media (max-width: 768px) {
+            .blog-post-card {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .blog-post-image {
+                width: 100%;
+                height: 180px;
+                order: -1; /* Move image to top */
+            }
+            
+            .blog-sidebar-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            /* Adjust padding for mobile */
+            .blog-mobile-padding {
+                padding: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .blog-mobile-padding {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Header -->
+    <header style="background-color: #2563EB; color: white; padding: 1rem 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.25rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <a href="../" style="font-size: 1.5rem; font-weight: bold; color: white; text-decoration: none;">PuroSeguro</a>
+                <nav>
+                    <a href="../" style="color: white; text-decoration: none; margin-left: 1.5rem;">Inicio</a>
+                    <a href="../#benefits" style="color: white; text-decoration: none; margin-left: 1.5rem;">Coberturas</a>
+                    <a href="../#faq" style="color: white; text-decoration: none; margin-left: 1.5rem;">Preguntas</a>
+                    <a href="../#contact" style="color: white; text-decoration: none; margin-left: 1.5rem;">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Header -->
+    <section style="background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%); color: white; padding: 4rem 0 3rem;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; text-align: center;">
+            <h1 style="font-size: 3rem; font-weight: bold; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Blog de PuroSeguro</h1>
+            <p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9;">Consejos expertos sobre seguros para contratistas y gestión de riesgos</p>
+        </div>
+    </section>
+
+    <!-- Blog Posts Section -->
+    <section class="section">
+        <div class="container">
+            <!-- Featured Post -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">Últimas Publicaciones</h2>
+                
+                <!-- Blog posts will be populated when created -->
+                <div style="background: white; border-radius: 0.5rem; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 3rem;">
+                    <div style="text-align: center;">
+                        <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; color: #2563EB;">Próximamente: Artículos Especializados</h3>
+                        <p style="color: #666; font-size: 1.1rem; line-height: 1.6; max-width: 600px; margin: 0 auto;">
+                            ¡Estamos preparando contenido valioso para ti! Pronto encontrarás artículos detallados sobre:
+                        </p>
+                        <ul style="color: #555; text-align: left; max-width: 500px; margin: 2rem auto; line-height: 1.8;">
+                            <li>• Seguros de responsabilidad civil para contratistas</li>
+                            <li>• Coberturas de equipos y herramientas especializadas</li>
+                            <li>• Estrategias de gestión de riesgos en construcción</li>
+                            <li>• Guías de cumplimiento normativo por estado</li>
+                            <li>• Consejos para reducir costos de seguros</li>
+                        </ul>
+                        <p style="color: #666; margin-top: 2rem;">
+                            <strong>¿Necesitas cobertura ahora?</strong> No esperes más - obtén tu cotización personalizada hoy mismo.
+                        </p>
+                        <a href="../#contact" style="background-color: #2563EB; color: white; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 1.5rem; transition: background-color 0.3s ease;">
+                            Obtener Cotización
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categories Sidebar -->
+            <div class="blog-sidebar-grid">
+                <div>
+                    <h2 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 1rem;">Todos los Artículos</h2>
+                    <div style="background: white; border-radius: 0.5rem; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 1.5rem;">
+                        <p style="color: #666; text-align: center; padding: 2rem 0;">¡Más artículos llegarán pronto! Regresa regularmente para encontrar los últimos consejos sobre seguros para contratistas, gestión de riesgos, y mejores prácticas en construcción.</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 1.125rem; font-weight: bold; margin-bottom: 1rem;">Categorías</h3>
+                    <div style="background: white; border-radius: 0.5rem; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 1.5rem;">
+                        <ul style="space-y: 0.5rem;">
+                            <li><span style="color: #2563EB; font-weight: 500;">Seguros de Responsabilidad</span></li>
+                            <li><span style="color: #2563EB; font-weight: 500;">Equipos y Herramientas</span></li>
+                            <li><span style="color: #2563EB; font-weight: 500;">Gestión de Riesgos</span></li>
+                            <li><span style="color: #2563EB; font-weight: 500;">Cumplimiento Legal</span></li>
+                            <li><span style="color: #2563EB; font-weight: 500;">Consejos de Ahorro</span></li>
+                        </ul>
+                    </div>
+                    
+                    <h3 style="font-size: 1.125rem; font-weight: bold; margin: 2rem 0 1rem;">Recursos Útiles</h3>
+                    <div style="background: white; border-radius: 0.5rem; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 1.5rem;">
+                        <ul style="space-y: 0.75rem;">
+                            <li><a href="../#faq" style="color: #2563EB; text-decoration: none; font-weight: 500;">Preguntas Frecuentes</a></li>
+                            <li><a href="../#contact" style="color: #2563EB; text-decoration: none; font-weight: 500;">Solicitar Cotización</a></li>
+                            <li><a href="../#benefits" style="color: #2563EB; text-decoration: none; font-weight: 500;">Tipos de Cobertura</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section style="background-color: #f8fafc; padding: 3rem 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; text-align: center;">
+            <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 1rem;">¿Listo para Proteger tu Negocio?</h2>
+            <p style="font-size: 1.125rem; color: #666; margin-bottom: 2rem;">Obtén una cotización personalizada para tu empresa de construcción</p>
+            <a href="../#contact" style="background-color: #2563EB; color: white; padding: 1rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: bold; display: inline-block; transition: background-color 0.3s ease;">
+                Comenzar Ahora
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #1f2937; color: white; padding: 2rem 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; text-align: center;">
+            <p>&copy; 2025 PuroSeguro. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

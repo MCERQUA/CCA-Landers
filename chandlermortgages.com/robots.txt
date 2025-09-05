@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.chandlermortgages.com/sitemap.xml
+
+# Prevent indexing of common admin/development paths
+Disallow: /admin/
+Disallow: /test/
+Disallow: /.netlify/
+Disallow: /node_modules/
+
+# Allow all legitimate content
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Allow: /blog/

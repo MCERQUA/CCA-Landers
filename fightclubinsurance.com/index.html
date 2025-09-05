@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Fight Club Insurance">
+    <meta property="og:description" content="Specialized Protection for Combat Sports">
+    <meta property="og:image" content="images/fightclub-insurance.webp">
+    <meta property="og:url" content="https://www.fightclubinsurance.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fight Club Insurance">
+    <meta name="twitter:description" content="Specialized Protection for Combat Sports">
+    <meta name="twitter:image" content="images/fightclub-insurance.webp">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fight Club Insurance | Combat Sports Liability Coverage | MMA Gym Insurance</title>
+    <meta name="description" content="Fight Club Insurance provides tailored insurance solutions for fighters, gyms, and combat sports professionals. Get comprehensive coverage for martial arts, boxing, MMA, and more at competitive rates.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.fightclubinsurance.com/">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Barlow+Condensed:wght@500;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+    <!-- Critical CSS -->
+    <style>
+      /* Base Styles */
+      body {
+        font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+        line-height: 1.6;
+        color: #333333;
+        margin: 0;
+        background-color: #FFFFFF;
+      }
+      
+      /* Announcement Bar */
+      .announcement-bar {
+        background-color: #000000;
+        color: #FFFFFF;
+        text-align: center;
+        padding: 0.5rem;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.875rem;
+      }
+      
+      /* Container */
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+      }
+      
+      /* Headings */
+      h1, h2, h3, h4 {
+        font-family: 'Bebas Neue', 'Barlow Condensed', sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #000000;
+        letter-spacing: 1.5px;
+        line-height: 1.15;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+      }
+      
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      h2 {
+        font-size: 2rem;
+      }
+      
+      /* Buttons */
+      .btn-primary {
+        display: inline-block;
+        background-color: #D20000;
+        color: #FFFFFF;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 700;
+        padding: 0.75rem 1.5rem;
+        border-radius: 4px;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 0.2s ease;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      }
+      
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      }
+      
+      /* Hero Section */
+      .hero-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        color: #FFFFFF;
+        padding: 4rem 1rem;
+        text-align: center;
+        background: #1A2E3C;
+      }
+
+      .hero-logo {
+        max-width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: contain;
+      }
+
+      @media (min-width: 768px) {
+        .hero-section {
+          flex-direction: row;
+          text-align: center;
+          padding: 4rem;
+        }
+        .hero-content {
+          flex: 1;
+        }
+        .hero-logo {
+          flex: 1;
+          max-height: 400px;
+        }
+      }
+      
+      .hero-title {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #FFD700; /* Gold/yellow color */
+        text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline effect */
+      }
+      
+      .hero-subtitle {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 500;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+      }
+      
+      /* Feature Cards */
+      .feature-card {
+        background: linear-gradient(135deg, #FFFFFF 0%, #E0B88D 100%);
+        border: 3px solid #000000;
+        border-radius: 8px;
+        padding: 2rem;
+        box-shadow: 0 4px 20px rgba(210, 0, 0, 0.2), 
+                    0 0 0 1px rgba(255,255,255,0.3) inset;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .feature-card::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(210,0,0,0.1) 0%, rgba(210,0,0,0) 70%);
+        transition: all 0.5s ease;
+        opacity: 0;
+      }
+      
+      .feature-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 25px rgba(210, 0, 0, 0.3),
+                    0 0 0 2px rgba(255,255,255,0.5) inset;
+      }
+      
+      .feature-card:hover::before {
+        opacity: 1;
+      }
+      
+      .feature-card h3 {
+        color: #D20000;
+        text-shadow: 1px 1px 0 #000, 
+                    -1px -1px 0 #000, 
+                    1px -1px 0 #000, 
+                    -1px 1px 0 #000;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      
+      .feature-card ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      
+      .feature-card li {
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      .feature-card li::before {
+        content: '•';
+        color: #D20000;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+      }
+      
+      .feature-icon svg {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-bottom: 1rem;
+        filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.3));
+      }
+      
+      /* Testimonials */
+      .testimonial-card {
+        background-color: #E0B88D;
+        border-radius: 4px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+      
+      /* Form Elements */
+      input, select, textarea {
+        background-color: #E0B88D;
+        border: 1px solid #333333;
+        border-radius: 4px;
+        padding: 0.75rem;
+        width: 100%;
+        font-family: 'Barlow', sans-serif;
+      }
+      
+      /* Footer */
+      .footer {
+        background-color: #1A2E3C;
+        color: #FFFFFF;
+        padding: 3rem 0;
+      }
+      
+      .footer a {
+        color: #FFFFFF;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+      
+      .footer a:hover {
+        color: #D20000;
+      }
+    </style>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="images/fightclub-insurance.webp" as="image" fetchpriority="high">
+    
+    <!-- Deferred CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="css/styles.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+    </noscript>
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        24/7 Claims Support for Combat Athletes | Licensed in All 50 States | Call: 844-967-5247
+    </div>
+
+    <!-- Navigation Section -->
+    <nav class="header-section">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; background-color: #D20000; padding: 1rem 0;">
+                <div style="font-size: 1.5rem; font-weight: bold; color: white;">Fight Club Insurance</div>
+                <nav style="display: block;">
+                    <!-- Desktop Navigation -->
+                    <ul style="display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0;">
+                        <li><a href="#features" style="color: white; text-decoration: none;">Coverage</a></li>
+                        <li><a href="#testimonials" style="color: white; text-decoration: none;">Testimonials</a></li>
+                        <li><a href="#faq" style="color: white; text-decoration: none;">FAQ</a></li>
+                        <li><a href="blog/" style="color: white; text-decoration: none;">Blog</a></li>
+                        <li><a href="#contact" class="cta-button" style="background-color: #000000; color: white; padding: 0.5rem 1rem; border-radius: 0.25rem; text-decoration: none;">Get a Quote</a></li>
+                    </ul>
+                </nav>
+                <button id="menuButton" style="background-color: #000000; color: white; padding: 0.5rem 1rem; border-radius: 0.25rem; border: none;">Menu</button>
+            </div>
+            
+            <div id="mobileMenu" style="display: none; margin-bottom: 1.5rem;">
+                <div style="background-color: #D20000; border-radius: 0.25rem; overflow: hidden;">
+                    <a href="#features" style="display: block; padding: 0.75rem 1rem; color: white; border-bottom: 1px solid rgba(255,255,255,0.1); text-decoration: none;">Coverage</a>
+                    <a href="#testimonials" style="display: block; padding: 0.75rem 1rem; color: white; border-bottom: 1px solid rgba(255,255,255,0.1); text-decoration: none;">Testimonials</a>
+                    <a href="#faq" style="display: block; padding: 0.75rem 1rem; color: white; border-bottom: 1px solid rgba(255,255,255,0.1); text-decoration: none;">FAQ</a>
+                    <a href="blog/" style="display: block; padding: 0.75rem 1rem; color: white; border-bottom: 1px solid rgba(255,255,255,0.1); text-decoration: none;">Blog</a>
+                    <a href="#contact" style="display: block; padding: 0.75rem 1rem; color: white; background-color: #000000; text-align: center; font-weight: bold; text-decoration: none;">Get a Quote</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="hero-section">
+            <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; width: 100%;">
+            <img src="images/fightclub-insurance.webp" alt="Fight Club Insurance - Combat Sports Liability Coverage for MMA Gyms and Professional Fighters" class="hero-logo">
+            <div class="hero-content" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+                <h1 class="hero-title">FIGHT CLUB INSURANCE</h1>
+                <p class="hero-subtitle">Specialized Protection for Combat Sports</p>
+                <a href="#contact" class="btn-primary">Get Your Free Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="container">
+            <h2 class="section-title">Comprehensive Coverage for Combat Sports</h2>
+            
+            <div class="grid-3">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 2rem; height: 2rem;">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3>Fighter Protection</h3>
+                    <ul>
+                        <li>Coverage for training and competition injuries</li>
+                        <li>Medical expense reimbursement</li>
+                        <li>Disability protection</li>
+                        <li>Accidental death & dismemberment</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 2rem; height: 2rem;">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3>Gym & Dojo Coverage</h3>
+                    <ul>
+                        <li>General liability for member injuries</li>
+                        <li>Property damage protection</li>
+                        <li>Equipment and facility coverage</li>
+                        <li>Professional liability for instructors</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 2rem; height: 2rem;">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3>Event Coverage</h3>
+                    <ul>
+                        <li>Tournament and competition liability</li>
+                        <li>Spectator injury protection</li>
+                        <li>Venue damage coverage</li>
+                        <li>Event cancellation insurance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section id="testimonials" class="section">
+        <div class="container">
+            <h2 class="section-title">Trusted by Combat Sports Professionals</h2>
+            
+            <div class="grid-2">
+                <div class="testimonial-card">
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <img src="images/reviews/man-4.webp" alt="John Martinez" style="width: 4rem; height: 4rem; border-radius: 50%; margin-right: 1rem; object-fit: cover;">
+                        <div>
+                            <h4>John Martinez</h4>
+                            <p>Owner, Phoenix MMA Academy</p>
+                        </div>
+                    </div>
+                    <p>"After struggling with standard insurance that wouldn't cover sparring injuries, Fight Club Insurance saved us. When a student was injured during training, they processed our claim in 48 hours with no pushback. Their specialized knowledge of combat sports is unmatched."</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <img src="images/reviews/woman.webp" alt="Sarah Rodriguez" style="width: 4rem; height: 4rem; border-radius: 50%; margin-right: 1rem; object-fit: cover;">
+                        <div>
+                            <h4>Sarah Rodriguez</h4>
+                            <p>Professional MMA Fighter</p>
+                        </div>
+                    </div>
+                    <p>"As a pro fighter, I need coverage that understands the risks of competition. Fight Club Insurance covered my knee surgery after a tournament injury when other insurers denied my claim. They're the only company I trust to protect my career."</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#testimonials" class="btn-primary">Read More Success Stories</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+        
+            <div style="max-width: 48rem; margin: 0 auto;">
+                <div class="feature-card" style="margin-bottom: 1.5rem;">
+                    <h3>What types of insurance do fighters and gyms need?</h3>
+                    <p>Combat sports professionals typically need:</p>
+                    <ul>
+                        <li>General Liability Insurance</li>
+                        <li>Professional Liability for instructors</li>
+                        <li>Participant Accident coverage</li>
+                        <li>Equipment and property insurance</li>
+                        <li>Event liability coverage for competitions</li>
+                        <li>Workers' Compensation for employees</li>
+                    </ul>
+                    <p>Each provides different coverage for the unique risks in combat sports.</p>
+                </div>
+                
+                <div class="feature-card" style="margin-bottom: 1.5rem;">
+                    <h3>How much does combat sports insurance cost?</h3>
+                    <p>Costs vary based on:</p>
+                    <ul>
+                        <li>Type and size of your facility</li>
+                        <li>Number of participants</li>
+                        <li>Training methods used</li>
+                        <li>Location and state requirements</li>
+                        <li>Coverage limits selected</li>
+                    </ul>
+                    <p>Most gyms pay $1,500-$5,000 annually for comprehensive coverage, while individual fighters can get coverage starting at $300/year.</p>
+                </div>
+                
+                <div class="feature-card" style="margin-bottom: 1.5rem;">
+                    <h3>Does insurance cover sparring and competition injuries?</h3>
+                    <p>Our specialized policies explicitly cover:</p>
+                    <ul>
+                        <li>Training injuries during sparring and drills</li>
+                        <li>Competition injuries in sanctioned events</li>
+                        <li>Medical expenses for participants</li>
+                        <li>Liability protection for the gym</li>
+                    </ul>
+                    <p>Standard insurance often excludes combat sports, which is why specialized coverage is essential.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Lead Capture Section -->
+    <section id="contact" class="section" style="background-color: #E0B88D;">
+        <div class="container">
+            <div class="flex-row">
+                <div class="flex-half" style="margin-bottom: 2rem; padding-right: 1.5rem;">
+                    <h2 class="section-title">Get Your Custom Combat Sports Insurance Quote</h2>
+                    <p>Complete this form and one of our combat sports insurance specialists will contact you within 24 hours with a customized quote.</p>
+                    <ul style="list-style-type: none; padding: 0; margin: 0 0 1.5rem 0;">
+                        <li style="display: flex; margin-bottom: 0.5rem;">
+                            <span style="color: #D20000; margin-right: 0.5rem;">✓</span>
+                            <p>Free risk assessment with every quote</p>
+                        </li>
+                        <li style="display: flex; margin-bottom: 0.5rem;">
+                            <span style="color: #D20000; margin-right: 0.5rem;">✓</span>
+                            <p>No obligation - compare coverage options</p>
+                        </li>
+                        <li style="display: flex;">
+                            <span style="color: #D20000; margin-right: 0.5rem;">✓</span>
+                            <p>Specialized policies for your discipline</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="flex-half">
+                    <form name="quote" method="POST" data-netlify="true" netlify netlify-honeypot="bot-field" action="/success" style="background-color: #FFFFFF; padding: 2rem; border-radius: 8px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); border: 2px solid #000000;">
+                        <input type="hidden" name="form-name" value="quote">
+                        <p class="hidden" style="display: none;">
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
+                        
+                        <!-- Enhanced honeypot fields -->
+                        <div style="position: absolute; left: -9999px; opacity: 0; pointer-events: none;">
+                            <input type="text" name="website" tabindex="-1" autocomplete="off">
+                            <input type="text" name="company_name" tabindex="-1" autocomplete="off">
+                            <input type="text" name="referral_source" tabindex="-1" autocomplete="off">
+                            <input type="email" name="email_address" tabindex="-1" autocomplete="off">
+                        </div>
+                        
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.75rem; font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; color: #000000; letter-spacing: 1px;">Full Name</label>
+                            <input type="text" name="name" style="background-color: #E0B88D; border: 1px solid #333333; border-radius: 4px; padding: 0.875rem; width: 100%; font-family: 'Barlow', sans-serif; transition: all 0.2s ease;" required>
+                        </div>
+                        
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.75rem; font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; color: #000000; letter-spacing: 1px;">Email Address</label>
+                            <input type="email" name="email" style="background-color: #E0B88D; border: 1px solid #333333; border-radius: 4px; padding: 0.875rem; width: 100%; font-family: 'Barlow', sans-serif; transition: all 0.2s ease;" required>
+                        </div>
+                        
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.75rem; font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; color: #000000; letter-spacing: 1px;">Phone Number</label>
+                            <input type="tel" name="phone" style="background-color: #E0B88D; border: 1px solid #333333; border-radius: 4px; padding: 0.875rem; width: 100%; font-family: 'Barlow', sans-serif; transition: all 0.2s ease;" required>
+                        </div>
+                        
+                        <div style="margin-bottom: 2rem;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.75rem; font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; color: #000000; letter-spacing: 1px;">Company Name</label>
+                            <input type="text" name="company" style="background-color: #E0B88D; border: 1px solid #333333; border-radius: 4px; padding: 0.875rem; width: 100%; font-family: 'Barlow', sans-serif; transition: all 0.2s ease;" required>
+                        </div>
+                        
+                        <div style="margin-bottom: 1.5rem;">
+                            <p style="font-size: 0.75rem; color: #333333; font-family: 'Barlow', sans-serif;">By submitting this form, you agree to our <a href="#" style="text-decoration: underline; color: #D20000; font-weight: bold;">privacy policy</a>.</p>
+                        </div>
+                        
+                        <div data-netlify-recaptcha="true" style="margin-bottom: 1.5rem;"></div>
+                        
+                        <button type="submit" style="width: 100%; background-color: #D20000; color: white; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; padding: 1rem; border: none; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+                            Get My Free Quote
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="flex-row">
+                <div class="flex-half" style="margin-bottom: 2rem;">
+                    <div style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; font-family: Impact, sans-serif; text-transform: uppercase;">Fight Club Insurance</div>
+                    <p>Specialized protection for fighters, gyms, and combat sports professionals since 2015.</p>
+                </div>
+                
+                <div class="flex-half" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                    <div>
+                        <h3 style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; color: #FFD700;">Coverage</h3>
+                        <ul style="list-style-type: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 0.5rem;"><a href="#">Liability</a></li>
+                            <li style="margin-bottom: 0.5rem;"><a href="#">Equipment</a></li>
+                            <li style="margin-bottom: 0.5rem;"><a href="#">Workers' Comp</a></li>
+                            <li style="margin-bottom: 0.5rem;"><a href="#">Environmental</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; color: #FFD700;">Company</h3>
+                        <ul style="list-style-type: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 0.5rem;"><a href="#">About Us</a></li>
+                            <li style="margin-bottom: 0.5rem;"><a href="#">Team</a></li>
+                            <li style="margin-bottom: 0.5rem;"><a href="#">Careers</a></li>
+                            <li style="margin-bottom: 0.5rem;"><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; color: #FFD700;">Contact</h3>
+                        <ul style="list-style-type: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 0.5rem;">12220 E Riggs Road, Suite #105</li>
+                            <li style="margin-bottom: 0.5rem;">Chandler, AZ 85249</li>
+                            <li style="margin-bottom: 0.5rem;">844-967-5247</li>
+                            <li style="margin-bottom: 0.5rem;">info@fightclubinsurance.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid #3D5866; margin-top: 2rem; padding-top: 2rem; display: flex; flex-direction: column; align-items: center;">
+                <p style="margin-bottom: 1rem;">© 2025 Fight Club Insurance. All rights reserved.</p>
+                <div>
+                    <a href="#" style="margin-right: 1rem;">Privacy Policy</a>
+                    <a href="#" style="margin-right: 1rem;">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <!-- Floating Contact Button -->
+    <button id="floatingPhoneButton" class="floating-button" aria-label="Contact Us">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+    </button>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.75); z-index: 1000; align-items: center; justify-content: center;">
+        <div style="background-color: white; padding: 2rem; border-radius: 0.5rem; max-width: 500px; width: 90%;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                <h3 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase;">Contact Us</h3>
+                <button id="closeModal" style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">&times;</button>
+            </div>
+            
+            <div style="margin-bottom: 1.5rem;">
+                <p>Call us directly at:</p>
+                <a href="tel:844-967-5247" style="font-size: 1.25rem; font-weight: bold; display: block; margin: 0.5rem 0;">844-967-5247</a>
+            </div>
+            
+            <form name="contact" method="POST" data-netlify="true" action="/success" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="contact">
+                <p class="hidden">
+                    <label>Don't fill this out <input name="bot-field"></label>
+                </p>
+                
+                <!-- Enhanced honeypot fields -->
+                <div style="position: absolute; left: -9999px; opacity: 0; pointer-events: none;">
+                    <input type="text" name="website" tabindex="-1" autocomplete="off">
+                    <input type="text" name="company_name" tabindex="-1" autocomplete="off">
+                    <input type="text" name="referral_source" tabindex="-1" autocomplete="off">
+                    <input type="email" name="email_address" tabindex="-1" autocomplete="off">
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Name</label>
+                    <input type="text" name="name" style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 0.25rem;" required>
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Email</label>
+                    <input type="email" name="email" style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 0.25rem;" required>
+                </div>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Message</label>
+                    <textarea name="message" style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 0.25rem; min-height: 100px;" required></textarea>
+                </div>
+                
+                <div data-netlify-recaptcha="true"></div>
+                
+                <button type="submit" style="background-color: #D20000; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 0.25rem; cursor: pointer; font-weight: bold; text-transform: uppercase;">Send Message</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
