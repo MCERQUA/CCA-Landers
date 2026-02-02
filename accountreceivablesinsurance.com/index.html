@@ -639,17 +639,38 @@
         // Additional client-side spam protection
         document.addEventListener('DOMContentLoaded', function() {
             const forms = document.querySelectorAll('form[data-netlify="true"]');
-            
+
             forms.forEach(form => {
-                // Check for honeypot field completion
+                // Check for honeypot field completion and character validation
                 form.addEventListener('submit', function(e) {
                     const honeypots = ['website', 'company_name', 'referral_source', 'email_address'];
-                    
+
+                    // Honeypot validation
                     for (const field of honeypots) {
                         const honeypotField = form.querySelector(`input[name="${field}"]`);
                         if (honeypotField && honeypotField.value !== '') {
                             e.preventDefault();
                             return false;
+                        }
+                    }
+
+                    // Character set validation - block Cyrillic and other non-Latin scripts
+                    const formData = new FormData(form);
+                    for (let [key, value] of formData.entries()) {
+                        if (typeof value === 'string' && key !== 'email') {
+                            // Check for Cyrillic characters
+                            if (/[\u0400-\u04FF]/i.test(value)) {
+                                e.preventDefault();
+                                alert('Please use English characters only. For international inquiries, please call us at 844-967-5247.');
+                                return false;
+                            }
+
+                            // Check for common spam keywords
+                            if (/топ|накрутка|вывод|SEO|продвижение/i.test(value)) {
+                                e.preventDefault();
+                                alert('Please remove promotional content from your message.');
+                                return false;
+                            }
                         }
                     }
                 });

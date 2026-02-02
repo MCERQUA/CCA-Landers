@@ -5,3 +5,14 @@
 [build.environment]
   NODE_VERSION = "16"
   NPM_FLAGS = "--legacy-peer-deps"
+
+# Enhanced spam filtering for forms
+[forms]
+  # Enable spam filtering
+  spam_filter = true
+
+  # Block submissions containing Cyrillic and other non-Latin scripts
+  [[forms.spam_protection]]
+    field = "*"
+    pattern = "[\u0400-\u04FF\u4E00-\u9FFF\u0600-\u06FF]"
+    action = "block"

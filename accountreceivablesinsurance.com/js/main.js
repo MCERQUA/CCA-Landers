@@ -87,25 +87,25 @@ const initModal = () => {
 const initSpamProtection = () => {
     document.querySelectorAll('form[data-netlify]').forEach(form => {
         const startTime = Date.now();
-        
+
         // Add hidden timestamp field
         const timeField = document.createElement('input');
         timeField.type = 'hidden';
         timeField.name = 'form_start_time';
         timeField.value = startTime;
         form.appendChild(timeField);
-        
+
         form.addEventListener('submit', (e) => {
             const submitTime = Date.now();
             const timeDiff = submitTime - startTime;
-            
+
             // Block if submitted too quickly (under 2 seconds)
             if (timeDiff < 2000) {
                 e.preventDefault();
                 alert('Please take a moment to review your information before submitting.');
                 return false;
             }
-            
+
             // Check for honeypot field completion
             const honeypots = ['website', 'company_name', 'referral_source', 'email_address'];
             for (const field of honeypots) {
@@ -116,21 +116,43 @@ const initSpamProtection = () => {
                     return false;
                 }
             }
-            
+
             // Check for suspicious content
             const formData = new FormData(form);
             for (let [key, value] of formData.entries()) {
                 // Skip checking email field for URL patterns
                 if (key !== 'email' && typeof value === 'string') {
+                    // Check for Cyrillic characters (common in Russian SEO spam)
+                    if (/[\u0400-\u04FF]/i.test(value)) {
+                        e.preventDefault();
+                        alert('Please use English characters only. For international inquiries, please call us at 844-967-5247.');
+                        return false;
+                    }
+
+                    // Check for other non-Latin scripts (Chinese, Arabic, etc.) - allow common symbols
+                    if (/[\u4E00-\u9FFF\u0600-\u06FF\u0E00-\u0E7F]/i.test(value)) {
+                        e.preventDefault();
+                        alert('Please use English characters only. For international inquiries, please call us at 844-967-5247.');
+                        return false;
+                    }
+
                     // Check for URLs, spam keywords, or repeated characters
-                    if (/https?:\/\/|SEO|marketing|promote|rank.*website|(.)\1{4,}/i.test(value)) {
+                    if (/https?:\/\/|SEO|marketing|promote|rank.*website|топ|накрутка|вывод|(.)\1{4,}/i.test(value)) {
                         e.preventDefault();
                         alert('Please remove any links or promotional content from your message.');
                         return false;
                     }
+
+                    // Check for excessive special characters (spam pattern)
+                    const specialCharCount = (value.match(/[^a-zA-Z0-9\s@.,'-]/g) || []).length;
+                    if (specialCharCount > value.length * 0.3) {
+                        e.preventDefault();
+                        alert('Please use standard characters in your message.');
+                        return false;
+                    }
                 }
             }
-            
+
             // Add timing data to submission
             const submitTimeField = document.createElement('input');
             submitTimeField.type = 'hidden';
