@@ -1,0 +1,12 @@
+# Lead-capture webhooks — sends Netlify form submissions to josh social-api lead system.
+[[notifications]]
+  form_name = "quote"
+  [notifications.webhook]
+    url = "https://josh.jam-bot.com/social-api/api/leads/webhook/netlify?tenant=josh&site=dirtworkinsurance.com"
+    events = ["submission_created"]
+
+[[notifications]]
+  form_name = "contact"
+  [notifications.webhook]
+    url = "https://josh.jam-bot.com/social-api/api/leads/webhook/netlify?tenant=josh&site=dirtworkinsurance.com"
+    events = ["submission_created"]
