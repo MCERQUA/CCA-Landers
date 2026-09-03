@@ -490,3 +490,41 @@ body {
         display: none !important;
     }
 }
+
+/* Mobile header (added 2026-09-02). The desktop nav used to carry an inline `display: block`,
+   which beats any stylesheet rule, so no breakpoint could take it out of flow — at 390px it sat
+   in a nowrap flex row and pushed the menu toggle up to 377px past the viewport. The inline style
+   is gone from the markup and the rule lives here, where a media query can reach it.
+   Deliberately no `overflow-x: hidden` on html/body: that hides the scrollbar and clips content. */
+.desktop-nav { display: block; }
+#menuButton { display: none; }
+@media (max-width: 767px) {
+  .desktop-nav { display: none; }
+  #menuButton { display: block; }
+}
+/* Long unbreakable tokens. Several of these sites put their own bare domain in headings and body
+   copy ("...Falls Short for Suretybonds4contractors.Com"), a 27-character word that cannot wrap: it
+   measured 373px inside a 310px column and scrolled the document to 413px. break-word only acts when
+   a word would otherwise overflow, so normal text is untouched. */
+body { overflow-wrap: break-word; }
+
+/* Modern-nav variant: where the logo is the bare domain it is one unbreakable 27-character token.
+   At 390px it measured 381px wide, pushed the row to 413px AND squeezed the hamburger to 0px, so the
+   menu could not be tapped at all. A flex item will not shrink below its content without min-width:0. */
+.nav-container { min-width: 0; }
+.nav-logo { min-width: 0; overflow-wrap: anywhere; }
+.hamburger { flex-shrink: 0; }
+@media (max-width: 420px) { .nav-logo { font-size: 1rem; line-height: 1.2; } }
+
+/* Footer link columns: the same inline-style disease as the nav. `1fr` is `minmax(auto,1fr)` and
+   will not shrink below its content, so a street address and a long email forced the third column
+   180px past the viewport. minmax(0,1fr) lets them shrink; the wrap rule handles the email. */
+.footer-links-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
+.footer-links-grid > * { min-width: 0; }
+.footer-links-grid a, .footer-links-grid p { overflow-wrap: anywhere; }
+@media (max-width: 767px) {
+  .footer-links-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+}
+/* Check/cross and blog-meta icons, replacing the emoji glyphs that used to sit in the markup. */
+.li-icon { display: inline-block; vertical-align: -0.15em; flex-shrink: 0; }
+.meta-icon { display: inline-block; vertical-align: -0.15em; margin-right: 0.3rem; flex-shrink: 0; }
