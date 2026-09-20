@@ -93,7 +93,7 @@ function generateFaqHtml(faqData) {
 const publisherConfig = {
   name: "Contractors Choice Agency",
   url: "https://www.contractorschoiceagency.com",
-  logo: "https://www.contractorschoiceagency.com/images/company-logo.webp",
+  logo: "https://contractorschoiceagency.com/images/logo/CCA-logo-grey.webp",
   phone: "844-967-5247",
   address: {
     street: "[STREET ADDRESS]",

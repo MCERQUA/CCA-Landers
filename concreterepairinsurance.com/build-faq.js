@@ -102,9 +102,9 @@ function generateSchemas(faqData) {
     "priceRange": "$$$",
     "image": {
       "@type": "ImageObject",
-      "url": "https://www.contractorschoiceagency.com/images/company-logo.webp",
-      "width": "800",
-      "height": "600"
+      "url": "https://contractorschoiceagency.com/images/logo/CCA-logo-grey.webp",
+      "width": 707,
+      "height": 187
     },
     "sameAs": [
       "[FACEBOOK URL]",
