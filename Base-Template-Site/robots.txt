@@ -5,8 +5,19 @@ User-agent: *
 Allow: /
 Disallow: /success.html
 
-# Sitemap location (update with your domain)
-Sitemap: https://[DOMAIN NAME]/sitemap.xml
+# NO Sitemap: line here, deliberately.
+# This template previously shipped BOTH a robots.txt advertising a sitemap AND a
+# sitemap.xml containing the literal placeholder https://[DOMAIN NAME]/.
+# Forks copied one, the other, or neither:
+#   - greasemonkeyinsurance.com copied the placeholder sitemap and SERVED it to crawlers
+#   - 10 CCA-Landers landers copied robots.txt but NOT sitemap.xml, so robots advertised a 404
+# A placeholder sitemap is VALID XML, so it passes every structural check we have -- an
+# INVISIBLE defect. A missing sitemap is a VISIBLE one. We prefer visible.
+#
+# TO ADD A SITEMAP TO YOUR FORK: run ./generate-sitemap.sh <your-domain> from the site root.
+# It derives every URL from .html files that actually exist, so it cannot emit a placeholder.
+# Then add this line yourself, with your real domain:
+#   Sitemap: https://<your-domain>/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
