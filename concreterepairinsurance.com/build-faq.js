@@ -95,9 +95,9 @@ function generateSchemas(faqData) {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "[COMPANY NAME]",
-    "description": "[COMPANY DESCRIPTION - 1-2 SENTENCES ABOUT YOUR MAIN SERVICE]",
-    "url": "[COMPANY WEBSITE URL]",
+    "name": "Contractors Choice Agency",
+    "description": "Concrete Repair Insurance from Contractors Choice Agency.",
+    "url": "https://www.contractorschoiceagency.com",
     "telephone": "844-967-5247",
     "priceRange": "$$$",
     "image": {
@@ -106,16 +106,12 @@ function generateSchemas(faqData) {
       "width": 707,
       "height": 187
     },
-    "sameAs": [
-      "[FACEBOOK URL]",
-      "[LINKEDIN URL]"
-    ],
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "[STREET ADDRESS]",
-      "addressLocality": "[CITY]",
-      "addressRegion": "[STATE]",
-      "postalCode": "[ZIP CODE]",
+      "streetAddress": "12220 E Riggs Rd",
+      "addressLocality": "Chandler",
+      "addressRegion": "AZ",
+      "postalCode": "85249",
       "addressCountry": {
         "@type": "Country",
         "name": "US"

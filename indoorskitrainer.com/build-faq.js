@@ -95,12 +95,6 @@ const publisherConfig = {
   url: "https://www.contractorschoiceagency.com",
   logo: "https://contractorschoiceagency.com/images/logo/CCA-logo-grey.webp",
   phone: "844-967-5247",
-  address: {
-    street: "[STREET ADDRESS]",
-    city: "[CITY]",
-    state: "[STATE]",
-    zip: "[ZIP CODE]"
-  }
 };
 
 // Function to generate schema JSON
@@ -121,21 +115,6 @@ function generateSchemas(faqData) {
       "url": publisherConfig.logo,
       "width": "800",
       "height": "600"
-    },
-    "sameAs": [
-      "[FACEBOOK URL]",
-      "[LINKEDIN URL]"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": publisherConfig.address.street,
-      "addressLocality": publisherConfig.address.city,
-      "addressRegion": publisherConfig.address.state,
-      "postalCode": publisherConfig.address.zip,
-      "addressCountry": {
-        "@type": "Country",
-        "name": "US"
-      }
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
@@ -168,14 +147,6 @@ function generateSchemas(faqData) {
         'url': publisherConfig.logo,
         'width': 800,
         'height': 600
-      },
-      'address': {
-        '@type': 'PostalAddress',
-        'streetAddress': publisherConfig.address.street,
-        'addressLocality': publisherConfig.address.city,
-        'addressRegion': publisherConfig.address.state,
-        'postalCode': publisherConfig.address.zip,
-        'addressCountry': 'US'
       },
       'telephone': publisherConfig.phone
     },

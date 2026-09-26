@@ -126,7 +126,7 @@ En la mayoría de los estados, este seguro es obligatorio para cualquier empresa
 
 ## ¿Cómo reporto una reclamación?
 Para reportar una reclamación con PuroSeguro.com:
-1. Llame a nuestro número de servicio al cliente disponible 24/7: [NÚMERO]
+1. Llame a nuestro número de servicio al cliente disponible 24/7: 844-967-5247
 2. Proporcione los detalles básicos del incidente
 3. Un representante bilingüe le guiará a través del proceso
 4. Recibirá instrucciones sobre la documentación necesaria
@@ -158,9 +158,9 @@ Nuestro objetivo es encontrar soluciones accesibles independientemente de su sit
 
 ## ¿Cómo puedo obtener una cotización?
 Obtener una cotización con PuroSeguro.com es fácil y conveniente:
-1. Llame a nuestro número gratuito: [NÚMERO]
+1. Llame a nuestro número gratuito: 844-967-5247
 2. Visite nuestra página web y complete el formulario en línea
-3. Envíenos un correo electrónico a [CORREO]
+3. Envíenos un correo electrónico a josh@contractorschoiceagency.com
 4. Visite nuestra oficina para atención personalizada
 
 Todas nuestras opciones de contacto ofrecen servicio en español, y nos comprometemos a responder a su solicitud dentro de 24 horas. No se requiere compromiso para obtener una cotización, y estamos aquí para responder todas sus preguntas durante el proceso.
