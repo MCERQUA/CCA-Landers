@@ -14,7 +14,7 @@ OUT=sitemap.xml; TODAY=$(date -u +%F)
   echo '<?xml version="1.0" encoding="UTF-8"?>'
   echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
   # success.html is Disallow'd in robots.txt, so it must not appear here.
-  find . -name '*.html' -not -name 'success.html' -not -path './node_modules/*' | sort | while read -r f; do
+  find . \( -name node_modules -o -name '.*' ! -name . \) -prune -o -name '*.html' ! -name 'success.html' -print | sort | while read -r f; do
     rel="${f#.}"
     case "$rel" in
       /index.html) loc="https://$DOMAIN/"; pri=1.0; chg=weekly ;;
