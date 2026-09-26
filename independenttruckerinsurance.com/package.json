@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Insurance landing page with dynamic FAQ system",
   "scripts": {
-    "build": "npm run build:css && node build-faq.js",
+    "build": "npm run build:css && node build-faq.js && npm run build:sitemap",
+    "build:sitemap": "bash scripts/generate-sitemap.sh independenttruckerinsurance.com",
     "build:css": "postcss css/styles.css -o css/styles.min.css",
     "optimize:images": "node scripts/optimize-images.js"
   },

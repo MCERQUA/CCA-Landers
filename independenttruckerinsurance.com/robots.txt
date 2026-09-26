@@ -1,0 +1,19 @@
+# Robots.txt for independenttruckerinsurance.com
+
+User-agent: *
+Allow: /
+Disallow: /success.html
+
+# sitemap.xml is regenerated on every build by scripts/generate-sitemap.sh
+# (wired into `npm run build`), from the .html files that actually exist.
+Sitemap: https://independenttruckerinsurance.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Block bad bots (optional)
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SEMrushBot
+Crawl-delay: 10
