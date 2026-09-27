@@ -123,7 +123,7 @@ const FroyoInsuranceStylePreview = () => {
           <h3 className="font-medium mb-3">Sample Card Component</h3>
           <div style={{ border: '1px solid #e5e5e5', borderRadius: '12px', overflow: 'hidden' }} className="max-w-sm shadow">
             <div style={{ 
-              background: 'linear-gradient(135deg, #A24A16 0%, #3EB489 100%)', 
+              background: 'linear-gradient(135deg, #A24A16 0%, #D9651E 100%)', 
               height: '8px', 
               width: '100%' 
             }}></div>
