@@ -114,7 +114,7 @@ const initScrollAnimations = () => {
 class SprinkleManager {
     constructor() {
         this.sprinkles = [];
-        this.colors = ['#FF9AA2', '#FFB7B2', '#FFDAC1', '#E2F0CB', '#B5EAD7', '#C7CEEA'];
+        this.colors = ['#EFA67C', '#FFB7B2', '#FFDAC1', '#E2F0CB', '#B5EAD7', '#DECCBB'];
         this.maxSprinkles = 50;
         this.activeSections = ['.header-section', '.problem-solution', 'features-section'];
     }

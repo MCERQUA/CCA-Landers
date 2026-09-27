@@ -4,13 +4,13 @@ const FroyoInsuranceStylePreview = () => {
   // Froyo Insurance brand colors
   const colors = {
     primary: [
-      { name: 'Berry Purple', hex: '#8A2BE2', usage: 'Primary brand color, headers, important UI elements' },
+      { name: 'Berry Purple', hex: '#A24A16', usage: 'Primary brand color, headers, important UI elements' },
       { name: 'Mint Green', hex: '#3EB489', usage: 'Secondary brand color, buttons, highlights, icons' },
-      { name: 'Yogurt White', hex: '#F8F7FF', usage: 'Backgrounds, spaces, text areas, negative space' }
+      { name: 'Yogurt White', hex: '#FCF7F1', usage: 'Backgrounds, spaces, text areas, negative space' }
     ],
     secondary: [
       { name: 'Raspberry Pink', hex: '#E84A5F', usage: 'Accents, call-to-action elements, highlights' },
-      { name: 'Blueberry Blue', hex: '#25567B', usage: 'Footer backgrounds, secondary text, depth elements' },
+      { name: 'Blueberry Blue', hex: '#7B4424', usage: 'Footer backgrounds, secondary text, depth elements' },
       { name: 'Soft Yellow', hex: '#FFF07C', usage: 'Subtle highlights, background accents, success messages' }
     ]
   };
@@ -76,7 +76,7 @@ const FroyoInsuranceStylePreview = () => {
         <div className="space-y-6">
           <div className="bg-white p-4 rounded-lg shadow" style={{ border: '1px solid #e5e5e5' }}>
             <h3 className="font-medium mb-2">Primary Font: {typography.primary.name}</h3>
-            <p style={{ fontFamily: 'Quicksand, sans-serif', fontWeight: 'bold', color: '#8A2BE2' }} className="text-2xl">
+            <p style={{ fontFamily: 'Quicksand, sans-serif', fontWeight: 'bold', color: '#A24A16' }} className="text-2xl">
               Froyo Insurance Protection
             </p>
             <p className="text-sm text-gray-600 mt-1">Used for: {typography.primary.usage}</p>
@@ -84,7 +84,7 @@ const FroyoInsuranceStylePreview = () => {
           
           <div className="bg-white p-4 rounded-lg shadow" style={{ border: '1px solid #e5e5e5' }}>
             <h3 className="font-medium mb-2">Secondary Font: {typography.secondary.name}</h3>
-            <p style={{ fontFamily: 'Open Sans, sans-serif', color: '#25567B' }} className="text-base">
+            <p style={{ fontFamily: 'Open Sans, sans-serif', color: '#7B4424' }} className="text-base">
               We provide specialized insurance coverage for frozen yogurt businesses, protecting your shop with policies designed for the unique risks you face. Our comprehensive solutions include property, liability, spoilage, and equipment breakdown coverage.
             </p>
             <p className="text-sm text-gray-600 mt-1">Used for: {typography.secondary.usage}</p>
@@ -107,13 +107,13 @@ const FroyoInsuranceStylePreview = () => {
         <div className="bg-white p-4 rounded-lg shadow mb-4" style={{ border: '1px solid #e5e5e5' }}>
           <h3 className="font-medium mb-3">Buttons</h3>
           <div className="flex flex-wrap gap-4">
-            <button style={{ backgroundColor: '#8A2BE2', color: 'white', fontFamily: 'Quicksand, sans-serif', fontWeight: '600', borderRadius: '8px' }} className="px-4 py-2">
+            <button style={{ backgroundColor: '#A24A16', color: 'white', fontFamily: 'Quicksand, sans-serif', fontWeight: '600', borderRadius: '8px' }} className="px-4 py-2">
               Get a Quote
             </button>
             <button style={{ backgroundColor: '#3EB489', color: 'white', fontFamily: 'Quicksand, sans-serif', fontWeight: '600', borderRadius: '8px' }} className="px-4 py-2">
               Learn More
             </button>
-            <button style={{ backgroundColor: 'white', color: '#8A2BE2', border: '2px solid #8A2BE2', fontFamily: 'Quicksand, sans-serif', fontWeight: '600', borderRadius: '8px' }} className="px-4 py-2">
+            <button style={{ backgroundColor: 'white', color: '#A24A16', border: '2px solid #A24A16', fontFamily: 'Quicksand, sans-serif', fontWeight: '600', borderRadius: '8px' }} className="px-4 py-2">
               Contact Us
             </button>
           </div>
@@ -123,15 +123,15 @@ const FroyoInsuranceStylePreview = () => {
           <h3 className="font-medium mb-3">Sample Card Component</h3>
           <div style={{ border: '1px solid #e5e5e5', borderRadius: '12px', overflow: 'hidden' }} className="max-w-sm shadow">
             <div style={{ 
-              background: 'linear-gradient(135deg, #8A2BE2 0%, #3EB489 100%)', 
+              background: 'linear-gradient(135deg, #A24A16 0%, #3EB489 100%)', 
               height: '8px', 
               width: '100%' 
             }}></div>
-            <div className="p-4" style={{ backgroundColor: '#F8F7FF' }}>
-              <h4 style={{ fontFamily: 'Quicksand, sans-serif', fontWeight: 'bold', color: '#8A2BE2' }} className="text-lg mb-2">
+            <div className="p-4" style={{ backgroundColor: '#FCF7F1' }}>
+              <h4 style={{ fontFamily: 'Quicksand, sans-serif', fontWeight: 'bold', color: '#A24A16' }} className="text-lg mb-2">
                 Property Protection Coverage
               </h4>
-              <p style={{ fontFamily: 'Open Sans, sans-serif', color: '#25567B' }} className="text-base mb-4">
+              <p style={{ fontFamily: 'Open Sans, sans-serif', color: '#7B4424' }} className="text-base mb-4">
                 Comprehensive protection for your shop, equipment, and inventory against damage, theft, and other covered perils.
               </p>
               <div className="flex justify-between items-center">
@@ -160,7 +160,7 @@ const FroyoInsuranceStylePreview = () => {
           <div style={{ 
             height: '100px', 
             width: '100%', 
-            background: '#F8F7FF',
+            background: '#FCF7F1',
             position: 'relative',
             borderRadius: '8px',
             overflow: 'hidden'
@@ -174,7 +174,7 @@ const FroyoInsuranceStylePreview = () => {
                   width: '8px',
                   height: '3px',
                   borderRadius: '3px',
-                  backgroundColor: i % 3 === 0 ? '#E84A5F' : i % 3 === 1 ? '#3EB489' : '#8A2BE2',
+                  backgroundColor: i % 3 === 0 ? '#E84A5F' : i % 3 === 1 ? '#3EB489' : '#A24A16',
                   transform: `rotate(${Math.random() * 180}deg)`,
                   top: `${Math.random() * 100}%`,
                   left: `${Math.random() * 100}%`
@@ -188,7 +188,7 @@ const FroyoInsuranceStylePreview = () => {
               transform: 'translate(-50%, -50%)',
               fontFamily: 'Quicksand, sans-serif',
               fontWeight: 'bold',
-              color: '#25567B'
+              color: '#7B4424'
             }}>
               Sprinkle Pattern Background
             </div>

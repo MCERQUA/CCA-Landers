@@ -8,16 +8,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#1E3A8A',
+        primary: '#653316',
         secondary: '#EAB308',
         success: '#10B981',
         danger: '#DC2626',
         icecream: {
           vanilla: '#FFF8E1',
           chocolate: '#D7CCC8',
-          strawberry: '#FFCDD2',
+          strawberry: '#F7D2BD',
           mint: '#C8E6C9',
-          blueberry: '#BBDEFB',
+          blueberry: '#F7D2BD',
         }
       },
     },

@@ -51,7 +51,7 @@ body {
 
 .section {
     padding: 3rem 1rem;
-    background-color: var(--icecream-blueberry, #BBDEFB);
+    background-color: var(--icecream-blueberry, #F7D2BD);
 }
 
 .section-title {
@@ -73,7 +73,7 @@ body {
 }
 
 .solution-box {
-    background-color: var(--icecream-strawberry, #FFCDD2);
+    background-color: var(--icecream-strawberry, #F7D2BD);
     padding: 1.5rem;
     border-radius: 0.5rem;
 }
@@ -91,8 +91,8 @@ body {
 }
 
 .feature-icon {
-    background-color: #DBEAFE;
-    color: #1E3A8A;
+    background-color: #F4E7D4;
+    color: #653316;
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
@@ -111,7 +111,7 @@ body {
 }
 
 .faq-section {
-    background-color: var(--icecream-blueberry, #BBDEFB);
+    background-color: var(--icecream-blueberry, #F7D2BD);
 }
 
 .faq-item {
@@ -121,7 +121,7 @@ body {
 }
 
 .contact-section {
-    background-color: #1E3A8A;
+    background-color: #653316;
     color: white;
 }
 
@@ -225,13 +225,13 @@ body {
     pointer-events: none;
     background: 
         radial-gradient(8px 8px at 90% 20%, #FCD34D, transparent),
-        radial-gradient(10px 10px at 10% 70%, #F472B6, transparent),
+        radial-gradient(10px 10px at 10% 70%, #E9854C, transparent),
         radial-gradient(8px 8px at 40% 30%, #5EEAD4, transparent),
         radial-gradient(10px 10px at 60% 90%, #FCD34D, transparent),
-        radial-gradient(8px 8px at 30% 50%, #F472B6, transparent),
+        radial-gradient(8px 8px at 30% 50%, #E9854C, transparent),
         radial-gradient(10px 10px at 70% 10%, #5EEAD4, transparent),
         radial-gradient(8px 8px at 20% 80%, #FFF07C, transparent),
-        radial-gradient(10px 10px at 50% 40%, #8A2BE2, transparent);
+        radial-gradient(10px 10px at 50% 40%, #A24A16, transparent);
     opacity: 0.8;
 }
 

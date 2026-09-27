@@ -8,7 +8,7 @@ For Froyo Insurance, I'll create a brand concept that combines the playful, colo
 ### Color Palette
 
 #### Primary Colors
-- **Berry Purple** (#8A2BE2)
+- **Berry Purple** (#A24A16)
   - Usage: Primary brand color, headers, important UI elements, accent borders
   - Represents: Creativity, premium quality, distinctive character of frozen yogurt
 
@@ -16,7 +16,7 @@ For Froyo Insurance, I'll create a brand concept that combines the playful, colo
   - Usage: Secondary brand color, buttons, highlights, icons
   - Represents: Freshness, growth, financial health
 
-- **Yogurt White** (#F8F7FF)
+- **Yogurt White** (#FCF7F1)
   - Usage: Backgrounds, spaces, text areas, negative space
   - Represents: Purity, simplicity, the base of frozen yogurt
 
@@ -25,7 +25,7 @@ For Froyo Insurance, I'll create a brand concept that combines the playful, colo
   - Usage: Accents, call-to-action elements, highlights, notification elements
   - Represents: Energy, excitement, fruity toppings
 
-- **Blueberry Blue** (#25567B)
+- **Blueberry Blue** (#7B4424)
   - Usage: Footer backgrounds, secondary text, depth elements
   - Represents: Trust, security, stability (insurance aspects)
 
@@ -90,7 +90,7 @@ For Froyo Insurance, I'll create a brand concept that combines the playful, colo
 - Mobile navigation with yogurt-swirl animation for menu transitions
 
 #### Buttons & CTAs
-- Primary buttons: Berry Purple (#8A2BE2) with white text
+- Primary buttons: Berry Purple (#A24A16) with white text
 - Secondary buttons: Mint Green (#3EB489) with white text
 - Tertiary buttons: White with Berry Purple border and text
 - Rounded corners (8px radius) like yogurt cups
