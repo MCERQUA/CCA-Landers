@@ -1,0 +1,13 @@
+# Internal build/tooling files are not part of the site (host task 2026-09-27-004).
+/package.json  /404.html  404!
+/package-lock.json  /404.html  404!
+/build-faq.js  /404.html  404!
+/postcss.config.js  /404.html  404!
+/tailwind.config.js  /404.html  404!
+/Run-Optimize-image-script.bat  /404.html  404!
+/scripts/*  /404.html  404!
+/docs/*  /404.html  404!
+/data/*  /404.html  404!
+/.claude/*  /404.html  404!
+/netlify-faq-implementation-plan.md  /404.html  404!
+/assets/brand-style-preview.tsx  /404.html  404!
