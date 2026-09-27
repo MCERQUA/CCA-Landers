@@ -8,7 +8,7 @@ body {
 }
 
 .announcement-bar {
-    background-color: #3C1053;
+    background-color: #4A0E17;
     color: white;
     text-align: center;
     padding: 0.5rem;
@@ -16,10 +16,10 @@ body {
 }
 
 .header-section {
-    background-color: #3C1053;
+    background-color: #4A0E17;
     color: white;
     padding: 2rem 1rem;
-    background: linear-gradient(135deg, #3C1053 0%, #00B4D8 100%);
+    background: linear-gradient(135deg, #4A0E17 0%, #F5A524 100%);
 }
 
 .container {
@@ -67,18 +67,18 @@ body {
 }
 
 .problem-box {
-    background-color: rgba(60, 16, 83, 0.3);
+    background-color: rgba(74, 14, 23, 0.3);
     padding: 1.5rem;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
-    border: 1px solid #3C1053;
+    border: 1px solid #4A0E17;
 }
 
 .solution-box {
-    background-color: rgba(0, 180, 216, 0.2);
+    background-color: rgba(245, 165, 36, 0.2);
     padding: 1.5rem;
     border-radius: 0.5rem;
-    border: 1px solid #00B4D8;
+    border: 1px solid #F5A524;
 }
 
 .features-section {
@@ -90,13 +90,13 @@ body {
     padding: 1.5rem;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
-    box-shadow: 0 4px 20px rgba(0, 180, 216, 0.1);
-    border: 1px solid #3C1053;
+    box-shadow: 0 4px 20px rgba(245, 165, 36, 0.1);
+    border: 1px solid #4A0E17;
 }
 
 .feature-icon {
-    background-color: #3C1053;
-    color: #00B4D8;
+    background-color: #4A0E17;
+    color: #F5A524;
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
@@ -110,7 +110,7 @@ body {
     background-color: rgba(18, 18, 18, 0.8);
     padding: 1.5rem;
     border-radius: 0.5rem;
-    border: 1px solid #3C1053;
+    border: 1px solid #4A0E17;
     margin-bottom: 1rem;
 }
 
@@ -119,13 +119,13 @@ body {
 }
 
 .faq-item {
-    border-bottom: 1px solid #3C1053;
+    border-bottom: 1px solid #4A0E17;
     padding-bottom: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
 .contact-section {
-    background: linear-gradient(135deg, #3C1053 0%, #121212 100%);
+    background: linear-gradient(135deg, #4A0E17 0%, #121212 100%);
     color: white;
 }
 
@@ -134,7 +134,7 @@ body {
     color: #f8f9fa;
     padding: 1.5rem;
     border-radius: 0.5rem;
-    border: 1px solid #00B4D8;
+    border: 1px solid #F5A524;
 }
 
 .form-field {
@@ -151,22 +151,22 @@ body {
     width: 100%;
     padding: 0.5rem;
     background-color: rgba(18, 18, 18, 0.5);
-    border: 1px solid #3C1053;
+    border: 1px solid #4A0E17;
     border-radius: 0.25rem;
     color: #f8f9fa;
 }
 
 .form-input:focus {
     outline: none;
-    border-color: #00B4D8;
-    box-shadow: 0 0 0 2px rgba(0, 180, 216, 0.2);
+    border-color: #F5A524;
+    box-shadow: 0 0 0 2px rgba(245, 165, 36, 0.2);
 }
 
 .footer {
-    background: linear-gradient(135deg, #3C1053 0%, #121212 100%);
+    background: linear-gradient(135deg, #4A0E17 0%, #121212 100%);
     color: white;
     padding: 2rem 1rem;
-    border-top: 1px solid #00B4D8;
+    border-top: 1px solid #F5A524;
 }
 
 .footer-heading {
@@ -188,7 +188,7 @@ body {
     position: fixed;
     bottom: env(safe-area-inset-bottom, 1rem);
     right: 1rem;
-    background-color: #FF36AB;
+    background-color: #FF5A36;
     color: white;
     width: 3.5rem;
     height: 3.5rem;
