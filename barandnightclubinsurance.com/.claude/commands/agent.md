@@ -30,7 +30,7 @@ This website provides comprehensive insurance solutions for the unique risks of 
 
 ## Business Information
 **Company**: Bar & Nightclub Insurance Specialists
-**Address**: 12220 E Riggs Road, Suite #105, Chandler, AZ 85249
+**Address**: 12220 E Riggs Rd, Suite #104, Chandler, AZ 85249
 **Phone**: 844-967-5247
 **Social Media**: 
 - Facebook: facebook.com/barandnightclubinsurance

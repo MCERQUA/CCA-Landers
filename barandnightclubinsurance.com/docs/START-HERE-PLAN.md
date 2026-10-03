@@ -303,7 +303,7 @@ Please create a new landing page for Bar & Nightclub Insurance using the CCA Bas
   - Contact section: 100-150 words
 
 ### Company information
-  - Address: 12220 E Riggs Road, Suite #105, Chandler, AZ 85249
+  - Address: 12220 E Riggs Rd, Suite #104, Chandler, AZ 85249
   - Phone: 844-967-5247
   - Email: josh@contractorschoiceagency.com
 

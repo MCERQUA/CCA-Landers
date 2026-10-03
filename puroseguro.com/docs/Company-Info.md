@@ -1,8 +1,7 @@
 # Use This Company Info
 
 # Address 
-	12220 E Riggs Road,
-	Suite #105
+	12220 E Riggs Rd, Suite #104
 	Chandler, Az 
 	85249 
 
