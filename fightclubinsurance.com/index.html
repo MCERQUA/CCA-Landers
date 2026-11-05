@@ -572,6 +572,47 @@
                             <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Classes Per Week</label>
                             <input type="number" name="classes_per_week" style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;" required>
                         </div>
+
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Requested Coverage Start Date</label>
+                            <input type="date" name="effective_date" style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;">
+                        </div>
+
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Liability Limits Wanted</label>
+                            <select name="limits_requested" style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;">
+                                <option value="">Select...</option>
+                                <option value="1M/2M">1M/2M</option>
+                                <option value="1M/3M">1M/3M</option>
+                                <option value="2M/4M">2M/4M</option>
+                                <option value="Not sure">Not sure</option>
+                            </select>
+                        </div>
+
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Years in Business</label>
+                            <input type="number" name="years_in_business" style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;">
+                        </div>
+
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Annual Gross Revenue</label>
+                            <input type="text" name="gross_revenue" placeholder="e.g. $250,000 or a range" style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;">
+                        </div>
+
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Current or Most Recent Insurance Carrier</label>
+                            <input type="text" name="current_carrier" style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;">
+                        </div>
+
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Claims in the Last 3 Years</label>
+                            <input type="number" name="losses_3yr_count" style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 0.25rem;">
+                        </div>
+
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: block; font-weight: bold; margin-bottom: 0.5rem;">Claim Details: Dates, What Happened, Amounts</label>
+                            <textarea name="losses_3yr_details" rows="3" style="width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 0.25rem; font-family: 'Barlow', sans-serif;"></textarea>
+                        </div>
 <div style="margin-bottom: 1.5rem;">
                             <p style="font-size: 0.75rem; color: #333333; font-family: 'Barlow', sans-serif;">By submitting this form, you agree to our <a href="#" style="text-decoration: underline; color: #D20000; font-weight: bold;">privacy policy</a>.</p>
                         </div>
