@@ -133,6 +133,18 @@ const initSpamProtection = () => {
                 return false;
             }
             
+            // Signature date must be today (+/- 1 day so a US evening, already tomorrow in UTC, still passes)
+            const sigDate = form.elements['signatureDate'];
+            if (sigDate) {
+                const sigMs = Date.parse(sigDate.value + 'T00:00:00Z');
+                const todayMs = Date.parse(new Date().toISOString().slice(0, 10) + 'T00:00:00Z');
+                if (isNaN(sigMs) || Math.abs(sigMs - todayMs) > 86400000) {
+                    e.preventDefault();
+                    alert("Please enter today's date as the signature date.");
+                    return false;
+                }
+            }
+
             // Check for suspicious content
             const formData = new FormData(form);
             for (let [key, value] of formData.entries()) {
