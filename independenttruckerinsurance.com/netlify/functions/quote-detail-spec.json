@@ -1,0 +1,1655 @@
+{
+  "spec": [
+    {
+      "name": "full-name",
+      "label": "Full Name",
+      "kind": "text"
+    },
+    {
+      "name": "company-name",
+      "label": "Company Name",
+      "kind": "text"
+    },
+    {
+      "name": "email",
+      "label": "Email Address",
+      "kind": "email"
+    },
+    {
+      "name": "phone",
+      "label": "Phone Number",
+      "kind": "phone"
+    },
+    {
+      "name": "state",
+      "label": "Primary State(s) of Operation",
+      "kind": "text"
+    },
+    {
+      "name": "work-type",
+      "label": "Type of Trucking Operation",
+      "kind": "text"
+    },
+    {
+      "name": "coverage-type",
+      "label": "Coverage Type Needed",
+      "kind": "text"
+    },
+    {
+      "name": "street-address",
+      "label": "Physical Street Address",
+      "kind": "text"
+    },
+    {
+      "name": "city",
+      "label": "Physical City",
+      "kind": "text"
+    },
+    {
+      "name": "zip",
+      "label": "Physical ZIP Code",
+      "kind": "zip"
+    },
+    {
+      "name": "business-description",
+      "label": "Description of Business Operations",
+      "kind": "text"
+    },
+    {
+      "name": "estimated-subcontractor-expenses",
+      "label": "Total Paid to Subcontractors, Next 12 Months",
+      "kind": "money"
+    },
+    {
+      "name": "entityType",
+      "label": "Business Entity Type",
+      "kind": "select",
+      "opts": [
+        "Individual / Sole Proprietor",
+        "Partnership",
+        "Corporation",
+        "LLC",
+        "Joint Venture",
+        "Not For Profit",
+        "S Corporation",
+        "Trust"
+      ]
+    },
+    {
+      "name": "businessStartDate",
+      "label": "Date Business Started",
+      "kind": "date"
+    },
+    {
+      "name": "effective_date",
+      "label": "Requested Policy Effective Date",
+      "kind": "date"
+    },
+    {
+      "name": "locationDescription",
+      "label": "Short Description of Operations at This Location (54 characters max)",
+      "kind": "text"
+    },
+    {
+      "name": "mailingAddress",
+      "label": "Mailing Street Address",
+      "kind": "text"
+    },
+    {
+      "name": "mailingCity",
+      "label": "Mailing City",
+      "kind": "text"
+    },
+    {
+      "name": "mailingCounty",
+      "label": "Mailing County",
+      "kind": "text"
+    },
+    {
+      "name": "mailingState",
+      "label": "Mailing State",
+      "kind": "select",
+      "opts": [
+        "Alabama",
+        "Alaska",
+        "Arizona",
+        "Arkansas",
+        "California",
+        "Colorado",
+        "Connecticut",
+        "Delaware",
+        "Florida",
+        "Georgia",
+        "Hawaii",
+        "Idaho",
+        "Illinois",
+        "Indiana",
+        "Iowa",
+        "Kansas",
+        "Kentucky",
+        "Louisiana",
+        "Maine",
+        "Maryland",
+        "Massachusetts",
+        "Michigan",
+        "Minnesota",
+        "Mississippi",
+        "Missouri",
+        "Montana",
+        "Nebraska",
+        "Nevada",
+        "New Hampshire",
+        "New Jersey",
+        "New Mexico",
+        "New York",
+        "North Carolina",
+        "North Dakota",
+        "Ohio",
+        "Oklahoma",
+        "Oregon",
+        "Pennsylvania",
+        "Rhode Island",
+        "South Carolina",
+        "South Dakota",
+        "Tennessee",
+        "Texas",
+        "Utah",
+        "Vermont",
+        "Virginia",
+        "Washington",
+        "West Virginia",
+        "Wisconsin",
+        "Wyoming"
+      ]
+    },
+    {
+      "name": "mailingZip",
+      "label": "Mailing ZIP Code",
+      "kind": "zip"
+    },
+    {
+      "name": "county",
+      "label": "Physical County",
+      "kind": "text"
+    },
+    {
+      "name": "physicalState",
+      "label": "Physical State",
+      "kind": "select",
+      "opts": [
+        "Alabama",
+        "Alaska",
+        "Arizona",
+        "Arkansas",
+        "California",
+        "Colorado",
+        "Connecticut",
+        "Delaware",
+        "Florida",
+        "Georgia",
+        "Hawaii",
+        "Idaho",
+        "Illinois",
+        "Indiana",
+        "Iowa",
+        "Kansas",
+        "Kentucky",
+        "Louisiana",
+        "Maine",
+        "Maryland",
+        "Massachusetts",
+        "Michigan",
+        "Minnesota",
+        "Mississippi",
+        "Missouri",
+        "Montana",
+        "Nebraska",
+        "Nevada",
+        "New Hampshire",
+        "New Jersey",
+        "New Mexico",
+        "New York",
+        "North Carolina",
+        "North Dakota",
+        "Ohio",
+        "Oklahoma",
+        "Oregon",
+        "Pennsylvania",
+        "Rhode Island",
+        "South Carolina",
+        "South Dakota",
+        "Tennessee",
+        "Texas",
+        "Utah",
+        "Vermont",
+        "Virginia",
+        "Washington",
+        "West Virginia",
+        "Wisconsin",
+        "Wyoming"
+      ]
+    },
+    {
+      "name": "fullTimeEmployees",
+      "label": "Full-Time Employees (exact number)",
+      "kind": "num"
+    },
+    {
+      "name": "partTimeEmployees",
+      "label": "Part-Time Employees (exact number)",
+      "kind": "num"
+    },
+    {
+      "name": "grossSales",
+      "label": "Annual Revenue (exact dollars)",
+      "kind": "money"
+    },
+    {
+      "name": "largestProjectValue",
+      "label": "Largest Single Project, Last 3 Years (exact dollars)",
+      "kind": "money"
+    },
+    {
+      "name": "workSubcontractedPercent",
+      "label": "Percent of Work Subcontracted (0-100)",
+      "kind": "pct"
+    },
+    {
+      "name": "usesSubcontractors",
+      "label": "Do you use subcontractors?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "glEachOccurrence",
+      "label": "Each Occurrence",
+      "kind": "select",
+      "opts": [
+        "$500,000",
+        "$1,000,000",
+        "$2,000,000"
+      ]
+    },
+    {
+      "name": "glGeneralAggregate",
+      "label": "General Aggregate",
+      "kind": "select",
+      "opts": [
+        "$1,000,000",
+        "$2,000,000",
+        "$3,000,000",
+        "$4,000,000"
+      ]
+    },
+    {
+      "name": "glProductsCompletedOps",
+      "label": "Products / Completed Operations Aggregate",
+      "kind": "select",
+      "opts": [
+        "$1,000,000",
+        "$2,000,000",
+        "$3,000,000",
+        "$4,000,000"
+      ]
+    },
+    {
+      "name": "glPersonalAdvertisingInjury",
+      "label": "Personal & Advertising Injury",
+      "kind": "select",
+      "opts": [
+        "$500,000",
+        "$1,000,000",
+        "$2,000,000"
+      ]
+    },
+    {
+      "name": "glRentedPremises",
+      "label": "Damage to Rented Premises",
+      "kind": "select",
+      "opts": [
+        "$50,000",
+        "$100,000",
+        "$300,000",
+        "$500,000"
+      ]
+    },
+    {
+      "name": "glMedicalExpense",
+      "label": "Medical Expense (any one person)",
+      "kind": "select",
+      "opts": [
+        "Excluded",
+        "$5,000",
+        "$10,000"
+      ]
+    },
+    {
+      "name": "glTrigger",
+      "label": "General Liability Coverage Trigger",
+      "kind": "radio",
+      "opts": [
+        "Occurrence",
+        "Claims Made"
+      ]
+    },
+    {
+      "name": "glAggregateAppliesTo",
+      "label": "How the General Aggregate Limit Applies",
+      "kind": "radio",
+      "opts": [
+        "Per Policy",
+        "Per Project",
+        "Per Location",
+        "Other"
+      ]
+    },
+    {
+      "name": "premisesCityLimits",
+      "label": "Is the Premises Inside or Outside City Limits?",
+      "kind": "radio",
+      "opts": [
+        "Inside City Limits",
+        "Outside City Limits"
+      ]
+    },
+    {
+      "name": "premisesInterest",
+      "label": "Do You Own or Rent (Tenant) This Location?",
+      "kind": "radio",
+      "opts": [
+        "Owner",
+        "Tenant"
+      ]
+    },
+    {
+      "name": "billingPlan",
+      "label": "Preferred Billing Plan",
+      "kind": "radio",
+      "opts": [
+        "Direct Bill",
+        "Agency Bill"
+      ]
+    },
+    {
+      "name": "currentlyInsured",
+      "label": "Are you currently insured?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "prior-carrier-name",
+      "label": "Prior / Current Carrier Name",
+      "kind": "text",
+      "if": [
+        "currentlyInsured",
+        "Yes"
+      ]
+    },
+    {
+      "name": "prior-policy-expiration",
+      "label": "Current Policy Expiration Date",
+      "kind": "date",
+      "if": [
+        "currentlyInsured",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_buildingLeasedToOthers",
+      "label": "Is Building Leased to Others?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_buildingLeasedToOthers",
+      "label": "Explain: Is Building Leased to Others?",
+      "kind": "text",
+      "if": [
+        "yn_buildingLeasedToOthers",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_applicantSubsidiary",
+      "label": "Is Applicant a Subsidiary?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_applicantSubsidiary",
+      "label": "Explain: Is Applicant a Subsidiary?",
+      "kind": "text",
+      "if": [
+        "yn_applicantSubsidiary",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_applicantHasSubsidiaries",
+      "label": "Does Applicant Have Subsidiaries?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_applicantHasSubsidiaries",
+      "label": "Explain: Does Applicant Have Subsidiaries?",
+      "kind": "text",
+      "if": [
+        "yn_applicantHasSubsidiaries",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_safetyProgramsExist",
+      "label": "Do Safety Programs Exist?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_safetyProgramsExist",
+      "label": "Explain: Do Safety Programs Exist?",
+      "kind": "text",
+      "if": [
+        "yn_safetyProgramsExist",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_exposureFlammables",
+      "label": "Any Exposure to Flammables, Explosives, Chemicals?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_exposureFlammables",
+      "label": "Explain: Any Exposure to Flammables, Explosives, Chemicals?",
+      "kind": "text",
+      "if": [
+        "yn_exposureFlammables",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_otherInsurance",
+      "label": "Any Other Insurance with This Company?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_otherInsurance",
+      "label": "Explain: Any Other Insurance with This Company?",
+      "kind": "text",
+      "if": [
+        "yn_otherInsurance",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_coverageTerminated",
+      "label": "Has a Policy Coverage Ever Been Terminated?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "coverageTerminatedReasons",
+      "label": "Reason coverage was terminated (tick all that apply)",
+      "kind": "checks",
+      "opts": [
+        "Non-Payment",
+        "Non-Renewal",
+        "Agent No Longer Represents Carrier",
+        "Underwriting"
+      ],
+      "if": [
+        "yn_coverageTerminated",
+        "Yes"
+      ]
+    },
+    {
+      "name": "coverageTerminatedConditionCorrectedDescription",
+      "label": "Describe how the condition was corrected",
+      "kind": "text",
+      "if": [
+        "coverageTerminatedConditionCorrected",
+        "Yes"
+      ],
+      "and": [
+        "yn_coverageTerminated",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_pastAllegations",
+      "label": "Past Allegations of Abuse, Molestation, or Discrimination?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_pastAllegations",
+      "label": "Explain: Past Allegations of Abuse, Molestation, or Discrimination?",
+      "kind": "text",
+      "if": [
+        "yn_pastAllegations",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_indictedOrConvicted",
+      "label": "Any Indictments or Convictions?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_indictedOrConvicted",
+      "label": "Explain: Any Indictments or Convictions?",
+      "kind": "text",
+      "if": [
+        "yn_indictedOrConvicted",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_safetyViolations",
+      "label": "Any Uncorrected Fire and/or Safety Violations?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_safetyViolations",
+      "label": "Explain: Any Uncorrected Fire and/or Safety Violations?",
+      "kind": "text",
+      "if": [
+        "yn_safetyViolations",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_negativeFinancialAction",
+      "label": "Any Past Negative Financial Action?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_negativeFinancialAction",
+      "label": "Explain: Any Past Negative Financial Action?",
+      "kind": "text",
+      "if": [
+        "yn_negativeFinancialAction",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_judgementOrLien",
+      "label": "Any Judgement or Lien?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_judgementOrLien",
+      "label": "Explain: Any Judgement or Lien?",
+      "kind": "text",
+      "if": [
+        "yn_judgementOrLien",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_businessInTrust",
+      "label": "Has the Business Been Placed in a Trust?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_businessInTrust",
+      "label": "Explain: Has the Business Been Placed in a Trust?",
+      "kind": "text",
+      "if": [
+        "yn_businessInTrust",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_foreignOperations",
+      "label": "Any Foreign Operations or Products?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_foreignOperations",
+      "label": "Explain: Any Foreign Operations or Products?",
+      "kind": "text",
+      "if": [
+        "yn_foreignOperations",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_otherVentures",
+      "label": "Do Other Ventures Exist?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_otherVentures",
+      "label": "Explain: Do Other Ventures Exist?",
+      "kind": "text",
+      "if": [
+        "yn_otherVentures",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_possessDrones",
+      "label": "Does Applicant Possess Drones?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_possessDrones",
+      "label": "Explain: Does Applicant Possess Drones?",
+      "kind": "text",
+      "if": [
+        "yn_possessDrones",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_hireDroneOperators",
+      "label": "Does Applicant Hire Drone Operators?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_hireDroneOperators",
+      "label": "Explain: Does Applicant Hire Drone Operators?",
+      "kind": "text",
+      "if": [
+        "yn_hireDroneOperators",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_priorExclusionUninsured",
+      "label": "Has Any Product, Work, Accident or Location Been Excluded, Uninsured or Self-Insured from Any Previous Coverage?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_priorExclusionUninsured",
+      "label": "Explain: Has Any Product, Work, Accident or Location Been Excluded, Uninsured or Self-Insured from Any Previous Coverage?",
+      "kind": "text",
+      "if": [
+        "yn_priorExclusionUninsured",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_tailCoveragePurchased",
+      "label": "Was Tail Coverage Purchased Under Any Previous Policy?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_tailCoveragePurchased",
+      "label": "Explain: Was Tail Coverage Purchased Under Any Previous Policy?",
+      "kind": "text",
+      "if": [
+        "yn_tailCoveragePurchased",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_drawsPlansForOthers",
+      "label": "Does Applicant Draw Plans, Designs or Specifications for Others?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_drawsPlansForOthers",
+      "label": "Explain: Does Applicant Draw Plans, Designs or Specifications for Others?",
+      "kind": "text",
+      "if": [
+        "yn_drawsPlansForOthers",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_blastingOrExplosives",
+      "label": "Do Any Operations Include Blasting, or Utilize/Store Explosive Material?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_blastingOrExplosives",
+      "label": "Explain: Do Any Operations Include Blasting, or Utilize/Store Explosive Material?",
+      "kind": "text",
+      "if": [
+        "yn_blastingOrExplosives",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_excavationOrEarthMoving",
+      "label": "Does Any Operation Involve Excavation, Tunneling, Underground Work or Earth Moving?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_excavationOrEarthMoving",
+      "label": "Explain: Does Any Operation Involve Excavation, Tunneling, Underground Work or Earth Moving?",
+      "kind": "text",
+      "if": [
+        "yn_excavationOrEarthMoving",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_subsRequireLowerLimits",
+      "label": "Do Subcontractors Carry Coverages or Limits Less Than Applicant?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_subsRequireLowerLimits",
+      "label": "Explain: Do Subcontractors Carry Coverages or Limits Less Than Applicant?",
+      "kind": "text",
+      "if": [
+        "yn_subsRequireLowerLimits",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_subsWorkWithoutCOI",
+      "label": "Are Subcontractors Allowed to Work Without Providing a Certificate of Insurance?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_subsWorkWithoutCOI",
+      "label": "Explain: Are Subcontractors Allowed to Work Without Providing a Certificate of Insurance?",
+      "kind": "text",
+      "if": [
+        "yn_subsWorkWithoutCOI",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_leaseEquipmentToOthers",
+      "label": "Does Applicant Lease Equipment to Others, With or Without Operators?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_leaseEquipmentToOthers",
+      "label": "Explain: Does Applicant Lease Equipment to Others, With or Without Operators?",
+      "kind": "text",
+      "if": [
+        "yn_leaseEquipmentToOthers",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_installServiceDemoProducts",
+      "label": "Does Applicant Install, Service or Demonstrate Products?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_installServiceDemoProducts",
+      "label": "Explain: Does Applicant Install, Service or Demonstrate Products?",
+      "kind": "text",
+      "if": [
+        "yn_installServiceDemoProducts",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_foreignProducts",
+      "label": "Foreign Products Sold, Distributed, or Used as Components?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_foreignProducts",
+      "label": "Explain: Foreign Products Sold, Distributed, or Used as Components?",
+      "kind": "text",
+      "if": [
+        "yn_foreignProducts",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_researchAndDevelopment",
+      "label": "Research and Development Conducted, or New Products Planned?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_researchAndDevelopment",
+      "label": "Explain: Research and Development Conducted, or New Products Planned?",
+      "kind": "text",
+      "if": [
+        "yn_researchAndDevelopment",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_guaranteesWarranties",
+      "label": "Guarantees, Warranties, or Hold Harmless Agreements?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_guaranteesWarranties",
+      "label": "Explain: Guarantees, Warranties, or Hold Harmless Agreements?",
+      "kind": "text",
+      "if": [
+        "yn_guaranteesWarranties",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_aircraftSpaceProducts",
+      "label": "Products Related to the Aircraft/Space Industry?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_aircraftSpaceProducts",
+      "label": "Explain: Products Related to the Aircraft/Space Industry?",
+      "kind": "text",
+      "if": [
+        "yn_aircraftSpaceProducts",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_productsRecalled",
+      "label": "Products Recalled, Discontinued, or Changed?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_productsRecalled",
+      "label": "Explain: Products Recalled, Discontinued, or Changed?",
+      "kind": "text",
+      "if": [
+        "yn_productsRecalled",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_productsRepackagedUnderLabel",
+      "label": "Products of Others Sold or Repackaged Under Applicant Label?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_productsRepackagedUnderLabel",
+      "label": "Explain: Products of Others Sold or Repackaged Under Applicant Label?",
+      "kind": "text",
+      "if": [
+        "yn_productsRepackagedUnderLabel",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_productsUnderOthersLabel",
+      "label": "Products Sold Under the Label of Others?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_productsUnderOthersLabel",
+      "label": "Explain: Products Sold Under the Label of Others?",
+      "kind": "text",
+      "if": [
+        "yn_productsUnderOthersLabel",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_vendorsCoverageRequired",
+      "label": "Vendors Coverage Required?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_vendorsCoverageRequired",
+      "label": "Explain: Vendors Coverage Required?",
+      "kind": "text",
+      "if": [
+        "yn_vendorsCoverageRequired",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_sellsToOtherNamedInsured",
+      "label": "Does Any Named Insured Sell to Another Named Insured?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_sellsToOtherNamedInsured",
+      "label": "Explain: Does Any Named Insured Sell to Another Named Insured?",
+      "kind": "text",
+      "if": [
+        "yn_sellsToOtherNamedInsured",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_medicalFacilities",
+      "label": "Any Medical Facilities Provided, or Medical Professionals Employed/Contracted?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_medicalFacilities",
+      "label": "Explain: Any Medical Facilities Provided, or Medical Professionals Employed/Contracted?",
+      "kind": "text",
+      "if": [
+        "yn_medicalFacilities",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_radioactiveExposure",
+      "label": "Any Exposure to Radioactive/Nuclear Materials?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_radioactiveExposure",
+      "label": "Explain: Any Exposure to Radioactive/Nuclear Materials?",
+      "kind": "text",
+      "if": [
+        "yn_radioactiveExposure",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_hazardousMaterialOps",
+      "label": "Do/Have Past, Present or Discontinued Operations Involved Storing, Treating, Discharging, Applying, Disposing or Transporting Hazardous Material?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_hazardousMaterialOps",
+      "label": "Explain: Do/Have Past, Present or Discontinued Operations Involved Storing, Treating, Discharging, Applying, Disposing or Transporting Hazardous Material?",
+      "kind": "text",
+      "if": [
+        "yn_hazardousMaterialOps",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_operationsSoldAcquired",
+      "label": "Any Operations Sold, Acquired or Discontinued in the Last 5 Years?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_operationsSoldAcquired",
+      "label": "Explain: Any Operations Sold, Acquired or Discontinued in the Last 5 Years?",
+      "kind": "text",
+      "if": [
+        "yn_operationsSoldAcquired",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_rentOrLoanEquipment",
+      "label": "Do You Rent or Loan Equipment to Others?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_rentOrLoanEquipment",
+      "label": "Explain: Do You Rent or Loan Equipment to Others?",
+      "kind": "text",
+      "if": [
+        "yn_rentOrLoanEquipment",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_watercraftDocksFloats",
+      "label": "Any Watercraft, Docks or Floats Owned, Hired or Leased?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_watercraftDocksFloats",
+      "label": "Explain: Any Watercraft, Docks or Floats Owned, Hired or Leased?",
+      "kind": "text",
+      "if": [
+        "yn_watercraftDocksFloats",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_parkingFacilities",
+      "label": "Any Parking Facilities Owned or Rented?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_parkingFacilities",
+      "label": "Explain: Any Parking Facilities Owned or Rented?",
+      "kind": "text",
+      "if": [
+        "yn_parkingFacilities",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_parkingFeeCharged",
+      "label": "Is a Fee Charged for Parking?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_parkingFeeCharged",
+      "label": "Explain: Is a Fee Charged for Parking?",
+      "kind": "text",
+      "if": [
+        "yn_parkingFeeCharged",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_recreationFacilities",
+      "label": "Recreation Facilities Provided?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_recreationFacilities",
+      "label": "Explain: Recreation Facilities Provided?",
+      "kind": "text",
+      "if": [
+        "yn_recreationFacilities",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_lodgingOperations",
+      "label": "Are There Any Lodging Operations, Including Apartments?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_lodgingOperations",
+      "label": "Explain: Are There Any Lodging Operations, Including Apartments?",
+      "kind": "text",
+      "if": [
+        "yn_lodgingOperations",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_swimmingPool",
+      "label": "Is There a Swimming Pool on the Premises?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_swimmingPool",
+      "label": "Explain: Is There a Swimming Pool on the Premises?",
+      "kind": "text",
+      "if": [
+        "yn_swimmingPool",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_socialEvents",
+      "label": "Are Social Events Sponsored?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_socialEvents",
+      "label": "Explain: Are Social Events Sponsored?",
+      "kind": "text",
+      "if": [
+        "yn_socialEvents",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_athleticTeams",
+      "label": "Are Athletic Teams Sponsored?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_athleticTeams",
+      "label": "Explain: Are Athletic Teams Sponsored?",
+      "kind": "text",
+      "if": [
+        "yn_athleticTeams",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_structuralAlterations",
+      "label": "Any Structural Alterations Contemplated?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_structuralAlterations",
+      "label": "Explain: Any Structural Alterations Contemplated?",
+      "kind": "text",
+      "if": [
+        "yn_structuralAlterations",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_demolitionExposure",
+      "label": "Any Demolition Exposure Contemplated?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_demolitionExposure",
+      "label": "Explain: Any Demolition Exposure Contemplated?",
+      "kind": "text",
+      "if": [
+        "yn_demolitionExposure",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_activeJointVentures",
+      "label": "Has Applicant Been Active in, or Is Currently Active in, Joint Ventures?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_activeJointVentures",
+      "label": "Explain: Has Applicant Been Active in, or Is Currently Active in, Joint Ventures?",
+      "kind": "text",
+      "if": [
+        "yn_activeJointVentures",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_leaseEmployees",
+      "label": "Do You Lease Employees to or from Other Employers?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_leaseEmployees",
+      "label": "Explain: Do You Lease Employees to or from Other Employers?",
+      "kind": "text",
+      "if": [
+        "yn_leaseEmployees",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_laborInterchange",
+      "label": "Is There a Labor Interchange with Any Other Business or Subsidiaries?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_laborInterchange",
+      "label": "Explain: Is There a Labor Interchange with Any Other Business or Subsidiaries?",
+      "kind": "text",
+      "if": [
+        "yn_laborInterchange",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_dayCareFacilities",
+      "label": "Are Day Care Facilities Operated or Controlled?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_dayCareFacilities",
+      "label": "Explain: Are Day Care Facilities Operated or Controlled?",
+      "kind": "text",
+      "if": [
+        "yn_dayCareFacilities",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_crimesOnPremises",
+      "label": "Have Any Crimes Occurred or Been Attempted on Your Premises Within the Last 3 Years?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_crimesOnPremises",
+      "label": "Explain: Have Any Crimes Occurred or Been Attempted on Your Premises Within the Last 3 Years?",
+      "kind": "text",
+      "if": [
+        "yn_crimesOnPremises",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_formalSafetyPolicy",
+      "label": "Is There a Formal, Written Safety and Security Policy in Effect?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_formalSafetyPolicy",
+      "label": "Explain: Is There a Formal, Written Safety and Security Policy in Effect?",
+      "kind": "text",
+      "if": [
+        "yn_formalSafetyPolicy",
+        "Yes"
+      ]
+    },
+    {
+      "name": "yn_promotionalSafetyClaims",
+      "label": "Does the Business' Promotional Literature Make Any Representation About the Safety or Security of the Premises?",
+      "kind": "radio",
+      "opts": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "ynExplain_promotionalSafetyClaims",
+      "label": "Explain: Does the Business' Promotional Literature Make Any Representation About the Safety or Security of the Premises?",
+      "kind": "text",
+      "if": [
+        "yn_promotionalSafetyClaims",
+        "Yes"
+      ]
+    },
+    {
+      "name": "safetyProgramElements",
+      "label": "Safety Program Elements (check all that apply)",
+      "kind": "checks",
+      "opts": [
+        "Safety Manual",
+        "Safety Position",
+        "Monthly Meetings",
+        "OSHA Compliance",
+        "Other"
+      ],
+      "if": [
+        "yn_safetyProgramsExist",
+        "Yes"
+      ]
+    },
+    {
+      "name": "athleticTeamAgeGroup",
+      "label": "Sponsored Athletic Team Age Group",
+      "kind": "radio",
+      "opts": [
+        "12 and Under",
+        "13 Through 18",
+        "Over 18"
+      ],
+      "if": [
+        "yn_athleticTeams",
+        "Yes"
+      ]
+    },
+    {
+      "name": "poolConstruction",
+      "label": "Pool Construction",
+      "kind": "radio",
+      "opts": [
+        "Above Ground",
+        "In Ground"
+      ],
+      "if": [
+        "yn_swimmingPool",
+        "Yes"
+      ]
+    },
+    {
+      "name": "poolSafetyFeatures",
+      "label": "Pool Safety Features (check all that apply)",
+      "kind": "checks",
+      "opts": [
+        "Approved Fence",
+        "Limited Access",
+        "Diving Board",
+        "Slide",
+        "Life Guard"
+      ],
+      "if": [
+        "yn_swimmingPool",
+        "Yes"
+      ]
+    },
+    {
+      "name": "otherCoverage_pollution",
+      "label": "Pollution: what do you need?",
+      "kind": "text",
+      "if": [
+        "otherCoverage",
+        "Pollution"
+      ]
+    },
+    {
+      "name": "otherCoverage_workerscomp",
+      "label": "Workers Comp: what do you need?",
+      "kind": "text",
+      "if": [
+        "otherCoverage",
+        "Workers Comp"
+      ]
+    },
+    {
+      "name": "otherCoverage_commercialauto",
+      "label": "Commercial Auto: what do you need?",
+      "kind": "text",
+      "if": [
+        "otherCoverage",
+        "Commercial Auto"
+      ]
+    },
+    {
+      "name": "otherCoverage_umbrella",
+      "label": "Umbrella: what do you need?",
+      "kind": "text",
+      "if": [
+        "otherCoverage",
+        "Umbrella"
+      ]
+    },
+    {
+      "name": "otherCoverage_bonds",
+      "label": "Bonds: what do you need?",
+      "kind": "text",
+      "if": [
+        "otherCoverage",
+        "Bonds"
+      ]
+    },
+    {
+      "name": "otherCoverage_inlandmarine",
+      "label": "Equipment / Inland Marine: what do you need?",
+      "kind": "text",
+      "if": [
+        "otherCoverage",
+        "Equipment / Inland Marine"
+      ]
+    },
+    {
+      "name": "otherCoverage_liquor",
+      "label": "Liquor: what do you need?",
+      "kind": "text",
+      "if": [
+        "otherCoverage",
+        "Liquor"
+      ]
+    },
+    {
+      "name": "lossHistoryStatus",
+      "label": "Losses in the Last 3 Years",
+      "kind": "radio",
+      "opts": [
+        "No Losses to Report",
+        "Report a Loss"
+      ]
+    },
+    {
+      "name": "losses_3yr_count",
+      "label": "Number of Losses (Last 3 Years)",
+      "kind": "num",
+      "if": [
+        "lossHistoryStatus",
+        "Report a Loss"
+      ]
+    },
+    {
+      "name": "lossDate",
+      "label": "Date of Most Recent Loss",
+      "kind": "date",
+      "if": [
+        "lossHistoryStatus",
+        "Report a Loss"
+      ]
+    },
+    {
+      "name": "lossDescription",
+      "label": "Loss Description (type and status)",
+      "kind": "text",
+      "if": [
+        "lossHistoryStatus",
+        "Report a Loss"
+      ]
+    },
+    {
+      "name": "lossAmountPaid",
+      "label": "Amount Paid (exact dollars)",
+      "kind": "money",
+      "if": [
+        "lossHistoryStatus",
+        "Report a Loss"
+      ]
+    },
+    {
+      "name": "lossAmountReserved",
+      "label": "Amount Reserved (exact dollars)",
+      "kind": "money",
+      "if": [
+        "lossHistoryStatus",
+        "Report a Loss"
+      ]
+    }
+  ],
+  "oc": [
+    [
+      "Pollution",
+      "pollution"
+    ],
+    [
+      "Workers Comp",
+      "workerscomp"
+    ],
+    [
+      "Commercial Auto",
+      "commercialauto"
+    ],
+    [
+      "Umbrella",
+      "umbrella"
+    ],
+    [
+      "Bonds",
+      "bonds"
+    ],
+    [
+      "Equipment / Inland Marine",
+      "inlandmarine"
+    ],
+    [
+      "Liquor",
+      "liquor"
+    ]
+  ]
+}

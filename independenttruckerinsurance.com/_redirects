@@ -10,3 +10,6 @@
 /data/*  /404.html  404!
 /.claude/*  /404.html  404!
 /netlify-faq-implementation-plan.md  /404.html  404!
+
+# Quote page alias (ACORD port)
+/quote  /get-a-quote.html  200

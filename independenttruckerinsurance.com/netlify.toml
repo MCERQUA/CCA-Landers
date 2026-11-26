@@ -24,3 +24,8 @@
   enable = true
   honeypot_field = "bot-field"
   recaptcha = false
+
+# Quote-detail form handler (ACORD port): validates, then forwards to Netlify Forms.
+[functions]
+  directory = "netlify/functions"
+  included_files = ["netlify/functions/quote-detail-spec.json"]
